@@ -13,3 +13,16 @@ If not on Windows run the LaTeX commands as in the batch file. If you are on Lin
 
 1. Open console or PowerShell.
 1. In console `m.bat`, in PowerShell `.\m.bat` (typing `m` and hitting TAB should expand to `.\m.bat`).
+
+
+# Contributions without LaTeX
+
+Write your text without any other formatting than paragraphs. Anything else should be just asking for more formatting/ integration, like
+
+```latex
+% headline "The Big Day"
+On the day of our Lord 2525-02-28 the Firewall crew THE CREW...
+% maybe link "Firewall" and "THE CREW" with the glossary?
+```
+
+where the text will be added, and the comments will be translated into LaTeX and its auxiliary tools as needed.
