@@ -93,6 +93,19 @@ if NOT %status% == 0 echo %_RESET%
 if NOT %status% == 0 echo.
 if NOT %status% == 0 EXIT /b 1
 
+echo.
+echo %_fDGray% ========================================================================
+echo %_fDGray%   3rd pass
+echo %_fDGray% ========================================================================
+Echo %_RESET%
+xelatex --interaction=batchmode --halt-on-error epCamp01.tex 
+if %ERRORLEVEL% NEQ 0 SET /A status = 1
+if NOT %status% == 0 echo.
+if NOT %status% == 0 echo %_fRed% failure, check log-file for errors.
+if NOT %status% == 0 echo %_RESET%
+if NOT %status% == 0 echo.
+if NOT %status% == 0 EXIT /b 1
+
 set end=%time%
 
 set options="tokens=1-4 delims=:.,"
