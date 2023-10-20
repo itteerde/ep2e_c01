@@ -56,6 +56,19 @@ if NOT %status% == 0 EXIT /b 1
 
 echo.
 echo %_fDGray% ========================================================================
+echo %_fDGray%   Index
+echo %_fDGray% ========================================================================
+Echo %_RESET%
+makeindex epCamp01.idx
+if %ERRORLEVEL% NEQ 0 SET /A status = 1
+if NOT %status% == 0 echo.
+if NOT %status% == 0 echo %_fRed% failure, check log-file for errors.
+if NOT %status% == 0 echo %_RESET%
+if NOT %status% == 0 echo.
+if NOT %status% == 0 EXIT /b 1
+
+echo.
+echo %_fDGray% ========================================================================
 echo %_fDGray%   Glossaries
 echo %_fDGray% ========================================================================
 Echo %_RESET%
