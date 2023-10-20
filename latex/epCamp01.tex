@@ -1,0 +1,74 @@
+\documentclass[a4paper, twoside, russian, ngerman]{book}%[a4paper,oneside] ngerman für "=
+\usepackage[pass]{geometry}%[hmarginratio=1:1]{geometry}
+\usepackage{makeidx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathabx}
+\usepackage{afterpage}
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds,arrows,calc,positioning}
+\usetikzlibrary{calendar,fpu}
+
+\usepackage{ifthen}
+\usepackage{intcalc}
+\usepackage[citecolor=black,urlcolor=black,linkcolor=black,breaklinks=true]{hyperref}
+\hypersetup{
+    colorlinks=true
+}
+
+\usepackage{fontspec}
+\setromanfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+\newfontfamily\japanesefont{NotoSerifKR-Regular.otf}[
+    BoldFont = NotoSerifKR-Bold.otf ,
+    ItalicFont = NotoSerifKR-ExtraLight.otf ,
+    BoldItalicFont = NotoSerifKR-Black.otf
+] %\newfontfamily\japanesefont{Noto Sans CJK KR}
+\newcommand\textjapanese[1]{{\japanesefont #1}}
+
+\newfontfamily\chinesefont{Msyh.ttc}[
+    BoldFont = Msyhbd.ttc ,
+    ItalicFont = Msyhl.ttc ,
+    BoldItalicFont = Msyhbd.ttc
+]
+\newcommand\textchinese[1]{{\chinesefont #1}}
+
+\newfontfamily\arabicfont[Script=Arabic]{NotoSansArabic-Regular.ttf}[
+    BoldFont = NotoSansArabic-Bold.ttf ,
+    ItalicFont = NotoSansArabic-Thin.ttf ,
+    BoldItalicFont = NotoSansArabic-Black.ttf
+]
+\newcommand\textarabic[1]{{\arabicfont #1}}
+
+\newfontfamily\sanskritfont{Sanskrit Text}
+\newcommand\textsanskrit[1]{{\sanskritfont #1}}
+
+\newfontfamily\hebrewfont{NotoSansHebrew-VariableFont_wdth,wght.ttf}
+\newcommand\texthebrew[1]{{\hebrewfont #1}}
+
+\setcounter{tocdepth}{1}
+
+\makeindex
+
+\begin{titlepage}
+\centering
+\title{Eclipse Phase 2nd Edition \\ Campaign I}
+
+\centering
+\author{$\varnothing$}
+\end{titlepage}
+
+\begin{document}
+
+\include{mycommands.tex}
+\include{prolog.tex}
+
+\maketitle
+
+\tableofcontents
+
+\setlength{\parskip}{1ex}
+
+\end{document}
