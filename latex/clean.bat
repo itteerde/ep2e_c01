@@ -1,0 +1,9 @@
+del *.aux
+del *.log
+del *.ilg
+del *.idx
+del *.ind
+del *.out
+del *.pdf
+del *.synctex
+del *.toc

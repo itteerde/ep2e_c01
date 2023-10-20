@@ -16,6 +16,16 @@
     colorlinks=true
 }
 
+\usepackage[xindy={language=english,codepage=duden-utf8},
+    nonumberlist,
+    toc,
+    nopostdot,
+    style=altlist,
+    nogroupskip
+    ]{glossaries}
+    \GlsSetXdyCodePage{duden-utf8}
+\apptocmd{\thebibliography}{\raggedright}{}{}
+
 \usepackage{fontspec}
 \setromanfont{CMU Serif}
 \setsansfont{CMU Sans Serif}
@@ -51,6 +61,8 @@
 \setcounter{tocdepth}{1}
 
 \makeindex
+\makeglossaries
+
 
 \begin{titlepage}
 \centering
@@ -62,8 +74,9 @@
 
 \begin{document}
 
-\include{mycommands.tex}
-\include{prolog.tex}
+\include{mycommands}
+\include{glossar}
+
 
 \maketitle
 
@@ -71,4 +84,18 @@
 
 \setlength{\parskip}{1ex}
 
+\input{input/prolog.tex}
+
+
+\chapter{Crew}
+
+\input{input/egr.tex}
+\input{input/intro.tex}
+
+
+\printglossary[nonumberlist=false, style=altlist]
+
+{\footnotesize
+    \printindex
+}
 \end{document}
