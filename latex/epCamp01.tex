@@ -16,6 +16,18 @@
     colorlinks=true
 }
 
+\usepackage[
+    backend=biber,
+    style=numeric,
+    sortlocale=de_DE,
+    natbib=true,
+    url=false,
+    doi=true,
+    eprint=false
+]{biblatex}
+\addbibresource{egr.bib}
+\bibliography{egr}	
+
 \usepackage[xindy={language=english,codepage=duden-utf8},
     nonumberlist,
     toc,
@@ -94,6 +106,8 @@
 
 
 \printglossary[nonumberlist=false, style=altlist]
+
+\printbibliography
 
 {\footnotesize
     \printindex
