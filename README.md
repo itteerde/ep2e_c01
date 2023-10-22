@@ -25,4 +25,6 @@ On the day of our Lord 2525-02-28 the Firewall crew THE CREW...
 % maybe link "Firewall" and "THE CREW" with the glossary?
 ```
 
+and DM it. Or just add something to [The Logbook](https://docs.google.com/document/d/1Bt4DGv5Dx-UilDSzQVBT0CZuOWF7NazVS-jlQy1pTF0/edit?usp=share_link), which will be integrated into the LaTeX project.
+
 where the text will be added, and the comments will be translated into LaTeX and its auxiliary tools as needed.
