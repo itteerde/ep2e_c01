@@ -1,4 +1,4 @@
-\documentclass[a4paper, twoside, russian, ngerman]{book}%[a4paper,oneside] ngerman für "=
+\documentclass[a4paper, twoside, ngerman]{book}%[a4paper,oneside] ngerman für "=
 \usepackage[pass]{geometry}%[hmarginratio=1:1]{geometry}
 \usepackage{makeidx}
 \usepackage{amsmath}
@@ -39,9 +39,13 @@
 \apptocmd{\thebibliography}{\raggedright}{}{}
 
 \usepackage{fontspec}
-\setromanfont{CMU Serif}
-\setsansfont{CMU Sans Serif}
-\setmonofont{CMU Typewriter Text}
+\setmainfont{Noto Sans}
+%\setmainfont{Libre Baskerville}
+%\setromanfont{CMU Serif}
+%\setsansfont{CMU Sans Serif}
+%\setmonofont{CMU Typewriter Text}
+\setmonofont{Noto Sans Mono}
+%\linespread{1.25}
 
 \newfontfamily\japanesefont{NotoSerifKR-Regular.otf}[
     BoldFont = NotoSerifKR-Bold.otf ,
@@ -86,6 +90,9 @@
 
 \begin{document}
 
+%\fontsize{8}{9}\selectfont
+
+
 \include{mycommands}
 \include{glossar}
 
@@ -103,6 +110,13 @@
 
 \input{input/egr.tex}
 \input{input/intro.tex}
+
+\chapter{Notes}
+
+\section{\texttt{\egr{}}}
+\input{input/egrNotes.tex}
+
+\chapter{Logbook}
 
 
 \printglossary[nonumberlist=false, style=altlist]
