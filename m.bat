@@ -1,6 +1,8 @@
 @echo off
 Setlocal
 
+cd latex
+
 set start=%time%
 
 :: Define foreground and background ANSI colors:
@@ -51,6 +53,7 @@ if %ERRORLEVEL% NEQ 0 SET /A status = 1
 if NOT %status% == 0 echo.
 if NOT %status% == 0 echo %_fRed% failure, check log-file for errors.
 if NOT %status% == 0 echo %_RESET%
+if NOT %status% == 0 cd ..
 if NOT %status% == 0 echo.
 if NOT %status% == 0 EXIT /b 1
 
@@ -64,6 +67,7 @@ if %ERRORLEVEL% NEQ 0 SET /A status = 1
 if NOT %status% == 0 echo.
 if NOT %status% == 0 echo %_fRed% failure, check log-file for errors.
 if NOT %status% == 0 echo %_RESET%
+if NOT %status% == 0 cd ..
 if NOT %status% == 0 echo.
 if NOT %status% == 0 EXIT /b 1
 
@@ -77,6 +81,7 @@ if %ERRORLEVEL% NEQ 0 SET /A status = 1
 if NOT %status% == 0 echo.
 if NOT %status% == 0 echo %_fRed% failure, check log-file for errors.
 if NOT %status% == 0 echo %_RESET%
+if NOT %status% == 0 cd ..
 if NOT %status% == 0 echo.
 if NOT %status% == 0 EXIT /b 1
 
@@ -90,6 +95,7 @@ if %ERRORLEVEL% NEQ 0 SET /A status = 1
 if NOT %status% == 0 echo.
 if NOT %status% == 0 echo %_fRed% failure, check log-file for errors.
 if NOT %status% == 0 echo %_RESET%
+if NOT %status% == 0 cd ..
 if NOT %status% == 0 echo.
 if NOT %status% == 0 EXIT /b 1
 
@@ -103,6 +109,7 @@ if %ERRORLEVEL% NEQ 0 SET /A status = 1
 if NOT %status% == 0 echo.
 if NOT %status% == 0 echo %_fRed% failure, check log-file for errors.
 if NOT %status% == 0 echo %_RESET%
+if NOT %status% == 0 cd ..
 if NOT %status% == 0 echo.
 if NOT %status% == 0 EXIT /b 1
 
@@ -116,6 +123,7 @@ if %ERRORLEVEL% NEQ 0 SET /A status = 1
 if NOT %status% == 0 echo.
 if NOT %status% == 0 echo %_fRed% failure, check log-file for errors.
 if NOT %status% == 0 echo %_RESET%
+if NOT %status% == 0 cd ..
 if NOT %status% == 0 echo.
 if NOT %status% == 0 EXIT /b 1
 
@@ -143,4 +151,5 @@ echo %_fDGray% =================================================================
 echo %_fGreen%   typesetting successfully completed.
 echo %_fDGray% ========================================================================
 Echo %_RESET%
+cd ..
 echo.
