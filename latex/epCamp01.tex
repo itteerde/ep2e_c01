@@ -74,7 +74,7 @@
 \newfontfamily\hebrewfont{NotoSansHebrew-VariableFont_wdth,wght.ttf}
 \newcommand\texthebrew[1]{{\hebrewfont #1}}
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 
 \makeindex
 \makeglossaries
@@ -103,13 +103,12 @@
 
 \setlength{\parskip}{1ex}
 
-\input{input/prolog.tex}
+% \input{input/prolog.tex}
 
 
 \chapter{Crew}
 
 \input{input/egr.tex}
-\input{input/intro.tex}
 
 \chapter{Notes \texttt{\egr{}}}
 \input{input/egrNotes.tex}
@@ -120,8 +119,8 @@
 \chapter{SOPs}
 \input{input/sops.tex}
 
-\chapter{Logbook}
-
+\input{input/intro.tex}
+\input{input/logbook.tex}
 
 \printglossary[nonumberlist=false, style=altlist]
 
