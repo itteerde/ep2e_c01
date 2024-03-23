@@ -53,9 +53,8 @@
 
 Normal mission start Gear Points $GP=20$. \texttt{\egr{}}\index{\egr{}} has Resources IV, therfore $GP=GP_{\text{default}}+4=24$.
 
-\subsubsection{Standard Gear}
+\subsubsection{Tutorial Gear}
 
-\texttt{\egr{}}\index{\egr{}}'s default starting equipment currently is
 \newcounter{gp}
 \setcounter{gp}{24}
 \begin{align}
@@ -79,10 +78,57 @@ Normal mission start Gear Points $GP=20$. \texttt{\egr{}}\index{\egr{}} has Reso
             & \arabic{gp}
 \end{align}
 
-\begin{enumerate}
-    \item \textbf{\gls{Exploit}} “A hacker library/tool for taking advantage of known software vulnerabilities. Required for hacking.” \citep[pg. 326]{ep2e_1.1_2019}
 
-    \item \textbf{\gls{Simulspace}} “You have access to a virtual game environment, private meeting space, interactive media service, unreal vacation library, or other simulspace environment.” \citep[pg. 315]{ep2e_1.1_2019}
+
+\subsubsection{Starting Gear}
+
+\texttt{\egr{}}\index{\egr{}}'s starting gear is
+\setcounter{gp}{24}
+\begin{align}
+    GP =    & 20 + \text{Resources IV} (4) &&\arabic{gp}\\
+            %& - \text{Exploit} (2) &&\addtocounter{gp}{-2}\arabic{gp}\\ % Meshware, have from Tutorial Gear
+            %& - \text{Simulspace} (1) &&\addtocounter{gp}{-1}\arabic{gp}\\ % see below, I do think it has to be available as an App, to be clarified
+            %& - \text{Spoofer} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\ % Meshware, have from Tutorial Gear
+            %& - \text{VPN} (1) &&\addtocounter{gp}{-1}\arabic{gp} \\ % Meshware, have from Tutorial Gear
+            & - \text{Private Server} (1) &&\addtocounter{gp}{-1}\arabic{gp} \\
+            %& - \text{TacNet} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\
+            %& - \text{Tracker} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\
+            %& - \text{Crypto} (1) &&\addtocounter{gp}{-1}\arabic{gp} \\
+            & - \text{Drone Rig} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\
+            %& - \text{Oracles} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\
+            %& - \text{Sniffer} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\
+            %& - \text{Multitasking} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\
+            %& - \text{Skillware} (3) &&\addtocounter{gp}{-3}\arabic{gp} \\
+            & - \text{Fake-ID} (3) &&\addtocounter{gp}{-3}\arabic{gp} \\
+            & - \text{Explorenaut} (3) &&\addtocounter{gp}{-3}\arabic{gp} \\
+            & - \text{Ghostrider Module} (1) &&\addtocounter{gp}{-1}\arabic{gp} \\
+            & - \text{Multitasking} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\
+            & - \text{Nanoscopic Vision} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\
+            & - \text{\gls{Structural Enhancement}} (3) &&\addtocounter{gp}{-3}\arabic{gp} \\
+            & - \text{Fault Tolerance} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\
+            & - \text{Persistence} (2) &&\addtocounter{gp}{-2}\arabic{gp} \\
+            & - \text{Heavy Combat Armor} (3) &&\addtocounter{gp}{-3}\arabic{gp} \\
+            & \arabic{gp}
+\end{align}
+
+
+\subsubsection{Next Gear}
+
+\texttt{\egr{}}\index{\egr{}}'s next mission planned gear is
+\setcounter{gp}{24}
+\begin{align}
+    GP =    & 20 + \text{Resources IV} (4) &&\arabic{gp}\\
+            & - \text{Simulspace} (1) &&\addtocounter{gp}{-1}\arabic{gp}\\
+            & - \text{Private Server} (1) &&\addtocounter{gp}{-1}\arabic{gp} \\
+            & - \text{\gls{Fake Ego ID}} (3) &&\addtocounter{gp}{-3}\arabic{gp} \\
+            & - \text{Explorenaut} (3) &&\addtocounter{gp}{-3}\arabic{gp} \\
+            & \arabic{gp}
+\end{align}
+
+\begin{enumerate}
+    \item \textbf{\gls{Exploit}} “A hacker library/tool for taking advantage of known software vulnerabilities. Required for hacking.” \citep[pg. 326]{ep2e_1.1_2019} \glsdisp{Ware}{M}, Mod/R/2.
+
+    \item \textbf{\gls{Simulspace}} “You have access to a virtual game environment, private meeting space, interactive media service, unreal vacation library, or other simulspace environment.” \citep[pg. 315]{ep2e_1.1_2019} Mesh Service, Min/1. % If a Server is capable of running Simulspace, is Simulspace then also available to acquire it as an App (only see it as Mesh Services) to run it on that server (especially to have it in a Mesh Island situation [in that case requiring the actual physical Server of course])? https://discord.com/channels/575153209065340929/1082012122050990192/1221060024340582430
 
     \item \textbf{\gls{Spoofer}} “Use spoof apps to fake transmissions and mesh IDs (Spoofing ▶247)\footnote{Worthless without Sniffer \citep[pg. 326]{ep2e_1.1_2019}, as “To spoof signals, you must first successfully monitor an active connection between the two systems using a sniffer app (Sniffing ▶245).” (\citep[pg. 247]{ep2e_1.1_2019}).}.” \citep[pg. 326]{ep2e_1.1_2019}
 
@@ -99,11 +145,11 @@ Normal mission start Gear Points $GP=20$. \texttt{\egr{}}\index{\egr{}} has Reso
 
     \item \textbf{\gls{Drone Rig}} “This simsense augmentation gives you better control when jamming drones (Remote Operations ▶346). You ignore the –10 modifier for jamming.” \citep[pg. 320]{ep2e_1.1_2019}
 
-    \item \textbf{\gls{Oracles}} “This neural macrosensing processor helps you pay attention to sensory input you are not focusing on, alerting you to important things you might otherwise overlook. Oracles provide a +10 bonus to Perceive and negate the distraction modifier for Perceive Tests.” \citep[pg. 319]{ep2e_1.1_2019}
+    \item \textbf{\gls{Oracles}} “This neural macrosensing processor helps you pay attention to sensory input you are not focusing on, alerting you to important things you might otherwise overlook. Oracles provide a +10 bonus to Perceive and negate the distraction modifier for Perceive Tests.” \citep[pg. 319]{ep2e_1.1_2019} \glsdisp{Ware Type}{CHM} Mod/2.
 
-    %\item \textbf{Multitasking} “This cybernetic or software module enables your brain to focus on two things at the same time — something our minds cannot usually handle — without any context-switching confusion or increased error rates from inattention. Multi-Tasking increases your Insight Pool by 1.” \citep[pg. 320]{ep2e_1.1_2019}
+    \item \textbf{Multitasking} “This cybernetic or software module enables your brain to focus on two things at the same time — something our minds cannot usually handle — without any context-switching confusion or increased error rates from inattention. Multi-Tasking increases your Insight Pool by 1.” \citep[pg. 320]{ep2e_1.1_2019}
 
-    %\item \textbf{\gls{Skillware}} “Your brain is laced with a network of artificial neurons that can be formatted with information. This allows you to download \glsdisp{Skillsoft}{skillsofts} ▶below into your brain, gaining the use of those programmed skills until the \glsdisp{Skillsoft}{skillsoft} is erased or replaced. Skillware systems are only capable of handling 120 total skill points worth of skillsofts at a time. Switching out a \glsdisp{Skillsoft}{skillsoft} is a complex action.” \citep[pg. 320]{ep2e_1.1_2019}
+    \item \textbf{\gls{Skillware}} “Your brain is laced with a network of artificial neurons that can be formatted with information. This allows you to download \glsdisp{Skillsoft}{skillsofts} ▶below into your brain, gaining the use of those programmed skills until the \glsdisp{Skillsoft}{skillsoft} is erased or replaced. Skillware systems are only capable of handling 120 total skill points worth of skillsofts at a time. Switching out a \glsdisp{Skillsoft}{skillsoft} is a complex action.” \citep[pg. 320]{ep2e_1.1_2019} \glsdisp{Ware}{CHM} Maj/3.
 
     \item \textbf{\gls{Fake Ego ID}} “This forged ID will pass in most inner system and Jovian Republic habitats, and sometimes others. It gives you a rep score in one network with that ID at 10.” \citep[pg. 315]{ep2e_1.1_2019}
 
