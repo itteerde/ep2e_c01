@@ -30,9 +30,32 @@
 \section{Post Egocasting}
 
 \begin{enumerate}
-    \item If \gls{Private Server} available create four \glspl{Fork} as \gls{Active Defender} for the \gls{Private Server} as the default \gls{Home Device} (see \gls{Active Defense}, \gls{Teamwork}).
-    \item If \gls{Private Server} available create four \glspl{Fork} as \qGerman{The Council of EGR}, especially to be available for \gls{Defaulting} on everything the crew has no proper Skill for, as long as it would be covered by any INT or COG Skill, because that should allow for looking for a \gls{Complementary Skill} being looked for (gaining up to +30), and then \gls{Defaulting} to get a base of 30 for the Aptitudes Test, which will be done in \gls{Teamwork} in order to get up to 90 as the target -- but not being able to produce \glsdisp{Superior Result}{Superior Successes}.
+    \item If \gls{Private Server} available create three \glspl{Fork} as \gls{Active Defender} for the \gls{Private Server} as the default \gls{Home Device} (see \gls{Active Defense}, \gls{Teamwork}).
+    \item If \gls{Private Server} available create three \glspl{Fork} as \qGerman{The Council of EGR}, especially to be available for \gls{Defaulting} on everything the crew has no proper Skill for, as long as it would be covered by any INT or COG Skill, because that should allow for looking for a \gls{Complementary Skill} being looked for (gaining up to +30), and then \gls{Defaulting} to get a base of 30 for the Aptitudes Test, which will be done in \gls{Teamwork} in order to get up to 90 as the target -- but not being able to produce \glsdisp{Superior Result}{Superior Successes}.
 \end{enumerate}
+
+This way, creating only primary \glspl{Fork}, it is quite obviously not an optimized process (except for simplicity), but it is trivial to reason about and needs no furter documentation. The creation is just an Action per \gls{Fork}, so 18 seconds in Simulspace, so arguably 0.3 seconds, fitting into a real world round. The Merging is six hours per 48 hours. The Merging Test is Psychosurgery. While we don't have any crew member able to do that (and it would be somewhat a waste of time), and the Muse will fail $\left[\frac{1}{2}, \frac{7}{10}\right]$, the natural healing in Simulspace will fix it with the once per mission -10 Test. Yet that means once per mission, announced to be in the most inoppotune situation there is a $\left[\frac{1}{2}, \frac{7}{10}\right]$ risk of having all Tests global -10, with the $p_{\text{-10}}$ being anounced on the higher side. After raising the Trauma-Threshold to 7:
+
+\begin{align}
+    p_{\text{success}}(-30) &= \frac{30}{100} \\
+    p_{\text{success}}(-10) &= \frac{50}{100} \\
+    p_{1 \times \text{crit-fail}}(\left[-10,-30\right]) &= \frac{34}{100} \\
+    p_{2 \times \text{crit-fail}}(-30) &= \frac{3}{100}
+\end{align}
+
+\begin{align}
+    p_{\text{Trauma}}(-30) &= \frac{323}{2000} \\
+    &= 0.1615
+\end{align}
+
+\begin{itemize}
+    \item \textbf{Composure (Ego Trait)} “Your mental equilibrium is well tuned. You receive a +5 bonus to your Lucidity. This also affects derived stats based on Lucidity; increase your Trauma Threshold by 1 and your Insanity Rating by 10.” \citep[pg. 73]{ep2e_1.1_2019}
+    \item \textbf{Stress Control M} “Your morph’s endocrine system (or its software simulation) has been modified to give you greater control over cortisol and similar hormones. This enables you to manage your stress levels and responses. Apply a +10 modifier to WIL Checks against stress or triggered disorders and raise your Trauma Threshold by 1. This does not impact your Lucidity or Insanity Rating.” \citep[pg. 323]{ep2e_1.1_2019}
+    \item \textbf{Comfurt} (as Narcoalgorithm\footnote{Feels a bit exploit-like especially if it is, as it logically has to be Meshware and therefore in infinite supply once acquired.}) “Commonly served as a tasty yogurt treat, comfurt blocks stress hormones, stabilizes mood, and relieves anxiety. Temporarily boost Lucidity by 5, Trauma Threshold by 1, and Insanity Rating by 5. Excessive use of comfurt can lead to chronic itchiness caused by histamine release.” \citep[pg. 332]{ep2e_1.1_2019}
+    \item \textbf{Raise Willpower} With 2 Rez Points the next increast in Traum-Threshold can be reached.
+\end{itemize}
+
+The COG-Check -10 to recall is irrelevant as it is against a target 105 with Pools being applicable.
 
 
 \section{Nanofabrication}
