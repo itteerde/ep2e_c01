@@ -24,10 +24,10 @@
 ### Information Gathering
 1. Acquire `Skillware` with `Resources IV` once the week lapses. Acquire `Skillsoft, Know: TITAN Tech` to get +30 on all risk evaluation rolls, and maybe be given some more information, especially in combination with `Common Sense`.
 1. Try to get a roll from `Skillsoft, Know: TITAN Tech` with `Common Sense` on the basis of the information provided by John Vess and `EGR_2.71828`'s recording of J.V.'s operation on the boy for risk assessment regarding using
-  - live dynamic sensor data directly,
-  - live dynamic sensor data indirectly (with transformations, intrusion detection system),
-  - discrete recordings chunks of dynamic sensor data
-  - static snapshots only
+    - live dynamic sensor data directly,
+    - live dynamic sensor data indirectly (with transformations, intrusion detection system),
+    - discrete recordings chunks of dynamic sensor data
+    - static snapshots only
 1. Laser spectroscopy for more information.
 1. Kinetic probing.
 
