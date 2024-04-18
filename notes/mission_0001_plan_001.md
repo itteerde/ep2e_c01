@@ -16,7 +16,7 @@
 ## Course of Action
 
 ### Worst Case Containment Plan
-- Have Firewall stand by out of sensor range/resolution a thermonuclear strike package of save to assume total containment proportions.
+- Have Firewall stand by out of sensor range/resolution with a thermonuclear strike package of save to assume total containment proportions.
 - Have the strike package at dead man switch setup in case the crew gets compromized (not really possible, but what is a good compromise?).
 
 ### Evacuation
