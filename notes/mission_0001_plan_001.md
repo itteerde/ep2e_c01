@@ -1,7 +1,6 @@
 # Brainstorming 
 
 ## Questions
-- The disassembly by swarm was 1d6/3s?
 - Who is building a military installation what for?
 
 ## Assumptions
@@ -11,6 +10,7 @@
 - If it plays by physics it can be destroyed, and if it does not react violently, given the cavern size, safely.
 - If it does not play by physics or reacts by leaving/reaching out from the cavern it is about evacuation (even if it was Pandora Gate like  and stayed clam, would you want to isolate it and bet on nobody looking with a growing military installation on the same asteroid?).
 - With the infection stuff evacuation is also not completely safe, Egocasting out anyone might spread the infection just as physical evacuation might (reviewing the "operation", which EGR did record, might allow for putting a risk evaluation to that?).
+- The disassembly swarm protecting the artifact deals 1d6/3s, first to armor, reducing it by the ammount (destroy).
 
 
 ## Course of Action
