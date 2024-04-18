@@ -5,7 +5,7 @@
 
 ## Assumptions
 - Kellen tries to make us take a sample. Therefore we don't take a sample or at least if we take one we don't get into direct contact with it.
-- There is no air in the cavern and it is large. Therefore we can do quite some destructive testing including Superthermite Charges.
+- There is no air in the cavern and it is large. Therefore we can do quite some destructive testing including Superthermite Charges. The swarm might act pretty much gaseous though (not a problem for the Superthermite Charge experiment).
 - Shining a Laser at it should tell us if it plays by normal physics or Pandora Gate rules, because spectroscopy.
 - If it plays by physics it can be destroyed, and if it does not react violently, given the cavern size, safely.
 - If it does not play by physics or reacts by leaving/reaching out from the cavern it is about evacuation (even if it was Pandora Gate like  and stayed clam, would you want to isolate it and bet on nobody looking with a growing military installation on the same asteroid?).
