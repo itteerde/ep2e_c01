@@ -31,5 +31,13 @@
 1. Laser spectroscopy for more information.
 1. Kinetic probing.
 
+### Moving the Artifact
+- Kinetic probing (Kinetic Weapons fire)
+- Missile fire
+- Energy Weapons fire
+
 ### Destroying the Artifact
 - Superthermite Charges.
+
+### Moving the Asteroid
+> If it can not be moved maybe we move the asteroid from it.
