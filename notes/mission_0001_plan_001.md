@@ -26,6 +26,9 @@ Brainstorming elements to be used in working out a complete Course of Action.
 - Have the strike package at dead man switch setup in case the crew gets compromized (not really possible, but what is a good compromise?).
 
 ### Evacuation
+- Compromising structural integrity would cause the population to leave. How do you compromise a whole asteroid though?
+- Sabotaging life support. Wouldn't it be compartimentalized though, allowing them to isolate compromised sections and fix the problems?
+- What about the military installation, against whom/for what? Maybe one could wag the dog and make them flee the enemy with limited sabotage, or even just credible threat of impending destruction by attack?
 
 ### Information Gathering
 1. Acquire `Skillware` with `Resources IV` once the week lapses. Acquire `Skillsoft, Know: TITAN Tech` to get +30 on all risk evaluation rolls, and maybe be given some more information, especially in combination with `Common Sense`.
