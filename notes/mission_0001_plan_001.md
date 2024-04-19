@@ -1,4 +1,8 @@
-# Brainstorming 
+# Planning
+
+## Situation
+- `Eludare` has instructed the crew to investigate and plan independently accordingly, assuming full support by `Firewall`. The priorities are saving life, property to the extend affected in the case does not matter. 
+- `EGR_2.71828` has setup a dead man switch recommanding `Eludare` sets into motion nuking the asteroid in case the crew does not update the script within 24h, and its `Backup` would be corrupted.
 
 ## Questions
 - Who is building a military installation what for?
@@ -11,6 +15,7 @@
 - If it does not play by physics or reacts by leaving/reaching out from the cavern it is about evacuation (even if it was Pandora Gate like  and stayed clam, would you want to isolate it and bet on nobody looking with a growing military installation on the same asteroid?).
 - With the infection stuff evacuation is also not completely safe, Egocasting out anyone might spread the infection just as physical evacuation might (reviewing the "operation", which EGR did record, might allow for putting a risk evaluation to that?).
 - The disassembly swarm protecting the artifact  deals 1d6/3s, first to armor, reducing it by the ammount (destroy).
+- There seems to be no great haste currently, as according to `Joseph Bves` the `Confessors` have more or less successfully contained the artifact for a year.
 
 
 ## Course of Action
@@ -23,7 +28,7 @@
 
 ### Information Gathering
 1. Acquire `Skillware` with `Resources IV` once the week lapses. Acquire `Skillsoft, Know: TITAN Tech` to get +30 on all risk evaluation rolls, and maybe be given some more information, especially in combination with `Common Sense`.
-1. Try to get a roll from `Skillsoft, Know: TITAN Tech` with `Common Sense` on the basis of the information provided by Joseph Bves and `EGR_2.71828`'s recording of J.B.'s operation on the boy for risk assessment regarding using
+1. Try to get a roll from `Skillsoft, Know: TITAN Tech` with `Common Sense` on the basis of the information provided by `Joseph Bves` and `EGR_2.71828`'s recording of J.B.'s operation on the boy for risk assessment regarding using
     - live dynamic sensor data directly,
     - live dynamic sensor data indirectly (with transformations, intrusion detection system),
     - discrete recordings chunks of dynamic sensor data
