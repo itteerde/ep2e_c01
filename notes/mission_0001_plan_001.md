@@ -2,7 +2,7 @@
 
 ## Situation
 - `Eludare` has instructed the crew to investigate and plan independently accordingly, assuming full support by `Firewall`. The priorities are saving life, property to the extend affected in the case does not matter. 
-- `EGR_2.71828` has setup a dead man switch recommanding `Eludare` sets into motion nuking the asteroid in case the crew does not update the script within 24h, and its `Backup` would be corrupted.
+- `EGR_2.71828` has setup a dead man switch recommanding `Eludare` sets into motion nuking the asteroid in case the crew does not update the script within 24h, and its `Backup` would be corrupted. They did not however inform the crew of this in order to minimize the attack vectors available to the artifact.
 
 ## Questions
 - Who is building a military installation what for?
