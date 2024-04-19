@@ -31,6 +31,13 @@
 1. Laser spectroscopy for more information.
 1. Kinetic probing.
 
+### Uparmoring
+- Bots
+    - Acquire `Heavy Combat Armor` `Single Use Blueprint`, `Maj/3` (`+16/+14`). `Crack` the `Blueprint` (to use it on several bots as they are destroyed). The `Explorenaut` then has `DUR 35` at `28/24` lasting an average of 54s in the swarm. We could add `Structural Enhancement` (pg. 323), `Maj/3` to add `DUR +10`, but that is probably low on the list (better use the time to print a whole other bot to use up). Additional armor modifications (~ `+6/+6`) are available (pg. 217).
+- Suits
+    - The armor above can be used on suits, too, so most likely doing most of it `Blueprints` wise.
+- Depending on size of operation maybe use the `Habitat` `Microfac` to print the `Large Fabber` and escalate from there (including using a new location as secondary base running all preparations from there, while possible observers can watch some cover operations at the current printing location.)
+
 ### Moving the Artifact
 - Kinetic probing (Kinetic Weapons fire)
 - Missile fire
