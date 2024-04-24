@@ -63,4 +63,12 @@ Sith:
 ## Course of Action
 - Adrian acquires printing slots at one of the `Habitat`'s `Minifac` to have SysRig print `Large Fabber`, `Maj/3` and `Robomule` (?) with `Resources IV`. We move into a part of the tunnels covertly, SysRig moving the `Large Fabber` with the `Robomule` as the rest of the crew keeps possible observers busy around the old printing site, and roaming the places not interfering with SysRig bootstrapping base camp 2. SysRig of course using `Burner MeshID` and general stealth methods.
 - Once the `Large Fabber` is in position we relocate to base camp 2, Adrian and EGR faking the crew leaving the asteroid in order to be able to work uninterrupted. Should we need some communication we still have `Mesh`, and we can work with the `Confessors` as proxies if need be.
-- Print armor, bots, disinfection solution (think cone weapon), beam weopon, kinetic weapon, explosives.
+- Print armor, bots, disinfection solution (think cone weapon), beam weopon, kinetic weapon, explosives. Items include, but are certainly not limited to (no idea, are we supposed to do production planning? A proper setup probably takes hours to work out even with some software tools.)
+    - `Hearvy Combat Armor`
+    - `Explorenaut`
+    - `Plasma Rifle`
+    - `DocBot`
+    - `Med Scanner`
+    - `General Hive`
+    - `Guardian Swarm`
+    - `Superthermite Charges`
