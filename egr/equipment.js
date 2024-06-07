@@ -31,7 +31,7 @@ function getGearData() {
 	gear.set("Heavy Combat Armor", { name: "Heavy Combat Armor", gp: 3, ware: ["H"], pg: 214 });
 	gear.set("Impact", { name: "Impact", gp: 1, ware: "H", pg: 217 });
 	gear.set("Large Fabber", {
-		name: "Large Faqbber", complexity: "Maj", restricted: false, gp: 3, pg: 343, description: 'Large-sized fabbers are non-portable, unless mounted on a bot or vehicle, with a volume of 80 liters. They can manufacture most medium-sized items, or two or more of the same small-sized items at a time, or four or more identical very small objects at once.'
+		name: "Large Fabber", complexity: "Maj", restricted: false, gp: 3, pg: 343, description: 'Large-sized fabbers are non-portable, unless mounted on a bot or vehicle, with a volume of 80 liters. They can manufacture most medium-sized items, or two or more of the same small-sized items at a time, or four or more identical very small objects at once.'
 	});
 	gear.set("Laser/Microwave Link (Micro)", { name: "Laser/Microwave Link (Micro)", gp: 1, pg: 336 });
 	gear.set("Medium Fabber", {
