@@ -25,6 +25,9 @@ function getGearData() {
 	}),
 		gear.set("Refractive Glazing", { name: "Refractive Glazing", gp: 1, ware: "H", pg: 217 });
 	gear.set("Robomule", { name: "Robomule", gp: 2 });
+	gear.set("Satnet-in-a-Can", {
+		name: "Satnet-in-a-Can", complexity: "Maj", restricted: false, gp: 3, pg: 336, description: 'This medium-sized metallic-hydrogen missile can be launched on any world with a gravity of 2 g or less. A smart-material launch tube automatically extends struts and aims it at the proper trajectory. It deploys 32 small satellites into orbit, which after 1–2 days will be in position to cover the planet with GPS data, low-resolution hyperspectral imaging (down to 100 meters), and communication/mesh relay between anyone on the planet with a radio booster. The satellites can map the planet and provide weather data using Know: Meteorology 60.'
+	});
 	gear.set("Server", { name: "Server", gp: 2, pg: 337, size: "L" });
 	gear.set("Shield Drone", {
 		name: "Shield Drone", complexity: "Min", gp: 1, restricted: false, pg: 347, size: "S",
@@ -71,7 +74,7 @@ mission_gear.set("EGR_2.71828", {
 for (let [key, value] of mission_gear) {
 	console.log({
 		sentinel: key,
-		gear: value.gear,
+		gear: value.gear.map(i => `${i.name} (pg. ${i.pg})`),
 		gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
 		mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
 	});
