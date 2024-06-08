@@ -19,6 +19,9 @@ function getGearData() {
 		name: "Explorenaut", complexity: "Maj", restricted: false, gp: 3, pg: 346,
 		description: 'These small-sized bots travel on smart treads or with thrust-vector jets. They are loaded with sensors and favored for gatecrashing and similar exploration ops.  A pair of manipulator arms are used for taking samples.'
 	});
+	gear.set("Fake Ego ID", {
+		name: "Fake Ego ID", complexity: "Maj", restricted: true, gp: 3, pg: 315, description: `This forged ID will pass in most inner system and Jovian Republic habitats, and sometimes others. It gives you a rep score in one network with that ID at 10.`
+	});
 	gear.set("Fixer Swarm", {
 		name: "Fixer Swarm", complexity: "Mod", restricted: false, gp: 2, pg: 345, description: 'Fixers repair objects and restore them to their original specifications. They must be programmed with the item’s nanofabrication blueprints or given time (~an hour) to scan an identical object; they are not smart enough to recognize and repair damage on their own. A fixer swarm repairs 1d10 [6] damage per hour. Once all damage is repaired, it will restore 1 wound per day. Fixers also clean and polish items, returning them to a new, pristine state. Fixer swarms cannot effect repairs on objects with more than 3 wounds, but they will apply a +30 modifier to Hardware Tests for repair.'
 	});
@@ -77,6 +80,18 @@ function getGearData() {
 	gear.set("Structural Enhancement", {
 		name: "Structural Enhancement", complexity: "Maj", restricted: false, gp: 3, pg: 323, description: 'This modification bolsters the shell’s structural integrity, increasing its toughness and ability to take damage. Increase Wound Threshold by 2, Durability by 10, and Death Rating by 20.'
 	});
+	gear.set("TacNet", {
+		name: "TacNet", complexity: "Mod", restricted: false, gp: 2, pg: 327, description: `Tacnets allow a group and their muses/gear to share real-time tactical situational and sensory data over encrypted mesh channels. They are used by sports teams, security/military units, gamers, and anyone else that needs to coordinate actions. Tacnets  provide the following functions: 
+		• Maps: Tacnets present maps from a bird’s eye, three-dimensional interactive, or first-person entoptic view, tagging notable features and marking distances. They can also plot maps based on sensory input, positioning systems, and other data.
+		• Positioning: Tacnets indicate the position of known people, bots, vehicles, and other features according to sensory input or their calculated trajectories. Friend-or-foe tags highlight allies and opponents, noting their lines of sight and fields of fire and alerting the user to areas of potential cover or danger.
+		• Sensory Input: Tacnets share all sensory input available from members and linked devices. This includes data from physical senses, portable sensors, smartlink guncams, XP feeds, etc. Users can immediately call up and access the sensor feeds of others as needed.
+		• Communications Management: Tacnets maintain an encrypted VPN between users. They actively monitor for dropped signals and hacking/sniffing/jamming attempts. Treat as a system defender with Infosec 40 and Interface 40..
+		• Smartlink/Weapon Data: Tacnets monitor the status of weapons, accessories, and other gear, bringing damage, shortages, ammo counts, and other issues to the user’s attention.
+		• Medical Data: Tacnets monitor the health of their users via medichines, implants, and other sensors. Users can call up health reports on their allies. • Overwatch: Tacnets keep an eye out for potential threats. They provide a +10 modifier to Perceive Tests against surprise ▶227.
+		• Indirect Fire: Members of a tacnet can provide targeting data to each other for purposes of indirect fire ▶206. • Analysis: Tacnets can analyze real-time situations to provide suggestions and warnings. The app's god’s-eye view of a situation helps it to identify facts and details that individuals overlook. For example, a tacnet can analyze an opposing team's weapons, shots fired, and potential injuries and suggest tactical maneuvers. Querying a tacnet for advice is a quick action; treat as Know: Tactics 80.
+
+		Many tacnet features are immediately accessible to the user via their AR display; other data can be accessed with a quick action. The GM determines when the tacnet provides important alerts to the user. At the GM’s discretion, some of these features may apply modifiers to the character’s tests. Tacnets are designed to be overseers, not to take action. They will not hack opponents, pilot vehicles, or interface with weapon systems.`
+	});
 	gear.set("Thruster Pack", {
 		name: "Thruster Pack", complexity: "Min", restricted: false, gp: 1, pg: 352, description: 'Worn for micrograv operations or EVA in vacuum, this thruster pack uses vectored thrust nozzles to maneuver.'
 	});
@@ -94,18 +109,21 @@ mission_gear.set("EGR_2.71828", {
 	gp: 24,
 	gear: [
 		{ name: "converting mp to gp", gp: -10 },
+		structuredClone(gear.get("TacNet")),
+		structuredClone(gear.get("Fake Ego ID")),
 		structuredClone(gear.get("Emergency Bubble")),
 		{ ...gear.get("DocBot"), notes: "can print Explorenaut" },
 		{ ...gear.get("Weapon Mount"), ware: ["H"] },
 		structuredClone(gear.get("Battle Laser")),
-		structuredClone(gear.get("Heavy Combat Armor")),
 		{ ...gear.get("Spindle"), name: gear.get("Spindle").name + " (Blueprint unlimited)", gp: gear.get("Spindle").gp + 1 },
 		structuredClone(gear.get("Dwarf")),
-		{ ...gear.get("Ghostrider Module"), notes: "installed@DocBot" },
 		{ ...gear.get("Ghostrider Module"), notes: "installed@Dwarf" },
-		{ ...gear.get("Rocket Pack"), name: gear.get("Rocket Pack").name + " (Blueprint unlimited)", gp: gear.get("Rocket Pack").gp + 1 },
 		{ ...gear.get("Self-Healing"), notes: "installed@Dwarf" },
-		{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Dwarf" }
+		{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf` },
+		{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Dwarf" },
+		//{ ...gear.get("Structural Enhancement"), notes: `installed@Dwarf` },
+		{ ...gear.get("Ghostrider Module"), notes: "installed@DocBot" },
+		{ ...gear.get("Rocket Pack"), name: gear.get("Rocket Pack").name + " (Blueprint unlimited)", gp: gear.get("Rocket Pack").gp + 1 },
 		//{ ...gear.get("Gas-Jet System"), name: gear.get("Gas-Jet System").name + " (Blueprint unlimited)", gp: gear.get("Gas-Jet System").gp + 1 },
 		//structuredClone(gear.get("Server")),
 		//structuredClone(gear.get("Robomule")),
@@ -125,7 +143,9 @@ mission_gear.set("SysRig.exe", {
 	gp: 20,
 	gear: [
 		structuredClone(gear.get("Large Fabber")),
-		structuredClone(gear.get("Robomule"))
+		structuredClone(gear.get("Robomule")),
+		structuredClone(gear.get("Fake Ego ID")),
+		structuredClone(gear.get("TacNet"))
 	],
 	morph: []
 });
