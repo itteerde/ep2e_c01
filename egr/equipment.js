@@ -43,8 +43,11 @@ function getGearData() {
 	gear.set("Pressure Tent", {
 		name: "Pressure Tent", complexity: "Mod", restricted: false, gp: 2, pg: 341,
 		description: 'This pack self-unfolds in 3 action turns into a pressurized shelter for up to 4 medium-sized people plus gear. A built-in breather will convert carbon dioxide from the atmosphere (if any) indefinitely. It also packs itself.'
-	}),
-		gear.set("Refractive Glazing", { name: "Refractive Glazing", gp: 1, ware: "H", pg: 217 });
+	});
+	gear.set("Reactive", {
+		name: "Reactive", complexity: "Min", restricted: false, gp: 1, pg: 217, description: ``
+	});
+	gear.set("Refractive Glazing", { name: "Refractive Glazing", gp: 1, ware: "H", pg: 217 });
 	gear.set("Robomule", {
 		name: "Robomule", complexity: "Mod", gp: 2, pg: 349, description: 'These six-legged cargo drones are designed to carry large, non-portable gear, such as servers, healing vats, tool shops, etc. They also serve as general-purpose supply drones, with smart-material straps and webbing to hold items and an envirosealed pod to protect its load from the environment.'
 	});
@@ -100,6 +103,74 @@ function getGearData() {
 	return gear;
 }
 
+function biomorphSupportRockNoHabitat(){
+	return [
+		structuredClone(gear.get("Emergency Bubble")),
+		structuredClone(gear.get("Spindle"))
+	];
+}
+
+function docBotTank(options={}){
+	let tank = [
+		{ ...gear.get("DocBot"), notes: `can print Explorenaut`},
+	];
+
+	if(!(options?.ghostriderModule===false)){
+		tank.push(
+			{ ...gear.get("Ghostrider Module"), notes: `installed@DocBot`},
+		);
+	}
+
+	if(options?.armed){
+		tank.push(
+			{ ...gear.get("Weapon Mount"), notes: `installed@DocBot`},
+			{ ...gear.get("Battle Laser"), notes: `installed@DocBot`}
+		);
+	}
+
+	if(!(options?.armored===false)){
+		tank.push(
+			{ ...gear.get("Heavy Combat Armor"), notes: `installed@DocBot`},
+			{ ...gear.get("Structural Enhancement"), notes: `installed@DocBot` },
+		);	
+	}
+
+	if(!(options?.selfRepair===false)){
+		tank.push(
+			{ ...gear.get("Self-Healing"), notes: "installed@DocBot" },
+			{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@DocBot" },
+		);
+	}
+
+	if(options?.uparmored){
+		tank.push(
+			{ ...gear.get("Reactive"), notes: `installed@DocBot`},
+			{ ...gear.get("Impact"), notes: `installed@DocBot`},
+			{ ...gear.get("Refractive Glazing"), notes: `installed@DocBot`},
+		);
+	}
+
+	return tank;
+}
+
+function dwarfTank(){
+	return [
+		{ ...gear.get("Dwarf"), notes: `Large, Disassembly Tools`},
+		{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf`},
+		{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf`},
+		{ ...gear.get("Weapon Mount"), notes: `installed@Dwarf`},
+		{ ...gear.get("Battle Laser"), notes: `installed@Dwarf`},
+		{ ...gear.get("Self-Healing"), notes: "installed@Dwarf" },
+		{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Dwarf" },
+	];
+}
+
+function rocketry(){
+	return [
+		{ ...gear.get("Rocket Pack"), name: gear.get("Rocket Pack").name + " (Blueprint unlimited)", gp: gear.get("Rocket Pack").gp + 1 },
+	];
+}
+
 const gear = getGearData();
 const mission_gear = new Map();
 
@@ -109,21 +180,7 @@ mission_gear.set("EGR_2.71828", {
 	gp: 24,
 	gear: [
 		{ name: "converting mp to gp", gp: -10 },
-		structuredClone(gear.get("TacNet")),
 		structuredClone(gear.get("Fake Ego ID")),
-		structuredClone(gear.get("Emergency Bubble")),
-		{ ...gear.get("DocBot"), notes: "can print Explorenaut" },
-		{ ...gear.get("Weapon Mount"), ware: ["H"] },
-		structuredClone(gear.get("Battle Laser")),
-		{ ...gear.get("Spindle"), name: gear.get("Spindle").name + " (Blueprint unlimited)", gp: gear.get("Spindle").gp + 1 },
-		structuredClone(gear.get("Dwarf")),
-		{ ...gear.get("Ghostrider Module"), notes: "installed@Dwarf" },
-		{ ...gear.get("Self-Healing"), notes: "installed@Dwarf" },
-		{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf` },
-		{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Dwarf" },
-		//{ ...gear.get("Structural Enhancement"), notes: `installed@Dwarf` },
-		{ ...gear.get("Ghostrider Module"), notes: "installed@DocBot" },
-		{ ...gear.get("Rocket Pack"), name: gear.get("Rocket Pack").name + " (Blueprint unlimited)", gp: gear.get("Rocket Pack").gp + 1 },
 		//{ ...gear.get("Gas-Jet System"), name: gear.get("Gas-Jet System").name + " (Blueprint unlimited)", gp: gear.get("Gas-Jet System").gp + 1 },
 		//structuredClone(gear.get("Server")),
 		//structuredClone(gear.get("Robomule")),
@@ -131,7 +188,10 @@ mission_gear.set("EGR_2.71828", {
 		//{ ...gear.get("Impact"), name: gear.get("Impact").name + " (Blueprint unlimited)", gp: gear.get("Impact").gp + 1 },
 		//{ ...gear.get("Refractive Glazing"), name: gear.get("Refractive Glazing").name + " (Blueprint unlimited)", gp: gear.get("Refractive Glazing").gp + 1 },
 		//{ ...gear.get("Shield Drone"), name: gear.get("Shield Drone").name + " (Blueprint unlimited)", gp: gear.get("Shield Drone").gp + 1 }
-	],
+	]
+		//.concat(biomorphSupportRockNoHabitat())
+		.concat(docBotTank({armed: false, uparmored: true}))
+		,
 	morph: [
 		{ name: "converting mp to gp", mp: 10 }
 	]
@@ -145,16 +205,20 @@ mission_gear.set("SysRig.exe", {
 		structuredClone(gear.get("Large Fabber")),
 		structuredClone(gear.get("Robomule")),
 		structuredClone(gear.get("Fake Ego ID")),
-		structuredClone(gear.get("TacNet"))
+		//structuredClone(gear.get("TacNet"))
 	],
 	morph: []
 });
 
-for (let [key, value] of mission_gear) {
-	console.log({
-		sentinel: key,
-		gear: value.gear.map(i => `${i.name} (pg. ${i.pg})${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
-		gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
-		mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
-	});
+function report_mission_gear(mg=mission_gear){
+	for (let [key, value] of mg) {
+		console.log({
+			sentinel: key,
+			gear: value.gear.map(i => `${i.name} (pg. ${i.pg})${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
+			gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
+			mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
+		});
+	}
 }
+
+report_mission_gear();
