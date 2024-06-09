@@ -1,3 +1,4 @@
+const fs = require('fs');
 
 function getGearData() {
 	const gear = new Map();
@@ -108,7 +109,7 @@ function getGearData() {
 
 function biomorphSupportRockNoHabitat(){
 	return [
-		structuredClone(gear.get("Emergency Bubble")),
+		structuredClone(gear.get("Pressure Tent")),
 		structuredClone(gear.get("Spindle"))
 	];
 }
@@ -266,9 +267,9 @@ mission_gear.set("EGR_2.71828", {
 		//{ ...gear.get("Shield Drone"), name: gear.get("Shield Drone").name + " (Blueprint unlimited)", gp: gear.get("Shield Drone").gp + 1 }
 	]
 		.concat(biomorphSupportRockNoHabitat())
-		.concat(docBotTank({armed: false, uparmored: true}))
+		.concat(docBotTank({armed: true, uparmored: true}))
 		//.concat(dwarfTank({armed: false}))
-		.concat(explorenautTank({selfRepair: false, structuralEnhancement: false}))
+		.concat(explorenautTank({selfRepair: false, structuralEnhancement: false, armored: false}))
 		.concat(rocketry())
 		,
 	morph: [
@@ -289,15 +290,42 @@ mission_gear.set("SysRig.exe", {
 	morph: []
 });
 
-function report_mission_gear(mg=mission_gear){
-	for (let [key, value] of mg) {
-		console.log({
-			sentinel: key,
-			gear: value.gear.map(i => `${i.name} (pg. ${i.pg})${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
-			gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
-			mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
-		});
+function scenario_battle_medic(){
+	mission_gear.get("EGR_2.71828").gear = [
+		{ name: "converting mp to gp", gp: -10 },
+		structuredClone(gear.get("Fake Ego ID")),
+	]
+	.concat(biomorphSupportRockNoHabitat())
+	.concat(docBotTank({armed: true, uparmored: true}))
+	.concat(rocketry())
+
+	mission_gear.get("EGR_2.71828").gear.push(
+		{ ...gear.get("Dwarf"), notes: `Disassembly Tools (pg. 340)` }
+	);
+}
+scenario_battle_medic();
+console.clear();
+
+function report_mission_gear(options={mg:mission_gear, json: false}){
+	for (let [key, value] of options.mg) {
+		if(!(options?.json)){
+			console.log({
+				sentinel: key,
+				gear: value.gear.map(i => `${i.name} (pg. ${i.pg})${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
+				gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
+				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
+			});
+		}else{// is json
+			fs.writeFileSync(`${key}.json`, JSON.stringify({
+				sentinel: key,
+				gear: value.gear.map(i => `${i.name} (pg. ${i.pg})${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
+				gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
+				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
+			}, null, 2));
+		}
 	}
 }
 
 report_mission_gear();
+report_mission_gear({mg: mission_gear, json: true});
+// fs.writeFileSync('file.json', JSON.stringify(jsonVariable));
