@@ -44,6 +44,9 @@ function getGearData() {
 	gear.set("Medium Fabber", {
 		name: "Medium Fabber", complexity: "Mod", restricted: false, gp: 2, pg: 343, description: 'These desktop fabbers can manufacture up to small-sized items. They may be able to print multiple of the same very small items at once. They have a maximum volume of 40 liters.'
 	});
+	gear.set("Nuclear Battery", {
+		name: "Nuclear Battery", complexity: "Min", restricted: false, gp: 1, pg: 317, description: `These micro-sized batteries generate power from radio-isotope decay, storing it for use. They can produce power for years or even decades. They are often used to recharge standard batteries.` 
+	});
 	gear.set("Pressure Tent", {
 		name: "Pressure Tent", complexity: "Mod", restricted: false, gp: 2, pg: 341,
 		description: 'This pack self-unfolds in 3 action turns into a pressurized shelter for up to 4 medium-sized people plus gear. A built-in breather will convert carbon dioxide from the atmosphere (if any) indefinitely. It also packs itself.'
@@ -83,6 +86,9 @@ function getGearData() {
 	});
 	gear.set("Spindle Climber", {
 		name: "Spindle Climber", complexity: "Min", restricted: false, gp: 1, pg: 341, description: 'This device attaches to a spindle and transforms it into a highly effective climbing device. The spindle climber has two functions. First, it attaches hardened tips to the spindle’s cable and fires it at high speed, up to 50 meters, with sufficient force to imbed the tip into almost any sufficiently durable surface (if used as a weapon, it inflicts DV 2d10). Second, the spindle climber can pull itself and up to 250 kg up the cable at a speed of 12 meters per turn.'
+	});
+	gear.set("Standard Battery", {
+		name: "Standard Battery", complexity: "Min", restricted: false, gp: 1, pg: 317, description: `Batteries are micro-sized, high-density, ultra-capacity, rechargeable, room-temperature superconductors good for hundreds of hours of operation.` 
 	});
 	gear.set("Structural Enhancement", {
 		name: "Structural Enhancement", complexity: "Maj", restricted: false, gp: 3, pg: 323, description: 'This modification bolsters the shell’s structural integrity, increasing its toughness and ability to take damage. Increase Wound Threshold by 2, Durability by 10, and Death Rating by 20.'
