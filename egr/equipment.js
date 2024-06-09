@@ -14,7 +14,10 @@ function getGearData() {
 	gear.set("Emergency Bubble", {
 		name: "Emergency Bubble", complexity: "Maj", restricted: false, gp: 3, pg: 341,
 		description: 'Used as a last-resort life raft on spaceships, an emergency bubble is made of advanced smart materials and comes in a large but portable package that can be quickly inflated around you in 1 action turn, usually inside an airlock. The bubble has a 5-meter diameter and can comfortably accommodate 4 people for 1 week. It maintains 1 atmosphere of pressure in a vacuum, protects the inhabitants from temperatures ranging from −175 to 140 C, and provides light and breathable air. A built-in autocook ▶343 provides food and liquids. It features a simple airlock, carries an emergency distress beacon, and can be transparent, opaque, or polarized. It is powered by a nuclear battery and includes comfortable inflatable furniture. This bubble can also be partially inflated as a dome and staked down to a surface to serve as an emergency shelter on asteroids or other surfaced environments.'
-	})
+	});
+	gear.set("Envirosuit", {
+		name: "Envirosuit", complexity: "Maj", restricted: false, gp: 3, pg: 351, description: `These shells feature both increased radiation shielding and thermal regulation systems to withstand extreme environments such as deep undersea and the surfaces of Mercury and Venus. They can withstand temperatures from −270 to 1,000 C.`
+	});
 	gear.set("Explorenaut", {
 		name: "Explorenaut", complexity: "Maj", restricted: false, gp: 3, pg: 346,
 		description: 'These small-sized bots travel on smart treads or with thrust-vector jets. They are loaded with sensors and favored for gatecrashing and similar exploration ops.  A pair of manipulator arms are used for taking samples.'
@@ -211,6 +214,11 @@ function explorenautTank(options={}){
 	if(!(options?.armored===false)){
 		tank.push(
 			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Explorenaut`},
+		);	
+	}
+
+	if(!(options?.structuralEnhancement===false)){
+		tank.push(
 			{ ...gear.get("Structural Enhancement"), notes: `installed@Explorenaut` },
 		);	
 	}
@@ -259,7 +267,9 @@ mission_gear.set("EGR_2.71828", {
 	]
 		.concat(biomorphSupportRockNoHabitat())
 		.concat(docBotTank({armed: false, uparmored: true}))
-		.concat(dwarfTank({armed: false}))
+		//.concat(dwarfTank({armed: false}))
+		.concat(explorenautTank({selfRepair: false, structuralEnhancement: false}))
+		.concat(rocketry())
 		,
 	morph: [
 		{ name: "converting mp to gp", mp: 10 }
