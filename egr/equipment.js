@@ -1,3 +1,4 @@
+const fs = require('fs');
 
 function getGearData() {
 	const gear = new Map();
@@ -14,7 +15,10 @@ function getGearData() {
 	gear.set("Emergency Bubble", {
 		name: "Emergency Bubble", complexity: "Maj", restricted: false, gp: 3, pg: 341,
 		description: 'Used as a last-resort life raft on spaceships, an emergency bubble is made of advanced smart materials and comes in a large but portable package that can be quickly inflated around you in 1 action turn, usually inside an airlock. The bubble has a 5-meter diameter and can comfortably accommodate 4 people for 1 week. It maintains 1 atmosphere of pressure in a vacuum, protects the inhabitants from temperatures ranging from −175 to 140 C, and provides light and breathable air. A built-in autocook ▶343 provides food and liquids. It features a simple airlock, carries an emergency distress beacon, and can be transparent, opaque, or polarized. It is powered by a nuclear battery and includes comfortable inflatable furniture. This bubble can also be partially inflated as a dome and staked down to a surface to serve as an emergency shelter on asteroids or other surfaced environments.'
-	})
+	});
+	gear.set("Envirosuit", {
+		name: "Envirosuit", complexity: "Maj", restricted: false, gp: 3, pg: 351, description: `These shells feature both increased radiation shielding and thermal regulation systems to withstand extreme environments such as deep undersea and the surfaces of Mercury and Venus. They can withstand temperatures from −270 to 1,000 C.`
+	});
 	gear.set("Explorenaut", {
 		name: "Explorenaut", complexity: "Maj", restricted: false, gp: 3, pg: 346,
 		description: 'These small-sized bots travel on smart treads or with thrust-vector jets. They are loaded with sensors and favored for gatecrashing and similar exploration ops.  A pair of manipulator arms are used for taking samples.'
@@ -105,7 +109,7 @@ function getGearData() {
 
 function biomorphSupportRockNoHabitat(){
 	return [
-		structuredClone(gear.get("Emergency Bubble")),
+		structuredClone(gear.get("Pressure Tent")),
 		structuredClone(gear.get("Spindle"))
 	];
 }
@@ -153,16 +157,89 @@ function docBotTank(options={}){
 	return tank;
 }
 
-function dwarfTank(){
-	return [
+function dwarfTank(options={}){
+
+	let tank = [
 		{ ...gear.get("Dwarf"), notes: `Large, Disassembly Tools`},
-		{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf`},
-		{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf`},
-		{ ...gear.get("Weapon Mount"), notes: `installed@Dwarf`},
-		{ ...gear.get("Battle Laser"), notes: `installed@Dwarf`},
-		{ ...gear.get("Self-Healing"), notes: "installed@Dwarf" },
-		{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Dwarf" },
 	];
+
+	if(!(options?.ghostriderModule===false)){
+		tank.push(
+			{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf`},
+		);
+	}
+
+	if(options?.armed){
+		tank.push(
+			{ ...gear.get("Weapon Mount"), notes: `installed@Dwarf`},
+			{ ...gear.get("Battle Laser"), notes: `installed@Dwarf`}
+		);
+	}
+
+	if(!(options?.armored===false)){
+		tank.push(
+			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf`},
+		);	
+	}
+
+	if(!(options?.selfRepair===false)){
+		tank.push(
+			{ ...gear.get("Self-Healing"), notes: "installed@Dwarf" },
+			{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Dwarf" },
+		);
+	}
+
+	if(options?.uparmored){
+		tank.push(
+			{ ...gear.get("Structural Enhancement"), notes: `installed@Dwarf` },
+			{ ...gear.get("Reactive"), notes: `installed@Dwarf`},
+			{ ...gear.get("Impact"), notes: `installed@Dwarf`},
+			{ ...gear.get("Refractive Glazing"), notes: `installed@Dwarf`},
+		);
+	}
+
+	return tank;
+}
+
+function explorenautTank(options={}){
+	let tank = [
+		{ ...gear.get("Explorenaut"), notes: `Small, no Long weapons`},
+	];
+
+	if(!(options?.ghostriderModule===false)){
+		tank.push(
+			{ ...gear.get("Ghostrider Module"), notes: `installed@Explorenaut`},
+		);
+	}
+
+	if(!(options?.armored===false)){
+		tank.push(
+			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Explorenaut`},
+		);	
+	}
+
+	if(!(options?.structuralEnhancement===false)){
+		tank.push(
+			{ ...gear.get("Structural Enhancement"), notes: `installed@Explorenaut` },
+		);	
+	}
+
+	if(!(options?.selfRepair===false)){
+		tank.push(
+			{ ...gear.get("Self-Healing"), notes: "installed@Explorenaut" },
+			{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Explorenaut" },
+		);
+	}
+
+	if(options?.uparmored){
+		tank.push(
+			{ ...gear.get("Reactive"), notes: `installed@Explorenaut`},
+			{ ...gear.get("Impact"), notes: `installed@Explorenaut`},
+			{ ...gear.get("Refractive Glazing"), notes: `installed@Explorenaut`},
+		);
+	}
+
+	return tank;
 }
 
 function rocketry(){
@@ -189,8 +266,11 @@ mission_gear.set("EGR_2.71828", {
 		//{ ...gear.get("Refractive Glazing"), name: gear.get("Refractive Glazing").name + " (Blueprint unlimited)", gp: gear.get("Refractive Glazing").gp + 1 },
 		//{ ...gear.get("Shield Drone"), name: gear.get("Shield Drone").name + " (Blueprint unlimited)", gp: gear.get("Shield Drone").gp + 1 }
 	]
-		//.concat(biomorphSupportRockNoHabitat())
-		.concat(docBotTank({armed: false, uparmored: true}))
+		.concat(biomorphSupportRockNoHabitat())
+		.concat(docBotTank({armed: true, uparmored: true}))
+		//.concat(dwarfTank({armed: false}))
+		.concat(explorenautTank({selfRepair: false, structuralEnhancement: false, armored: false}))
+		.concat(rocketry())
 		,
 	morph: [
 		{ name: "converting mp to gp", mp: 10 }
@@ -210,15 +290,42 @@ mission_gear.set("SysRig.exe", {
 	morph: []
 });
 
-function report_mission_gear(mg=mission_gear){
-	for (let [key, value] of mg) {
-		console.log({
-			sentinel: key,
-			gear: value.gear.map(i => `${i.name} (pg. ${i.pg})${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
-			gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
-			mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
-		});
+function scenario_battle_medic(){
+	mission_gear.get("EGR_2.71828").gear = [
+		{ name: "converting mp to gp", gp: -10 },
+		structuredClone(gear.get("Fake Ego ID")),
+	]
+	.concat(biomorphSupportRockNoHabitat())
+	.concat(docBotTank({armed: true, uparmored: true}))
+	.concat(rocketry())
+
+	mission_gear.get("EGR_2.71828").gear.push(
+		{ ...gear.get("Dwarf"), notes: `Disassembly Tools (pg. 340)` }
+	);
+}
+scenario_battle_medic();
+console.clear();
+
+function report_mission_gear(options={mg:mission_gear, json: false}){
+	for (let [key, value] of options.mg) {
+		if(!(options?.json)){
+			console.log({
+				sentinel: key,
+				gear: value.gear.map(i => `${i.name} (pg. ${i.pg})${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
+				gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
+				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
+			});
+		}else{// is json
+			fs.writeFileSync(`${key}.json`, JSON.stringify({
+				sentinel: key,
+				gear: value.gear.map(i => `${i.name} (pg. ${i.pg})${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
+				gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
+				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
+			}, null, 2));
+		}
 	}
 }
 
 report_mission_gear();
+report_mission_gear({mg: mission_gear, json: true});
+// fs.writeFileSync('file.json', JSON.stringify(jsonVariable));

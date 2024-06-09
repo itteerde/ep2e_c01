@@ -1,0 +1,24 @@
+{
+  "sentinel": "EGR_2.71828",
+  "gear": [
+    "converting mp to gp (pg. undefined)",
+    "Fake Ego ID (pg. 315)",
+    "Pressure Tent (pg. 341)",
+    "Spindle (pg. 341)",
+    "DocBot (pg. 349) : can print Explorenaut",
+    "Ghostrider Module (pg. 320) : installed@DocBot",
+    "Weapon Mount (pg. 323) : installed@DocBot",
+    "Battle Laser (pg. 208) : installed@DocBot",
+    "Heavy Combat Armor (pg. 214) : installed@DocBot",
+    "Structural Enhancement (pg. 323) : installed@DocBot",
+    "Self-Healing (pg. 217) : installed@DocBot",
+    "Fixer Swarm (Hive) (pg. 345) : installed@DocBot",
+    "Reactive (pg. 217) : installed@DocBot",
+    "Impact (pg. 217) : installed@DocBot",
+    "Refractive Glazing (pg. 217) : installed@DocBot",
+    "Rocket Pack (Blueprint unlimited) (pg. 352)",
+    "Dwarf (pg. 349) : Disassembly Tools (pg. 340)"
+  ],
+  "gp_left": 0,
+  "mp_left": 0
+}
