@@ -153,16 +153,84 @@ function docBotTank(options={}){
 	return tank;
 }
 
-function dwarfTank(){
-	return [
+function dwarfTank(options={}){
+
+	let tank = [
 		{ ...gear.get("Dwarf"), notes: `Large, Disassembly Tools`},
-		{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf`},
-		{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf`},
-		{ ...gear.get("Weapon Mount"), notes: `installed@Dwarf`},
-		{ ...gear.get("Battle Laser"), notes: `installed@Dwarf`},
-		{ ...gear.get("Self-Healing"), notes: "installed@Dwarf" },
-		{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Dwarf" },
 	];
+
+	if(!(options?.ghostriderModule===false)){
+		tank.push(
+			{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf`},
+		);
+	}
+
+	if(options?.armed){
+		tank.push(
+			{ ...gear.get("Weapon Mount"), notes: `installed@Dwarf`},
+			{ ...gear.get("Battle Laser"), notes: `installed@Dwarf`}
+		);
+	}
+
+	if(!(options?.armored===false)){
+		tank.push(
+			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf`},
+		);	
+	}
+
+	if(!(options?.selfRepair===false)){
+		tank.push(
+			{ ...gear.get("Self-Healing"), notes: "installed@Dwarf" },
+			{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Dwarf" },
+		);
+	}
+
+	if(options?.uparmored){
+		tank.push(
+			{ ...gear.get("Structural Enhancement"), notes: `installed@Dwarf` },
+			{ ...gear.get("Reactive"), notes: `installed@Dwarf`},
+			{ ...gear.get("Impact"), notes: `installed@Dwarf`},
+			{ ...gear.get("Refractive Glazing"), notes: `installed@Dwarf`},
+		);
+	}
+
+	return tank;
+}
+
+function explorenautTank(options={}){
+	let tank = [
+		{ ...gear.get("Explorenaut"), notes: `Small, no Long weapons`},
+	];
+
+	if(!(options?.ghostriderModule===false)){
+		tank.push(
+			{ ...gear.get("Ghostrider Module"), notes: `installed@Explorenaut`},
+		);
+	}
+
+	if(!(options?.armored===false)){
+		tank.push(
+			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Explorenaut`},
+			{ ...gear.get("Structural Enhancement"), notes: `installed@Explorenaut` },
+		);	
+	}
+
+	if(!(options?.selfRepair===false)){
+		tank.push(
+			{ ...gear.get("Self-Healing"), notes: "installed@Explorenaut" },
+			{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Explorenaut" },
+		);
+	}
+
+	if(options?.uparmored){
+		tank.push(
+			{ ...gear.get("Reactive"), notes: `installed@Explorenaut`},
+			{ ...gear.get("Impact"), notes: `installed@Explorenaut`},
+			{ ...gear.get("Refractive Glazing"), notes: `installed@Explorenaut`},
+		);
+	}
+
+	return tank;
 }
 
 function rocketry(){
@@ -189,8 +257,9 @@ mission_gear.set("EGR_2.71828", {
 		//{ ...gear.get("Refractive Glazing"), name: gear.get("Refractive Glazing").name + " (Blueprint unlimited)", gp: gear.get("Refractive Glazing").gp + 1 },
 		//{ ...gear.get("Shield Drone"), name: gear.get("Shield Drone").name + " (Blueprint unlimited)", gp: gear.get("Shield Drone").gp + 1 }
 	]
-		//.concat(biomorphSupportRockNoHabitat())
+		.concat(biomorphSupportRockNoHabitat())
 		.concat(docBotTank({armed: false, uparmored: true}))
+		.concat(dwarfTank({armed: false}))
 		,
 	morph: [
 		{ name: "converting mp to gp", mp: 10 }
