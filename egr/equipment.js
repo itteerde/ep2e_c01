@@ -3,9 +3,14 @@ const fs = require('fs');
 function getGearData() {
 	const gear = new Map();
 
-	gear.set("Battle Laser", { name: "Battle Laser", gp: 3, ware: ["H"], pg: 208, properties: ["Long"] });
+	gear.set("Battle Laser", {
+		name: "Battle Laser", complexity: "Maj", restricted: true, gp: 3, ware: ["H"], pg: 208, properties: ["Long"], description: `This heavy laser pulser is typically mounted and used for battlefield support, firing more powerful beams than the standard laser pulser.`
+	});
+	gear.set("Breadcrumb System", {
+		name: "Breadcrumb System", complexity: "Min", restricted: false, gp: 1, pg: 336, description: `This worn device leaves micro-sized “breadcrumb” motes behind as you move, roughly every 25 meters. These devices mesh with each other and other devices, allowing you to map your position in relation to the breadcrumb trail, and creating a mesh connection all the way back to the trail’s source. This is for tracking your movement, finding your way back, and keeping meshed with your camp or ship in derelict habitats, wilderness, and other areas where there is no local functioning mesh.`
+	});
 	gear.set("DocBot", {
-		name: "DocBot", gp: 3, pg: 349, type: ["Robot"],
+		name: "DocBot", complexity: "Maj", restricted: false, gp: 3, pg: 347, type: ["Robot"],
 		description: 'These wheeled medical robots are designed to tend to and transport injured or sick people. They carry a fabber for medical supplies and pharmaceuticals, miscellaneous medical gear, a secure container for carrying heads, and 4–8 articulated arms for conducting remote surgery. They are often loaded up with healing spray and meds (acquired separately).'
 	});
 	gear.set("Dwarf", {
@@ -35,6 +40,12 @@ function getGearData() {
 	gear.set("Ghostrider Module", {
 		name: "Ghostrider Module", complexity: "Min", restricted: false, gp: 1, pg: 320, ware: ["C", "H"], description: 'This implant is a host for carrying another infomorph. This infomorph can be another muse, an ALI, a backed-up ego, or a fork. The module is linked to your mesh inserts, so the ghost-rider can mentally communicate with you, access the mesh, and connect to other parts of your PAN, depending on what access privileges you allow. You may install multiple modules.'
 	});
+	gear.set("Guardian Angel", {
+		name: "Guardian Angel", complexity: "Mod", restricted: false, gp: 2, pg: 347, description: `Similar to gnats, guardian angels are larger rotorcraft used for defensive purposes. They hover around their charges, keeping a watchful eye out to protect them from threats.`
+	});
+	gear.set("Hand Laser", {
+		name: "Hand Laser", complexity: "Mod", restricted: true, gp: 2, pg: 208, ware: ["C", "H"], description: `The morph has a weapon-grade laser implanted in its forearm, with a flexible waveguide leading to a lens located between the first two knuckles on the morph’s dominant hand. The laser’s batteries are implanted and not easily swapped out in biomorphs.`
+	});
 	gear.set("Heavy Combat Armor", { name: "Heavy Combat Armor", gp: 3, ware: ["H"], pg: 214 });
 	gear.set("Impact", { name: "Impact", gp: 1, ware: "H", pg: 217 });
 	gear.set("Large Fabber", {
@@ -44,8 +55,14 @@ function getGearData() {
 	gear.set("Medium Fabber", {
 		name: "Medium Fabber", complexity: "Mod", restricted: false, gp: 2, pg: 343, description: 'These desktop fabbers can manufacture up to small-sized items. They may be able to print multiple of the same very small items at once. They have a maximum volume of 40 liters.'
 	});
+	gear.set("Machine Gun", {
+		name: "Machine Gun", complexity: "Maj", restricted: true, gp: 3, pg: 210, description: `Machine guns are heavy weapons, typically mounted, and intended to provide continuous fire for support or suppressive purposes.`
+	});
+	gear.set("Mobility System", {
+		name: "Mobility System", complexity: "Mod", restricted: false, gp: 2, pg: 324, description: `Your morph is upgraded with an additional means of getting around (Movement Types ▶231). Any movement type can be chosen that works with your shell’s design, with approval from the GM. You may have multiple (different) systems.`
+	});
 	gear.set("Nuclear Battery", {
-		name: "Nuclear Battery", complexity: "Min", restricted: false, gp: 1, pg: 317, description: `These micro-sized batteries generate power from radio-isotope decay, storing it for use. They can produce power for years or even decades. They are often used to recharge standard batteries.` 
+		name: "Nuclear Battery", complexity: "Min", restricted: false, gp: 1, pg: 317, description: `These micro-sized batteries generate power from radio-isotope decay, storing it for use. They can produce power for years or even decades. They are often used to recharge standard batteries.`
 	});
 	gear.set("Pressure Tent", {
 		name: "Pressure Tent", complexity: "Mod", restricted: false, gp: 2, pg: 341,
@@ -81,6 +98,9 @@ function getGearData() {
 	gear.set("Smart Anchors", {
 		name: "Smart Anchors", complexity: "Min", restricted: false, gp: 1, pg: 341, description: 'When activated, this worn harness fires out up to 6 anchoring cables with a length of 10 meters. These cables spike into ice, dirt, or rock, or use grip pads to adhere to an appropriate surface. This prevents you from drifting into space, accidentally kicking off with terminal velocity, or falling off a cliff face. The device’s ALI targets and deploys anchors, and can be instructed to do so under certain conditions'
 	});
+	gear.set("Sniper Rifle", {
+		name: "Sniper Rifle", complexity: "Maj", restricted: true, gp: 3, pg: 210, description: ``
+	});
 	gear.set("Spindle", {
 		name: "Spindle", complexity: "Mod", restricted: false, gp: 2, pg: 341, description: 'Spindles are wound lengths of thin (0.2 millimeters) but super-strong fullerene cable. It can extend 250 meters of cable capable of supporting 5,000 kilograms of weight at 1 g. The spindle also contains a specialized fabber that can manufacture more cable and extend it indefinitely, at a rate of 1 meter per minute, as long as it is fed with raw materials. The spindle can cut the cables it produces at any length. If fixed in place with built-in grip pads, it can also retract the cable at a rate of 50 meters per action turn, or re-absorb cables at the rate of 5 meters per minute. Spindle cables can be cut by inflicting 30 points of damage.'
 	});
@@ -88,7 +108,7 @@ function getGearData() {
 		name: "Spindle Climber", complexity: "Min", restricted: false, gp: 1, pg: 341, description: 'This device attaches to a spindle and transforms it into a highly effective climbing device. The spindle climber has two functions. First, it attaches hardened tips to the spindle’s cable and fires it at high speed, up to 50 meters, with sufficient force to imbed the tip into almost any sufficiently durable surface (if used as a weapon, it inflicts DV 2d10). Second, the spindle climber can pull itself and up to 250 kg up the cable at a speed of 12 meters per turn.'
 	});
 	gear.set("Standard Battery", {
-		name: "Standard Battery", complexity: "Min", restricted: false, gp: 1, pg: 317, description: `Batteries are micro-sized, high-density, ultra-capacity, rechargeable, room-temperature superconductors good for hundreds of hours of operation.` 
+		name: "Standard Battery", complexity: "Min", restricted: false, gp: 1, pg: 317, description: `Batteries are micro-sized, high-density, ultra-capacity, rechargeable, room-temperature superconductors good for hundreds of hours of operation.`
 	});
 	gear.set("Structural Enhancement", {
 		name: "Structural Enhancement", complexity: "Maj", restricted: false, gp: 3, pg: 323, description: 'This modification bolsters the shell’s structural integrity, increasing its toughness and ability to take damage. Increase Wound Threshold by 2, Durability by 10, and Death Rating by 20.'
@@ -113,144 +133,156 @@ function getGearData() {
 	return gear;
 }
 
-function biomorphSupportRockNoHabitat(){
+function biomorphSupportRockNoHabitat() {
 	return [
 		structuredClone(gear.get("Pressure Tent")),
 		structuredClone(gear.get("Spindle"))
 	];
 }
 
-function docBotTank(options={}){
+function docBotTank(options = {}) {
 	let tank = [
-		{ ...gear.get("DocBot"), notes: `can print Explorenaut`},
+		{ ...gear.get("DocBot"), notes: `can print Explorenaut` },
 	];
 
-	if(!(options?.ghostriderModule===false)){
+	if (!(options?.ghostriderModule === false)) {
 		tank.push(
-			{ ...gear.get("Ghostrider Module"), notes: `installed@DocBot`},
+			{ ...gear.get("Ghostrider Module"), notes: `installed@DocBot` },
 		);
 	}
 
-	if(options?.armed){
+	if (options?.armed) {
 		tank.push(
-			{ ...gear.get("Weapon Mount"), notes: `installed@DocBot`},
-			{ ...gear.get("Battle Laser"), notes: `installed@DocBot`}
+			//{ ...gear.get("Weapon Mount"), notes: `installed@DocBot` }, // have arms, don't need
+			{ ...gear.get("Battle Laser"), notes: `installed@DocBot` }
 		);
 	}
 
-	if(!(options?.armored===false)){
+	if (!(options?.armored === false)) {
 		tank.push(
-			{ ...gear.get("Heavy Combat Armor"), notes: `installed@DocBot`},
+			{ ...gear.get("Heavy Combat Armor"), notes: `installed@DocBot` },
 			{ ...gear.get("Structural Enhancement"), notes: `installed@DocBot` },
-		);	
-	}
-
-	if(!(options?.selfRepair===false)){
-		tank.push(
-			{ ...gear.get("Self-Healing"), notes: "installed@DocBot" },
-			{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@DocBot" },
 		);
 	}
 
-	if(options?.uparmored){
+	if (!(options?.selfRepair === undefined)) {
+		if (options?.selfRepair.includes("Self-Healing")) {
+			tank.push(
+				{ ...gear.get("Self-Healing"), notes: "installed@DocBot" },
+			);
+		}
+		if (options?.selfRepair.includes("Fixer Swarm")) {
+			tank.push(
+				{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@DocBot" },
+			);
+		}
+	}
+
+	if (options?.uparmored) {
 		tank.push(
-			{ ...gear.get("Reactive"), notes: `installed@DocBot`},
-			{ ...gear.get("Impact"), notes: `installed@DocBot`},
-			{ ...gear.get("Refractive Glazing"), notes: `installed@DocBot`},
+			{ ...gear.get("Reactive"), notes: `installed@DocBot` },
+			//{ ...gear.get("Impact"), notes: `installed@DocBot` },
+			//{ ...gear.get("Refractive Glazing"), notes: `installed@DocBot` },
+		);
+	}
+
+	if (options?.mobility) {
+		tank.push(
+			{ ...gear.get("Mobility System"), name: gear.get("Mobility System").name + " Thrust Vector (Rocket) (Blueprint unlimited)", gp: gear.get("Mobility System").gp + 1 },
 		);
 	}
 
 	return tank;
 }
 
-function dwarfTank(options={}){
+function dwarfTank(options = {}) {
 
 	let tank = [
-		{ ...gear.get("Dwarf"), notes: `Large, Disassembly Tools`},
+		{ ...gear.get("Dwarf"), notes: `Large, Disassembly Tools` },
 	];
 
-	if(!(options?.ghostriderModule===false)){
+	if (!(options?.ghostriderModule === false)) {
 		tank.push(
-			{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf`},
+			{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf` },
 		);
 	}
 
-	if(options?.armed){
+	if (options?.armed) {
 		tank.push(
-			{ ...gear.get("Weapon Mount"), notes: `installed@Dwarf`},
-			{ ...gear.get("Battle Laser"), notes: `installed@Dwarf`}
+			{ ...gear.get("Weapon Mount"), notes: `installed@Dwarf` },
+			{ ...gear.get("Battle Laser"), notes: `installed@Dwarf` }
 		);
 	}
 
-	if(!(options?.armored===false)){
+	if (!(options?.armored === false)) {
 		tank.push(
-			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf`},
-		);	
+			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf` },
+		);
 	}
 
-	if(!(options?.selfRepair===false)){
+	if (!(options?.selfRepair === false)) {
 		tank.push(
 			{ ...gear.get("Self-Healing"), notes: "installed@Dwarf" },
 			{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Dwarf" },
 		);
 	}
 
-	if(options?.uparmored){
+	if (options?.uparmored) {
 		tank.push(
 			{ ...gear.get("Structural Enhancement"), notes: `installed@Dwarf` },
-			{ ...gear.get("Reactive"), notes: `installed@Dwarf`},
-			{ ...gear.get("Impact"), notes: `installed@Dwarf`},
-			{ ...gear.get("Refractive Glazing"), notes: `installed@Dwarf`},
+			{ ...gear.get("Reactive"), notes: `installed@Dwarf` },
+			{ ...gear.get("Impact"), notes: `installed@Dwarf` },
+			{ ...gear.get("Refractive Glazing"), notes: `installed@Dwarf` },
 		);
 	}
 
 	return tank;
 }
 
-function explorenautTank(options={}){
+function explorenautTank(options = {}) {
 	let tank = [
-		{ ...gear.get("Explorenaut"), notes: `Small, no Long weapons`},
+		{ ...gear.get("Explorenaut"), notes: `Small, no Long weapons` },
 	];
 
-	if(!(options?.ghostriderModule===false)){
+	if (!(options?.ghostriderModule === false)) {
 		tank.push(
-			{ ...gear.get("Ghostrider Module"), notes: `installed@Explorenaut`},
+			{ ...gear.get("Ghostrider Module"), notes: `installed@Explorenaut` },
 		);
 	}
 
-	if(!(options?.armored===false)){
+	if (!(options?.armored === false)) {
 		tank.push(
-			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Explorenaut`},
-		);	
+			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Explorenaut` },
+		);
 	}
 
-	if(!(options?.structuralEnhancement===false)){
+	if (!(options?.structuralEnhancement === false)) {
 		tank.push(
 			{ ...gear.get("Structural Enhancement"), notes: `installed@Explorenaut` },
-		);	
+		);
 	}
 
-	if(!(options?.selfRepair===false)){
+	if (!(options?.selfRepair === false)) {
 		tank.push(
 			{ ...gear.get("Self-Healing"), notes: "installed@Explorenaut" },
 			{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Explorenaut" },
 		);
 	}
 
-	if(options?.uparmored){
+	if (options?.uparmored) {
 		tank.push(
-			{ ...gear.get("Reactive"), notes: `installed@Explorenaut`},
-			{ ...gear.get("Impact"), notes: `installed@Explorenaut`},
-			{ ...gear.get("Refractive Glazing"), notes: `installed@Explorenaut`},
+			{ ...gear.get("Reactive"), notes: `installed@Explorenaut` },
+			{ ...gear.get("Impact"), notes: `installed@Explorenaut` },
+			{ ...gear.get("Refractive Glazing"), notes: `installed@Explorenaut` },
 		);
 	}
 
 	return tank;
 }
 
-function rocketry(){
+function rocketry() {
 	return [
-		{ ...gear.get("Rocket Pack"), name: gear.get("Rocket Pack").name + " (Blueprint unlimited)", gp: gear.get("Rocket Pack").gp + 1 },
+		{ ...gear.get("Mobility System"), name: gear.get("Mobility System").name + " Thrust Vector (Rocket) (Blueprint unlimited)", gp: gear.get("Mobility System").gp + 1 },
 	];
 }
 
@@ -259,10 +291,10 @@ const mission_gear = new Map();
 
 mission_gear.set("EGR_2.71828", {
 	sentinel: "EGR_2.71828",
-	mp: 10,
+	mp: 0,
 	gp: 24,
 	gear: [
-		{ name: "converting mp to gp", gp: -10 },
+		//{ name: "converting mp to gp", gp: -10 },
 		structuredClone(gear.get("Fake Ego ID")),
 		//{ ...gear.get("Gas-Jet System"), name: gear.get("Gas-Jet System").name + " (Blueprint unlimited)", gp: gear.get("Gas-Jet System").gp + 1 },
 		//structuredClone(gear.get("Server")),
@@ -272,59 +304,91 @@ mission_gear.set("EGR_2.71828", {
 		//{ ...gear.get("Refractive Glazing"), name: gear.get("Refractive Glazing").name + " (Blueprint unlimited)", gp: gear.get("Refractive Glazing").gp + 1 },
 		//{ ...gear.get("Shield Drone"), name: gear.get("Shield Drone").name + " (Blueprint unlimited)", gp: gear.get("Shield Drone").gp + 1 }
 	]
-		.concat(biomorphSupportRockNoHabitat())
-		.concat(docBotTank({armed: true, uparmored: true}))
+		//.concat(biomorphSupportRockNoHabitat())
+		.concat(docBotTank({ armed: false, uparmored: true }))
 		//.concat(dwarfTank({armed: false}))
-		.concat(explorenautTank({selfRepair: false, structuralEnhancement: false, armored: false}))
+		.concat(explorenautTank({ selfRepair: false, structuralEnhancement: false, armored: false }))
 		.concat(rocketry())
-		,
+	,
 	morph: [
-		{ name: "converting mp to gp", mp: 10 }
+		//{ name: "converting mp to gp", mp: 10 }
 	]
 });
 
 mission_gear.set("SysRig.exe", {
 	sentinel: "SysRig.exe",
-	mp: 6,
+	mp: 0,
 	gp: 20,
 	gear: [
+		structuredClone(gear.get("Fake Ego ID")),
 		structuredClone(gear.get("Large Fabber")),
 		structuredClone(gear.get("Robomule")),
-		structuredClone(gear.get("Fake Ego ID")),
-		//structuredClone(gear.get("TacNet"))
+		//{ ...gear.get("Mobility System"), notes: `(Thrust Vector (Rocket)) installed@Robomule` },
+		{ ...gear.get("Dwarf"), notes: `Disassembly Tools (pg. 340)` },
+		{ ...gear.get("Mobility System"), notes: `(Thrust Vector (Rocket)) installed@Dwarf` },
+		{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf` },
+		structuredClone(gear.get("Guardian Angel")),
+		{ ...gear.get("Mobility System"), notes: `(Thrust Vector (Rocket)) installed@Guardian Angel` },
+		{ ...gear.get("Hand Laser"), notes: `installed@Guardian Angel` }
+		//{ ...gear.get("Weapon Mount"), notes: `installed@Dwarf` },
+		//{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf` },
+		//{ ...gear.get("Machine Gun"), notes: `Railgun installed@Dwarf` },
+		//{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf` },
+		//{ ...gear.get("Self-Healing"), notes: `installed@Dwarf` }
 	],
 	morph: []
 });
 
-function scenario_battle_medic(){
+function scenario_battle_medic() {
+	mission_gear.get("EGR_2.71828").gear = [
+		//{ name: "converting mp to gp", gp: -10 },
+		structuredClone(gear.get("Fake Ego ID")),
+	]
+		//.concat(biomorphSupportRockNoHabitat())
+		.concat(docBotTank({ armed: true, uparmored: false, mobility: true, selfRepair: ["Self-Healing"] }))
+	//.concat(rocketry())
+
+	mission_gear.get("EGR_2.71828").gear.push(
+		//{ ...gear.get("Dwarf"), notes: `Disassembly Tools (pg. 340)` }
+		{ ...gear.get("Breadcrumb System"), notes: `installed@DocBot` },
+		{ ...gear.get("Explorenaut"), notes: `Utilitmod` }
+	);
+}
+
+function scenario_dwarven_tank() {
 	mission_gear.get("EGR_2.71828").gear = [
 		{ name: "converting mp to gp", gp: -10 },
 		structuredClone(gear.get("Fake Ego ID")),
 	]
-	.concat(biomorphSupportRockNoHabitat())
-	.concat(docBotTank({armed: true, uparmored: true}))
-	.concat(rocketry())
-
-	mission_gear.get("EGR_2.71828").gear.push(
-		{ ...gear.get("Dwarf"), notes: `Disassembly Tools (pg. 340)` }
-	);
+		.concat(biomorphSupportRockNoHabitat())
+		.concat(dwarfTank({ armed: true }))
+		.concat(rocketry())
+		.concat([
+			{ ...gear.get("Explorenaut") },
+			{ ...gear.get("DocBot") },
+			{ ...gear.get("Robomule") },
+			{ ...gear.get("Server") },
+			{ ...gear.get("Breadcrumb System"), notes: `installed@Dwarf` }
+		])
 }
+
+
 scenario_battle_medic();
 console.clear();
 
-function report_mission_gear(options={mg:mission_gear, json: false}){
+function report_mission_gear(options = { mg: mission_gear, json: false }) {
 	for (let [key, value] of options.mg) {
-		if(!(options?.json)){
+		if (!(options?.json)) {
 			console.log({
 				sentinel: key,
-				gear: value.gear.map(i => `${i.name} (pg. ${i.pg})${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
+				gear: value.gear.map(i => `${i.name} (pg. ${i.pg}, ${i.gp} gp)${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
 				gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
 				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
 			});
-		}else{// is json
+		} else {// is json
 			fs.writeFileSync(`${key}.json`, JSON.stringify({
 				sentinel: key,
-				gear: value.gear.map(i => `${i.name} (pg. ${i.pg})${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
+				gear: value.gear.map(i => `${i.name} (pg. ${i.pg}, ${i.gp} gp)${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
 				gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
 				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
 			}, null, 2));
@@ -333,5 +397,5 @@ function report_mission_gear(options={mg:mission_gear, json: false}){
 }
 
 report_mission_gear();
-report_mission_gear({mg: mission_gear, json: true});
+report_mission_gear({ mg: mission_gear, json: true });
 // fs.writeFileSync('file.json', JSON.stringify(jsonVariable));

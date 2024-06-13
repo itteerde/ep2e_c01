@@ -1,10 +1,16 @@
 {
   "sentinel": "SysRig.exe",
   "gear": [
-    "Large Fabber (pg. 343)",
-    "Robomule (pg. 349)",
-    "Fake Ego ID (pg. 315)"
+    "Fake Ego ID (pg. 315, 3 gp)",
+    "Large Fabber (pg. 343, 3 gp)",
+    "Robomule (pg. 349, 2 gp)",
+    "Dwarf (pg. 349, 3 gp) : Disassembly Tools (pg. 340)",
+    "Mobility System (pg. 324, 2 gp) : (Thrust Vector (Rocket)) installed@Dwarf",
+    "Ghostrider Module (pg. 320, 1 gp) : installed@Dwarf",
+    "Guardian Angel (pg. 347, 2 gp)",
+    "Mobility System (pg. 324, 2 gp) : (Thrust Vector (Rocket)) installed@Guardian Angel",
+    "Hand Laser (pg. 208, 2 gp) : installed@Guardian Angel"
   ],
-  "gp_left": 12,
-  "mp_left": 6
+  "gp_left": 0,
+  "mp_left": 0
 }

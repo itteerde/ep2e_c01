@@ -1,23 +1,16 @@
 {
   "sentinel": "EGR_2.71828",
   "gear": [
-    "converting mp to gp (pg. undefined)",
-    "Fake Ego ID (pg. 315)",
-    "Pressure Tent (pg. 341)",
-    "Spindle (pg. 341)",
-    "DocBot (pg. 349) : can print Explorenaut",
-    "Ghostrider Module (pg. 320) : installed@DocBot",
-    "Weapon Mount (pg. 323) : installed@DocBot",
-    "Battle Laser (pg. 208) : installed@DocBot",
-    "Heavy Combat Armor (pg. 214) : installed@DocBot",
-    "Structural Enhancement (pg. 323) : installed@DocBot",
-    "Self-Healing (pg. 217) : installed@DocBot",
-    "Fixer Swarm (Hive) (pg. 345) : installed@DocBot",
-    "Reactive (pg. 217) : installed@DocBot",
-    "Impact (pg. 217) : installed@DocBot",
-    "Refractive Glazing (pg. 217) : installed@DocBot",
-    "Rocket Pack (Blueprint unlimited) (pg. 352)",
-    "Dwarf (pg. 349) : Disassembly Tools (pg. 340)"
+    "Fake Ego ID (pg. 315, 3 gp)",
+    "DocBot (pg. 347, 3 gp) : can print Explorenaut",
+    "Ghostrider Module (pg. 320, 1 gp) : installed@DocBot",
+    "Battle Laser (pg. 208, 3 gp) : installed@DocBot",
+    "Heavy Combat Armor (pg. 214, 3 gp) : installed@DocBot",
+    "Structural Enhancement (pg. 323, 3 gp) : installed@DocBot",
+    "Self-Healing (pg. 217, 1 gp) : installed@DocBot",
+    "Mobility System Thrust Vector (Rocket) (Blueprint unlimited) (pg. 324, 3 gp)",
+    "Breadcrumb System (pg. 336, 1 gp) : installed@DocBot",
+    "Explorenaut (pg. 346, 3 gp) : Utilitmod"
   ],
   "gp_left": 0,
   "mp_left": 0
