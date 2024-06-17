@@ -2,16 +2,17 @@
   "sentinel": "EGR_2.71828",
   "gear": [
     "Fake Ego ID (pg. 315, 3 gp)",
-    "DocBot (pg. 347, 3 gp) : can print Explorenaut",
-    "Ghostrider Module (pg. 320, 1 gp) : installed@DocBot",
-    "Battle Laser (pg. 208, 3 gp) : installed@DocBot",
-    "Heavy Combat Armor (pg. 214, 3 gp) : installed@DocBot",
-    "Structural Enhancement (pg. 323, 3 gp) : installed@DocBot",
-    "Self-Healing (pg. 217, 1 gp) : installed@DocBot",
-    "Mobility System Thrust Vector (Rocket) (Blueprint unlimited) (pg. 324, 3 gp)",
-    "Breadcrumb System (pg. 336, 1 gp) : installed@DocBot",
-    "Explorenaut (pg. 346, 3 gp) : Utilitmod"
+    "acquired from Resources IV (pg. undefined, 0 gp)",
+    "Ghostrider Module (pg. 320, 1 gp) : @Parisphere",
+    "Medichines (pg. 322, 3 gp) : @Parisphere",
+    "Hardened Skeleton (pg. 322, 3 gp) : @DocBot",
+    "Self-Healing (pg. 217, 1 gp) : @DocBot",
+    "Impact (pg. 217, 1 gp) : @DocBot",
+    "Battle Laser (pg. 208, 3 gp) : @DocBot",
+    "Battle Laser (pg. 208, 3 gp) : @DocBot",
+    "Machine Gun Railgun (pg. 210, 3 gp) : @DocBot",
+    "Machine Gun Railgun (pg. 210, 3 gp) : @DocBot"
   ],
   "gp_left": 0,
-  "mp_left": 0
+  "mp_left": 10
 }

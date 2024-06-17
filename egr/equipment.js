@@ -3,6 +3,12 @@ const fs = require('fs');
 function getGearData() {
 	const gear = new Map();
 
+	gear.set("App-Lock", {
+		name: "App-Lock", complexity: "Min", restricted: false, gp: 1, description: `App-lock makes it more difficult for an installed app to be removed without proper authentication (apply a −30 modifier). This is useful for infomorphs/cyberbrains that are brainhacked and modified against their will. The protected apps must be designated in advance (when app-lock is installed or reconfigured).`
+	});
+	gear.set("Auto-Erase", {
+		name: "Auto-Erase", complexity: "Min", restricted: false, gp: 1, description: `This app will automatically erase the infomorph (or the ego within a cyberbrain) if certain pre-programmed conditions are met. This is useful if you are worried about brainhacking, forknapping, or being trapped in a lockbox. Common trigger conditions include detected brainhacking, a codephrase, psychosurgery, a designated time period, or upon failure to receive a periodic message. Some people use this app to keep forks from going errant; many polities legally require forks to be equipped to delete themselves after a set number of hours. Auto-erase functions even if the infomorph does not have privileges on that system.`
+	});
 	gear.set("Battle Laser", {
 		name: "Battle Laser", complexity: "Maj", restricted: true, gp: 3, ware: ["H"], pg: 208, properties: ["Long"], description: `This heavy laser pulser is typically mounted and used for battlefield support, firing more powerful beams than the standard laser pulser.`
 	});
@@ -13,13 +19,22 @@ function getGearData() {
 		name: "DocBot", complexity: "Maj", restricted: false, gp: 3, pg: 347, type: ["Robot"],
 		description: 'These wheeled medical robots are designed to tend to and transport injured or sick people. They carry a fabber for medical supplies and pharmaceuticals, miscellaneous medical gear, a secure container for carrying heads, and 4–8 articulated arms for conducting remote surgery. They are often loaded up with healing spray and meds (acquired separately).'
 	});
+	gear.set("Drone Rig", {
+		name: "Drone Rig", complexity: "Mod", restricted: false, gp: 2, pg: 320, ware: ["C", "H", "M"], description: `This simsense augmentation gives you better control when jamming drones (Remote Operations ▶346). You ignore the −10 modifier for jamming.`
+	});
 	gear.set("Dwarf", {
 		name: "Dwarf", complexity: "Maj", restricted: false, gp: 3, size: "L", pg: 349, description: 'These large industrial bots are named not just for their primary use — mining, excavation, tunneling, and construction — but because the default AIs they shipped with had a programmed tendency to happily whistle as they worked. Dwarfs are quadrupedal walkers, equipped with massive modular industrial tools like boring drills, shovels, hydraulic jacks, jackhammers, scooping arms, acid sprays, and so on.'
+	});
+	gear.set("E-Veil", {
+		name: "E-Veil", complexity: "Min", restricted: true, gp: 1, pg: 326, description: `E-veil obfuscates the presence of designated apps within the infomorph’s code. Any attempt to scan the infomorph using Interface is opposed with a Program skill of 80. The hidden apps must be designated when e-veil is activated.`
 	});
 	gear.set("Ecto", { name: "Ecto", gp: 1 });
 	gear.set("Emergency Bubble", {
 		name: "Emergency Bubble", complexity: "Maj", restricted: false, gp: 3, pg: 341,
 		description: 'Used as a last-resort life raft on spaceships, an emergency bubble is made of advanced smart materials and comes in a large but portable package that can be quickly inflated around you in 1 action turn, usually inside an airlock. The bubble has a 5-meter diameter and can comfortably accommodate 4 people for 1 week. It maintains 1 atmosphere of pressure in a vacuum, protects the inhabitants from temperatures ranging from −175 to 140 C, and provides light and breathable air. A built-in autocook ▶343 provides food and liquids. It features a simple airlock, carries an emergency distress beacon, and can be transparent, opaque, or polarized. It is powered by a nuclear battery and includes comfortable inflatable furniture. This bubble can also be partially inflated as a dome and staked down to a surface to serve as an emergency shelter on asteroids or other surfaced environments.'
+	});
+	gear.set("Enhanced Security", {
+		name: "Enhanced Security", complexity: "Mod", restricted: false, gp: 2, pg: 326, description: `This meshware installs additional firewall and security layers, making the infomorph/cyberbrain harder to hack. Apply a −10 modifier to attempts to brainhack your digital mind. You can also use this meshware to enter a heightened state of security — Defensive Mode. When activated with a quick action, the modifier to brainhack you is increased to −30. This lock-down status impairs your functions, however; you cannot use Insight pool while it is active and suffer a −3 Initiative modifier.`
 	});
 	gear.set("Envirosuit", {
 		name: "Envirosuit", complexity: "Maj", restricted: false, gp: 3, pg: 351, description: `These shells feature both increased radiation shielding and thermal regulation systems to withstand extreme environments such as deep undersea and the surfaces of Mercury and Venus. They can withstand temperatures from −270 to 1,000 C.`
@@ -28,8 +43,14 @@ function getGearData() {
 		name: "Explorenaut", complexity: "Maj", restricted: false, gp: 3, pg: 346,
 		description: 'These small-sized bots travel on smart treads or with thrust-vector jets. They are loaded with sensors and favored for gatecrashing and similar exploration ops.  A pair of manipulator arms are used for taking samples.'
 	});
+	gear.set("Fake Brainprint", {
+		name: "Fake Brainprint", complexity: "Maj", restricted: true, gp: 3, pg: -1, description: ``
+	});
 	gear.set("Fake Ego ID", {
 		name: "Fake Ego ID", complexity: "Maj", restricted: true, gp: 3, pg: 315, description: `This forged ID will pass in most inner system and Jovian Republic habitats, and sometimes others. It gives you a rep score in one network with that ID at 10.`
+	});
+	gear.set("Fault Tolerance", {
+		name: "Fault Tolerance", complexity: "Mod", restricted: false, gp: 2, pg: 326, description: `This module provides redundancy and loadsharing functions. You receive AV 5 against mesh attacks.`
 	});
 	gear.set("Fixer Swarm", {
 		name: "Fixer Swarm", complexity: "Mod", restricted: false, gp: 2, pg: 345, description: 'Fixers repair objects and restore them to their original specifications. They must be programmed with the item’s nanofabrication blueprints or given time (~an hour) to scan an identical object; they are not smart enough to recognize and repair damage on their own. A fixer swarm repairs 1d10 [6] damage per hour. Once all damage is repaired, it will restore 1 wound per day. Fixers also clean and polish items, returning them to a new, pristine state. Fixer swarms cannot effect repairs on objects with more than 3 wounds, but they will apply a +30 modifier to Hardware Tests for repair.'
@@ -46,6 +67,9 @@ function getGearData() {
 	gear.set("Hand Laser", {
 		name: "Hand Laser", complexity: "Mod", restricted: true, gp: 2, pg: 208, ware: ["C", "H"], description: `The morph has a weapon-grade laser implanted in its forearm, with a flexible waveguide leading to a lens located between the first two knuckles on the morph’s dominant hand. The laser’s batteries are implanted and not easily swapped out in biomorphs.`
 	});
+	gear.set("Hardened Skeleton", {
+		name: "Hardened Skeleton", complexity: "Maj", restricted: false, gp: 3, pg: 322, ware: ["C", "H"], description: `The morph’s skeleton is laced with strengthening amorphous metals and fullerenes. Increase your Wound Threshold by 1, Durability by 5, Death Rating by 8 (biomorphs) or 10 (synthmorphs), and your SOM Check by 10.`
+	});
 	gear.set("Heavy Combat Armor", { name: "Heavy Combat Armor", gp: 3, ware: ["H"], pg: 214 });
 	gear.set("Impact", { name: "Impact", gp: 1, ware: "H", pg: 217 });
 	gear.set("Large Fabber", {
@@ -58,11 +82,26 @@ function getGearData() {
 	gear.set("Machine Gun", {
 		name: "Machine Gun", complexity: "Maj", restricted: true, gp: 3, pg: 210, description: `Machine guns are heavy weapons, typically mounted, and intended to provide continuous fire for support or suppressive purposes.`
 	});
+	gear.set("Medichines", {
+		name: "Medichines", complexity: "Maj", restricted: true, gp: 3, pg: 322, description: `An implanted hive circulates nanobots throughout your system, monitoring your health at the cellular level and fixing any problems. Medichines allow you to ignore the effect of 1 wound (cumulative with other mods, up to a max of 3 ignored wounds). They also accelerate your natural healing (Biomorph Healing ▶221). If damage taken exceeds your Durability, or you take 5 or more wounds in an hour, the medichines automatically stabilize you, prevent you from bleeding out, place you into a medical stasis (during which you are unconscious and unable to act), and broadcast for emergency services via your mesh inserts. Medichines also reduce the duration and effects of drugs, toxins, and pathogens by half (cumulative with toxin filters). You can override this protection to permit intoxication or other effects, but unless you activate a second override, medichines prevent the toxins from accumulating to lethal or permanently harmful levels. Medichines provide health status reports to your mesh inserts and muse. Medichines for synthmorphs and bots consist of nanobots that monitor and repair the shell’s integrity and internal system functions. Note that the synthmorph version of medichines allows the synthmorph to self-repair in the same manner by which a biomorph with medichines would naturally heal (1d10 per hour, 1 wound per day).`
+	});
+	gear.set("Mnemonics", {
+		name: "Mnemonics", complexity: "Min", restricted: false, gp: 1, pg: 316, description: `The electronic minds of cyberbrains and infomorphs mimic biological brains in how they store memories — as networked but scattered groups of neurons. Despite being computerized, their memory recall is not any more efficient than bio brains. Mnemonics systems, however, allow memories to be tagged and roughly indexed. This improves memory recall, though it remains far from perfect. Mnemonics applies a +20 modifier to COG Checks for memory recall. Mnemonic data can be transferred with an ego when it resleeves, but the modifier applies only for memories that were recorded when mnemonics ware is present. Mnemonics systems are included in all cyberbrains.`
+	});
 	gear.set("Mobility System", {
 		name: "Mobility System", complexity: "Mod", restricted: false, gp: 2, pg: 324, description: `Your morph is upgraded with an additional means of getting around (Movement Types ▶231). Any movement type can be chosen that works with your shell’s design, with approval from the GM. You may have multiple (different) systems.`
 	});
+	gear.set("Multi-Tasking", {
+		name: "Multi-Tasking", complexity: "Mod", restricted: false, gp: 2, pg: 320, description: `This cybernetic or software module enables your brain to focus on two things at the same time — something our minds cannot usually handle — without any context-switching confusion or increased error rates from inattention. Multi-Tasking increases your Insight Pool by 1.`
+	});
 	gear.set("Nuclear Battery", {
 		name: "Nuclear Battery", complexity: "Min", restricted: false, gp: 1, pg: 317, description: `These micro-sized batteries generate power from radio-isotope decay, storing it for use. They can produce power for years or even decades. They are often used to recharge standard batteries.`
+	});
+	gear.set("Oracles", {
+		name: "Orcales", complexity: "Mod", restricted: false, gp: 2, pg: 318, ware: ["C", "H", "M"], description: `This neural macrosensing processor helps you pay attention to sensory input you are not focusing on, alerting you to important things you might otherwise overlook. Oracles provide a +10 bonus to Perceive and negate the distraction modifier for Perceive Tests.`
+	});
+	gear.set("Persistence", {
+		name: "Persistence", complexity: "Mod", restricted: false, gp: 2, pg: 326, description: `This meshware uses rootkit techniques to keep the digital mind active despite attempts to crash it. Increase the infomorph’s Durability by 10 and Wound Threshold by 2.`
 	});
 	gear.set("Pressure Tent", {
 		name: "Pressure Tent", complexity: "Mod", restricted: false, gp: 2, pg: 341,
@@ -92,6 +131,9 @@ function getGearData() {
 	gear.set("Skillsoft", {
 		name: "Skillsoft", complexity: "Mod", restricted: false, gp: 2, pg: 320, description: 'These are skills encoded in software form. Used with a skillware system, they provide you with a rating of up to 40 in a single active skill or 80 in a Know skill (your aptitudes do not effect this rating; if you already possess the skill, use the highest value).'
 	});
+	gear.set("Skillware", {
+		name: "Skillware", complexity: "Maj", restricted: false, gp: 3, pg: 321, description: `Your brain is laced with a network of artificial neurons that can be formatted with information. This allows you to download skillsofts ▶below into your brain, gaining the use of those programmed skills until the skillsoft is erased or replaced. Skillware systems are only capable of handling 120 total skill points worth of skillsofts at a time. Switching out a skillsoft is a complex action.`
+	});
 	gear.set("Small Fabber", {
 		name: "Small Fabber", complexity: "Min", restricted: false, gp: 1, pg: 343, description: 'These small and portable fabbers can produce objects up to a very small size with the appropriate blueprint. They have a maximum volume of 2 liters.'
 	});
@@ -109,6 +151,9 @@ function getGearData() {
 	});
 	gear.set("Standard Battery", {
 		name: "Standard Battery", complexity: "Min", restricted: false, gp: 1, pg: 317, description: `Batteries are micro-sized, high-density, ultra-capacity, rechargeable, room-temperature superconductors good for hundreds of hours of operation.`
+	});
+	gear.set("Stress Control", {
+		name: "Stress Control", complexity: "Mod", restricted: false, gp: 2, pg: 323, ware: ["B", "M"], description: `Your morph’s endocrine system (or its software simulation) has been modified to give you greater control over cortisol and similar hormones. This enables you to manage your stress levels and responses. Apply a +10 modifier to WIL Checks against stress or triggered disorders and raise your Trauma Threshold by 1. This does not impact your Lucidity or Insanity Rating.`
 	});
 	gear.set("Structural Enhancement", {
 		name: "Structural Enhancement", complexity: "Maj", restricted: false, gp: 3, pg: 323, description: 'This modification bolsters the shell’s structural integrity, increasing its toughness and ability to take damage. Increase Wound Threshold by 2, Durability by 10, and Death Rating by 20.'
@@ -133,191 +178,278 @@ function getGearData() {
 	return gear;
 }
 
-function biomorphSupportRockNoHabitat() {
-	return [
-		structuredClone(gear.get("Pressure Tent")),
-		structuredClone(gear.get("Spindle"))
-	];
-}
-
-function docBotTank(options = {}) {
-	let tank = [
-		{ ...gear.get("DocBot"), notes: `can print Explorenaut` },
-	];
-
-	if (!(options?.ghostriderModule === false)) {
-		tank.push(
-			{ ...gear.get("Ghostrider Module"), notes: `installed@DocBot` },
-		);
-	}
-
-	if (options?.armed) {
-		tank.push(
-			//{ ...gear.get("Weapon Mount"), notes: `installed@DocBot` }, // have arms, don't need
-			{ ...gear.get("Battle Laser"), notes: `installed@DocBot` }
-		);
-	}
-
-	if (!(options?.armored === false)) {
-		tank.push(
-			{ ...gear.get("Heavy Combat Armor"), notes: `installed@DocBot` },
-			{ ...gear.get("Structural Enhancement"), notes: `installed@DocBot` },
-		);
-	}
-
-	if (!(options?.selfRepair === undefined)) {
-		if (options?.selfRepair.includes("Self-Healing")) {
-			tank.push(
-				{ ...gear.get("Self-Healing"), notes: "installed@DocBot" },
-			);
-		}
-		if (options?.selfRepair.includes("Fixer Swarm")) {
-			tank.push(
-				{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@DocBot" },
-			);
-		}
-	}
-
-	if (options?.uparmored) {
-		tank.push(
-			{ ...gear.get("Reactive"), notes: `installed@DocBot` },
-			//{ ...gear.get("Impact"), notes: `installed@DocBot` },
-			//{ ...gear.get("Refractive Glazing"), notes: `installed@DocBot` },
-		);
-	}
-
-	if (options?.mobility) {
-		tank.push(
-			{ ...gear.get("Mobility System"), name: gear.get("Mobility System").name + " Thrust Vector (Rocket) (Blueprint unlimited)", gp: gear.get("Mobility System").gp + 1 },
-		);
-	}
-
-	return tank;
-}
-
-function dwarfTank(options = {}) {
-
-	let tank = [
-		{ ...gear.get("Dwarf"), notes: `Large, Disassembly Tools` },
-	];
-
-	if (!(options?.ghostriderModule === false)) {
-		tank.push(
-			{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf` },
-		);
-	}
-
-	if (options?.armed) {
-		tank.push(
-			{ ...gear.get("Weapon Mount"), notes: `installed@Dwarf` },
-			{ ...gear.get("Battle Laser"), notes: `installed@Dwarf` }
-		);
-	}
-
-	if (!(options?.armored === false)) {
-		tank.push(
-			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf` },
-		);
-	}
-
-	if (!(options?.selfRepair === false)) {
-		tank.push(
-			{ ...gear.get("Self-Healing"), notes: "installed@Dwarf" },
-			{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Dwarf" },
-		);
-	}
-
-	if (options?.uparmored) {
-		tank.push(
-			{ ...gear.get("Structural Enhancement"), notes: `installed@Dwarf` },
-			{ ...gear.get("Reactive"), notes: `installed@Dwarf` },
-			{ ...gear.get("Impact"), notes: `installed@Dwarf` },
-			{ ...gear.get("Refractive Glazing"), notes: `installed@Dwarf` },
-		);
-	}
-
-	return tank;
-}
-
-function explorenautTank(options = {}) {
-	let tank = [
-		{ ...gear.get("Explorenaut"), notes: `Small, no Long weapons` },
-	];
-
-	if (!(options?.ghostriderModule === false)) {
-		tank.push(
-			{ ...gear.get("Ghostrider Module"), notes: `installed@Explorenaut` },
-		);
-	}
-
-	if (!(options?.armored === false)) {
-		tank.push(
-			{ ...gear.get("Heavy Combat Armor"), notes: `installed@Explorenaut` },
-		);
-	}
-
-	if (!(options?.structuralEnhancement === false)) {
-		tank.push(
-			{ ...gear.get("Structural Enhancement"), notes: `installed@Explorenaut` },
-		);
-	}
-
-	if (!(options?.selfRepair === false)) {
-		tank.push(
-			{ ...gear.get("Self-Healing"), notes: "installed@Explorenaut" },
-			{ ...gear.get("Fixer Swarm"), name: gear.get("Fixer Swarm").name + " (Hive)", gp: gear.get("Fixer Swarm").gp + 1, notes: "installed@Explorenaut" },
-		);
-	}
-
-	if (options?.uparmored) {
-		tank.push(
-			{ ...gear.get("Reactive"), notes: `installed@Explorenaut` },
-			{ ...gear.get("Impact"), notes: `installed@Explorenaut` },
-			{ ...gear.get("Refractive Glazing"), notes: `installed@Explorenaut` },
-		);
-	}
-
-	return tank;
-}
-
-function rocketry() {
-	return [
-		{ ...gear.get("Mobility System"), name: gear.get("Mobility System").name + " Thrust Vector (Rocket) (Blueprint unlimited)", gp: gear.get("Mobility System").gp + 1 },
-	];
-}
 
 const gear = getGearData();
 const mission_gear = new Map();
 
+function egr_docbot_fullcombat(options = {}) {
+	const package = [
+		{ ...gear.get("DocBot"), notes: `` },
+		{ ...gear.get("Ghostrider Module"), notes: `@DocBot` },
+		{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} Thrust Vector (Rocket)`, notes: `@DocBot` },
+	];
+
+	if (options?.medichines) {
+		package.push(
+			{ ...gear.get("Medichines"), notes: `@DocBot` },
+		);
+	}
+
+	if (options?.armored) {
+		package.push(
+			{ ...gear.get("Heavy Combat Armor"), notes: `@DocBot` },
+		);
+
+		if (options.armored.hardened_skelton) {
+			package.push(
+				{ ...gear.get("Hardened Skeleton"), notes: `@DocBot` },
+			);
+		}
+
+		if (options.armored.structural_enhancement) {
+			package.push(
+				{ ...gear.get("Structural Enhancement"), notes: `@DocBot` },
+			);
+		}
+
+		if (options.armored.self_healing) {
+			package.push(
+				{ ...gear.get("Self-Healing"), notes: `@DocBot` },
+			);
+		}
+
+		if (options.armored.impact) {
+			package.push(
+				{ ...gear.get("Impact"), notes: `@DocBot` },
+			);
+		}
+
+		if (options.armored.reactive) {
+			package.push(
+				{ ...gear.get("Reactive"), notes: `@DocBot` },
+			);
+		}
+	}
+
+	if (options?.armed) {
+		if (options.armed.machine_gun > 0 && options.armed.machine_gun <= 4) {
+			for (let i = 0; i < options.armed.machine_gun; i++) {
+				package.push(
+					{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: `@DocBot` },
+				);
+			}
+		}
+	}
+
+	return package;
+}
+
+function egr_dwarf_fullcombat(options = {}) {
+	const package = [
+		{ ...gear.get("Dwarf"), notes: `` },
+		{ ...gear.get("Ghostrider Module"), notes: `@Dwarf` },
+		{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} Thrust Vector (Rocket)`, notes: `@Dwarf` },
+	];
+
+	if (options?.medichines) {
+		package.push(
+			{ ...gear.get("Medichines"), notes: `@Dwarf` },
+		);
+	}
+
+	if (options?.armored) {
+		package.push(
+			{ ...gear.get("Heavy Combat Armor"), notes: `@Dwarf` },
+		);
+
+		if (options.armored.hardened_skelton) {
+			package.push(
+				{ ...gear.get("Hardened Skeleton"), notes: `@Dwarf` },
+			);
+		}
+
+		if (options.armored.structural_enhancement) {
+			package.push(
+				{ ...gear.get("Structural Enhancement"), notes: `@Dwarf` },
+			);
+		}
+
+		if (options.armored.self_healing) {
+			package.push(
+				{ ...gear.get("Self-Healing"), notes: `@Dwarf` },
+			);
+		}
+
+		if (options.armored.impact) {
+			package.push(
+				{ ...gear.get("Impact"), notes: `@Dwarf` },
+			);
+		}
+
+		if (options.armored.reactive) {
+			package.push(
+				{ ...gear.get("Reactive"), notes: `@Dwarf` },
+			);
+		}
+	}
+
+	if (options?.armed) {
+		if (options.armed.weapon_mount > 0 && options.armed.weapon_mount <= 8) {
+			for (let i = 0; i < options.armed.weapon_mount; i++) {
+				package.push(
+					{ ...gear.get("Weapon Mount"), notes: `@Dwarf` },
+				);
+			}
+		}
+
+		if (options.armed.machine_gun > 0 && options.armed.machine_gun <= 4) {
+			for (let i = 0; i < options.armed.machine_gun; i++) {
+				package.push(
+					{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: `@Dwarf` },
+				);
+			}
+		}
+
+		if (options.armed.battle_laser > 0 && options.armed.battle_laser <= 4) {
+			for (let i = 0; i < options.armed.battle_laser; i++) {
+				package.push(
+					{ ...gear.get("Battle Laser"), notes: `@Dwarf` },
+				);
+			}
+		}
+	}
+
+	return package;
+}
+
+
+
+function egr_meshware_installed(options = {}) {
+
+	const package = [
+		{ ...gear.get("Enhanced Security"), gp: 0, notes: `from Agent` },
+		{ ...gear.get("Drone Rig") },
+		{ ...gear.get("Skillware") },
+		{ ...gear.get("Oracles") },
+		{ ...gear.get("Stress Control") },
+		{ ...gear.get("Fake Brainprint") },
+		{ ...gear.get("Auto-Erase") },
+		{ ...gear.get("Multi-Tasking") },
+		{ ...gear.get("App-Lock") },
+		{ ...gear.get("Fault Tolerance") },
+		{ ...gear.get("Persistence") },
+		{ ...gear.get("E-Veil"), gp: 0, notes: `from Agent` },
+		{ ...gear.get("Mnemonics"), gp: 0, notes: `from Agent` },
+	];
+
+	return package;
+}
+
+function egt_parisphere_upgrade(options = {}) {
+	const package = [
+		{ name: "acquired from Resources IV", gp: 0 }
+	];
+
+	if (options?.ghostrider) {
+		package.push(
+			{ ...gear.get("Ghostrider Module"), notes: `@Parisphere` },
+		);
+	}
+
+	if (options?.medichines) {
+		package.push(
+			{ ...gear.get("Medichines"), notes: `@Parisphere` },
+		);
+	}
+
+	if (options?.armored) {
+
+		if (options.armored.hardened_skelton) {
+			package.push(
+				{ ...gear.get("Hardened Skeleton"), notes: `@DocBot` },
+			);
+		}
+
+		if (options.armored.self_healing) {
+			package.push(
+				{ ...gear.get("Self-Healing"), notes: `@DocBot` },
+			);
+		}
+
+		if (options.armored.impact) {
+			package.push(
+				{ ...gear.get("Impact"), notes: `@DocBot` },
+			);
+		}
+
+		if (options.armored.reactive) {
+			package.push(
+				{ ...gear.get("Reactive"), notes: `@DocBot` },
+			);
+		}
+	}
+
+	if (options?.armed) {
+		if (options.armed.battle_laser > 0 && options.armed.battle_laser <= 4) {
+			for (let i = 0; i < options.armed.battle_laser; i++) {
+				package.push(
+					{ ...gear.get("Battle Laser"), notes: `@DocBot` },
+				);
+			}
+		}
+
+		if (options.armed.machine_gun > 0 && options.armed.machine_gun <= 4) {
+			for (let i = 0; i < options.armed.machine_gun; i++) {
+				package.push(
+					{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: `@DocBot` },
+				);
+			}
+		}
+	}
+
+	return package;
+}
+
+
 mission_gear.set("EGR_2.71828", {
 	sentinel: "EGR_2.71828",
-	mp: 0,
+	mp: 10,
 	gp: 24,
 	gear: [
-		//{ name: "converting mp to gp", gp: -10 },
-		structuredClone(gear.get("Fake Ego ID")),
-		//{ ...gear.get("Gas-Jet System"), name: gear.get("Gas-Jet System").name + " (Blueprint unlimited)", gp: gear.get("Gas-Jet System").gp + 1 },
-		//structuredClone(gear.get("Server")),
-		//structuredClone(gear.get("Robomule")),
-		//{ ...gear.get("Spindle Climber"), name: gear.get("Spindle Climber").name + " (Blueprint unlimited)", gp: gear.get("Spindle Climber").gp + 1 },
-		//{ ...gear.get("Impact"), name: gear.get("Impact").name + " (Blueprint unlimited)", gp: gear.get("Impact").gp + 1 },
-		//{ ...gear.get("Refractive Glazing"), name: gear.get("Refractive Glazing").name + " (Blueprint unlimited)", gp: gear.get("Refractive Glazing").gp + 1 },
-		//{ ...gear.get("Shield Drone"), name: gear.get("Shield Drone").name + " (Blueprint unlimited)", gp: gear.get("Shield Drone").gp + 1 }
-	]
-		//.concat(biomorphSupportRockNoHabitat())
-		.concat(docBotTank({ armed: false, uparmored: true }))
-		//.concat(dwarfTank({armed: false}))
-		.concat(explorenautTank({ selfRepair: false, structuralEnhancement: false, armored: false }))
-		.concat(rocketry())
-	,
+		{ ...gear.get("Fake Ego ID"), notes: `` },
+	],
 	morph: [
-		//{ name: "converting mp to gp", mp: 10 }
 	]
 });
 
+/*
+mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
+	.concat(
+		egr_dwarf_fullcombat({
+			medichines: true,
+			armored: { hardened_skelton: false, structural_enhancement: false, self_healing: true, impact: true, reactive: false },
+			armed: { weapon_mount: 4, machine_gun: 1 }
+		})
+	)
+	//.concat(egr_meshware_installed())
+	;
+*/
+
+mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
+	.concat(
+		egt_parisphere_upgrade({
+			ghostrider: true,
+			medichines: true,
+			armored: { hardened_skelton: true, self_healing: true, impact: true, reactive: false },
+			armed: { battle_laser: 2, machine_gun: 2 }
+		})
+	)
+	//.concat(egr_meshware_installed())
+	;
+
 mission_gear.set("SysRig.exe", {
 	sentinel: "SysRig.exe",
-	mp: 0,
+	mp: 6,
 	gp: 20,
 	gear: [
 		structuredClone(gear.get("Fake Ego ID")),
@@ -339,41 +471,6 @@ mission_gear.set("SysRig.exe", {
 	morph: []
 });
 
-function scenario_battle_medic() {
-	mission_gear.get("EGR_2.71828").gear = [
-		//{ name: "converting mp to gp", gp: -10 },
-		structuredClone(gear.get("Fake Ego ID")),
-	]
-		//.concat(biomorphSupportRockNoHabitat())
-		.concat(docBotTank({ armed: true, uparmored: false, mobility: true, selfRepair: ["Self-Healing"] }))
-	//.concat(rocketry())
-
-	mission_gear.get("EGR_2.71828").gear.push(
-		//{ ...gear.get("Dwarf"), notes: `Disassembly Tools (pg. 340)` }
-		{ ...gear.get("Breadcrumb System"), notes: `installed@DocBot` },
-		{ ...gear.get("Explorenaut"), notes: `Utilitmod` }
-	);
-}
-
-function scenario_dwarven_tank() {
-	mission_gear.get("EGR_2.71828").gear = [
-		{ name: "converting mp to gp", gp: -10 },
-		structuredClone(gear.get("Fake Ego ID")),
-	]
-		.concat(biomorphSupportRockNoHabitat())
-		.concat(dwarfTank({ armed: true }))
-		.concat(rocketry())
-		.concat([
-			{ ...gear.get("Explorenaut") },
-			{ ...gear.get("DocBot") },
-			{ ...gear.get("Robomule") },
-			{ ...gear.get("Server") },
-			{ ...gear.get("Breadcrumb System"), notes: `installed@Dwarf` }
-		])
-}
-
-
-scenario_battle_medic();
 console.clear();
 
 function report_mission_gear(options = { mg: mission_gear, json: false }) {
