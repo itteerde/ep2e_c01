@@ -1,18 +1,12 @@
 {
   "sentinel": "EGR_2.71828",
   "gear": [
-    "Fake Ego ID (pg. 315, 3 gp)",
-    "acquired from Resources IV (pg. undefined, 0 gp)",
-    "Ghostrider Module (pg. 320, 1 gp) : @Parisphere",
-    "Medichines (pg. 322, 3 gp) : @Parisphere",
-    "Hardened Skeleton (pg. 322, 3 gp) : @DocBot",
-    "Self-Healing (pg. 217, 1 gp) : @DocBot",
-    "Impact (pg. 217, 1 gp) : @DocBot",
-    "Battle Laser (pg. 208, 3 gp) : @DocBot",
-    "Battle Laser (pg. 208, 3 gp) : @DocBot",
-    "Machine Gun Railgun (pg. 210, 3 gp) : @DocBot",
-    "Machine Gun Railgun (pg. 210, 3 gp) : @DocBot"
+    "Fake Ego ID (pg. 315, 3 gp) : Leonhard Euler",
+    "DocBot (pg. 347, 3 gp)",
+    "Ghostrider Module (pg. 320, 1 gp) : @DocBot",
+    "Medichines (pg. 322, 3 gp) : @DocBot",
+    "Explorenaut (pg. 346, 3 gp)"
   ],
-  "gp_left": 0,
+  "gp_left": 11,
   "mp_left": 10
 }

@@ -182,16 +182,32 @@ function getGearData() {
 const gear = getGearData();
 const mission_gear = new Map();
 
-function egr_docbot_fullcombat(options = {}) {
+function egr_docbot(options = {}) {
 	const package = [
 		{ ...gear.get("DocBot"), notes: `` },
-		{ ...gear.get("Ghostrider Module"), notes: `@DocBot` },
-		{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} Thrust Vector (Rocket)`, notes: `@DocBot` },
 	];
+
+	if (options?.ghostrider) {
+		package.push(
+			{ ...gear.get("Ghostrider Module"), notes: `@DocBot` },
+		);
+	}
+
+	if (options?.mobility) {
+		package.push(
+			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: `@DocBot` },
+		);
+	}
 
 	if (options?.medichines) {
 		package.push(
 			{ ...gear.get("Medichines"), notes: `@DocBot` },
+		);
+	}
+
+	if (options?.breadcrumb) {
+		package.push(
+			{ ...gear.get("Breadcrumb System "), notes: `@DocBot` },
 		);
 	}
 
@@ -227,6 +243,84 @@ function egr_docbot_fullcombat(options = {}) {
 		if (options.armored.reactive) {
 			package.push(
 				{ ...gear.get("Reactive"), notes: `@DocBot` },
+			);
+		}
+	}
+
+	if (options?.armed) {
+		if (options.armed.machine_gun > 0 && options.armed.machine_gun <= 4) {
+			for (let i = 0; i < options.armed.machine_gun; i++) {
+				package.push(
+					{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: `@DocBot` },
+				);
+			}
+		}
+	}
+
+	return package;
+}
+
+function egr_explorenaut(options = {}) {
+	const package = [
+		{ ...gear.get("Explorenaut"), notes: `` },
+	];
+
+	if (options?.ghostrider) {
+		package.push(
+			{ ...gear.get("Ghostrider Module"), notes: `@Explorenaut` },
+		);
+	}
+
+	if (options?.mobility) {
+		package.push(
+			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: `@Explorenaut` },
+		);
+	}
+
+	if (options?.medichines) {
+		package.push(
+			{ ...gear.get("Medichines"), notes: `@Explorenaut` },
+		);
+	}
+
+	if (options?.breadcrumb) {
+		package.push(
+			{ ...gear.get("Breadcrumb System "), notes: `@DocBot` },
+		);
+	}
+
+	if (options?.armored) {
+		package.push(
+			{ ...gear.get("Heavy Combat Armor"), notes: `@Explorenaut` },
+		);
+
+		if (options.armored.hardened_skelton) {
+			package.push(
+				{ ...gear.get("Hardened Skeleton"), notes: `@Explorenaut` },
+			);
+		}
+
+		if (options.armored.structural_enhancement) {
+			package.push(
+				{ ...gear.get("Structural Enhancement"), notes: `@Explorenaut` },
+			);
+		}
+
+		if (options.armored.self_healing) {
+			package.push(
+				{ ...gear.get("Self-Healing"), notes: `@Explorenaut` },
+			);
+		}
+
+		if (options.armored.impact) {
+			package.push(
+				{ ...gear.get("Impact"), notes: `@Explorenaut` },
+			);
+		}
+
+		if (options.armored.reactive) {
+			package.push(
+				{ ...gear.get("Reactive"), notes: `@Explorenaut` },
 			);
 		}
 	}
@@ -322,8 +416,6 @@ function egr_dwarf_fullcombat(options = {}) {
 	return package;
 }
 
-
-
 function egr_meshware_installed(options = {}) {
 
 	const package = [
@@ -416,11 +508,26 @@ mission_gear.set("EGR_2.71828", {
 	mp: 10,
 	gp: 24,
 	gear: [
-		{ ...gear.get("Fake Ego ID"), notes: `` },
+		{ ...gear.get("Fake Ego ID"), notes: `Leonhard Euler` },
 	],
 	morph: [
 	]
 });
+
+mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
+	.concat(
+		egr_docbot({
+			ghostrider: true,
+			//mobility: "Thurst Vector (Rocket)",
+			medichines: true,
+			armored: false,// { hardened_skelton: false, structural_enhancement: false, self_healing: false, impact: true, reactive: false },
+			armed: { weapon_mount: 0, machine_gun: 0 }
+		})
+	)
+	.concat(
+		egr_explorenaut()
+	)
+	;
 
 /*
 mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
@@ -435,6 +542,7 @@ mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 	;
 */
 
+/*
 mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 	.concat(
 		egt_parisphere_upgrade({
@@ -446,6 +554,7 @@ mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 	)
 	//.concat(egr_meshware_installed())
 	;
+	*/
 
 mission_gear.set("SysRig.exe", {
 	sentinel: "SysRig.exe",
