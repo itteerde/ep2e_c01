@@ -15,6 +15,12 @@ function getGearData() {
 	gear.set("Breadcrumb System", {
 		name: "Breadcrumb System", complexity: "Min", restricted: false, gp: 1, pg: 336, description: `This worn device leaves micro-sized “breadcrumb” motes behind as you move, roughly every 25 meters. These devices mesh with each other and other devices, allowing you to map your position in relation to the breadcrumb trail, and creating a mesh connection all the way back to the trail’s source. This is for tracking your movement, finding your way back, and keeping meshed with your camp or ship in derelict habitats, wilderness, and other areas where there is no local functioning mesh.`
 	});
+	gear.set("Cauterizer", {
+		name: "Cauterizer", complexity: "Mod", restricted: true, gp: 2, pg: 327, description: `This scorch app rips into the ego with destructive neurofeedback routines. Against a cyberbrained ego, the cauterizer inflicts DV 1d10 + 5, +1d6 per superior success, to the target's morph (this is physical damage, not mesh damage). Against an infomorph, the cauterizer inflicts a DV 3d10 mesh attack of digitized neurological damage.`
+	});
+	gear.set("Defrag", {
+		name: "Defrag", complexity: "Mod", restricted: false, gp: 2, pg: null, description: `This app monitors your digital mental-state and takes measures to keep it in prime condition and optimize its performance. Whenever you take a short rest, you recover an additional pool point.`
+	});
 	gear.set("DocBot", {
 		name: "DocBot", complexity: "Maj", restricted: false, gp: 3, pg: 347, type: ["Robot"],
 		description: 'These wheeled medical robots are designed to tend to and transport injured or sick people. They carry a fabber for medical supplies and pharmaceuticals, miscellaneous medical gear, a secure container for carrying heads, and 4–8 articulated arms for conducting remote surgery. They are often loaded up with healing spray and meds (acquired separately).'
@@ -32,6 +38,9 @@ function getGearData() {
 	gear.set("Emergency Bubble", {
 		name: "Emergency Bubble", complexity: "Maj", restricted: false, gp: 3, pg: 341,
 		description: 'Used as a last-resort life raft on spaceships, an emergency bubble is made of advanced smart materials and comes in a large but portable package that can be quickly inflated around you in 1 action turn, usually inside an airlock. The bubble has a 5-meter diameter and can comfortably accommodate 4 people for 1 week. It maintains 1 atmosphere of pressure in a vacuum, protects the inhabitants from temperatures ranging from −175 to 140 C, and provides light and breathable air. A built-in autocook ▶343 provides food and liquids. It features a simple airlock, carries an emergency distress beacon, and can be transparent, opaque, or polarized. It is powered by a nuclear battery and includes comfortable inflatable furniture. This bubble can also be partially inflated as a dome and staked down to a surface to serve as an emergency shelter on asteroids or other surfaced environments.'
+	});
+	gear.set("Energy Efficiency", {
+		name: "Energy Efficiency", complexity: "Maj", restricted: false, gp: 3, pg: 323, description: `The bioware version of this ware boosts your metabolism. The hardware version optimizes your shell’s energy usage. The meshware version optimizes code. This gives you 1 extra short recharge per day.`
 	});
 	gear.set("Enhanced Security", {
 		name: "Enhanced Security", complexity: "Mod", restricted: false, gp: 2, pg: 326, description: `This meshware installs additional firewall and security layers, making the infomorph/cyberbrain harder to hack. Apply a −10 modifier to attempts to brainhack your digital mind. You can also use this meshware to enter a heightened state of security — Defensive Mode. When activated with a quick action, the modifier to brainhack you is increased to −30. This lock-down status impairs your functions, however; you cannot use Insight pool while it is active and suffer a −3 Initiative modifier.`
@@ -85,11 +94,17 @@ function getGearData() {
 	gear.set("Medichines", {
 		name: "Medichines", complexity: "Maj", restricted: true, gp: 3, pg: 322, description: `An implanted hive circulates nanobots throughout your system, monitoring your health at the cellular level and fixing any problems. Medichines allow you to ignore the effect of 1 wound (cumulative with other mods, up to a max of 3 ignored wounds). They also accelerate your natural healing (Biomorph Healing ▶221). If damage taken exceeds your Durability, or you take 5 or more wounds in an hour, the medichines automatically stabilize you, prevent you from bleeding out, place you into a medical stasis (during which you are unconscious and unable to act), and broadcast for emergency services via your mesh inserts. Medichines also reduce the duration and effects of drugs, toxins, and pathogens by half (cumulative with toxin filters). You can override this protection to permit intoxication or other effects, but unless you activate a second override, medichines prevent the toxins from accumulating to lethal or permanently harmful levels. Medichines provide health status reports to your mesh inserts and muse. Medichines for synthmorphs and bots consist of nanobots that monitor and repair the shell’s integrity and internal system functions. Note that the synthmorph version of medichines allows the synthmorph to self-repair in the same manner by which a biomorph with medichines would naturally heal (1d10 per hour, 1 wound per day).`
 	});
+	gear.set("Mind Amp", {
+		name: "Mind Amp", complexity: "Maj", restricted: false, gp: 3, pg: 320, description: `Mind amp alters your neural architecture and augments neuronal functions. This accelerates your mental faculties and ability to receive and process sensory information. Time subjectively slows down for you, allowing you to discern things happening too quickly for others to perceive, such as the individual frames of an old analog film or an accelerated audio recording. Mind amp increases your Insight pool by 2.`
+	});
 	gear.set("Mnemonics", {
 		name: "Mnemonics", complexity: "Min", restricted: false, gp: 1, pg: 316, description: `The electronic minds of cyberbrains and infomorphs mimic biological brains in how they store memories — as networked but scattered groups of neurons. Despite being computerized, their memory recall is not any more efficient than bio brains. Mnemonics systems, however, allow memories to be tagged and roughly indexed. This improves memory recall, though it remains far from perfect. Mnemonics applies a +20 modifier to COG Checks for memory recall. Mnemonic data can be transferred with an ego when it resleeves, but the modifier applies only for memories that were recorded when mnemonics ware is present. Mnemonics systems are included in all cyberbrains.`
 	});
 	gear.set("Mobility System", {
 		name: "Mobility System", complexity: "Mod", restricted: false, gp: 2, pg: 324, description: `Your morph is upgraded with an additional means of getting around (Movement Types ▶231). Any movement type can be chosen that works with your shell’s design, with approval from the GM. You may have multiple (different) systems.`
+	});
+	gear.set("Multi-Focus", {
+		name: "Multi-Focus", complexity: "Min", restricted: false, gp: 1, pg: null, description: `This mod is available to morphs with multi-tasking ware. You can either focus your detailed perception on one additional thing with the same quick action or maintain one mental-based task action that turn (e.g., research, hacking, programming, psychosurgery) for free. This does not provide bonus actions. You may take this mod multiple times.`
 	});
 	gear.set("Multi-Tasking", {
 		name: "Multi-Tasking", complexity: "Mod", restricted: false, gp: 2, pg: 320, description: `This cybernetic or software module enables your brain to focus on two things at the same time — something our minds cannot usually handle — without any context-switching confusion or increased error rates from inattention. Multi-Tasking increases your Insight Pool by 1.`
@@ -183,19 +198,32 @@ const gear = getGearData();
 const mission_gear = new Map();
 
 function egr_docbot(options = {}) {
+
+	const install_string = "@DocBot";
+
 	const package = [
 		{ ...gear.get("DocBot"), notes: `` },
 	];
 
 	if (options?.ghostrider) {
-		package.push(
-			{ ...gear.get("Ghostrider Module"), notes: `@DocBot` },
-		);
+
+		if (Number.isInteger(options.ghostrider) && options.ghostrider > 1 && options.ghostrider <= 4) {
+			for (let n = 0; n < options.ghostrider; n++) {
+				package.push(
+					{ ...gear.get("Ghostrider Module"), notes: install_string },
+				);
+			}
+		} else {
+			package.push(
+				{ ...gear.get("Ghostrider Module"), notes: install_string },
+			);
+		}
+
 	}
 
 	if (options?.mobility) {
 		package.push(
-			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: `@DocBot` },
+			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: install_string },
 		);
 	}
 
@@ -517,16 +545,19 @@ mission_gear.set("EGR_2.71828", {
 mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 	.concat(
 		egr_docbot({
-			ghostrider: true,
-			//mobility: "Thurst Vector (Rocket)",
+			ghostrider: 1,
+			mobility: "Thurst Vector (Rocket)",
 			medichines: true,
-			armored: false,// { hardened_skelton: false, structural_enhancement: false, self_healing: false, impact: true, reactive: false },
-			armed: { weapon_mount: 0, machine_gun: 0 }
+			armored: { hardened_skelton: false, structural_enhancement: false, self_healing: true, impact: true, reactive: false },
+			armed: { weapon_mount: 0, machine_gun: 1 }
 		})
 	)
 	.concat(
-		egr_explorenaut()
+		egr_explorenaut({ ghostrider: 0 })
 	)
+	.concat([
+		{ ...gear.get("Breadcrumb System") },
+	])
 	;
 
 /*
@@ -555,6 +586,33 @@ mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 	//.concat(egr_meshware_installed())
 	;
 	*/
+
+mission_gear.get("EGR_2.71828").gear = [
+	{ ...gear.get("Fake Ego ID"), notes: `Leonhard Euler` },
+	{ ...gear.get("Mind Amp") },
+	{ ...gear.get("Energy Efficiency") },
+	{ ...gear.get("Cauterizer") },
+	{ ...gear.get("Defrag") },
+	{ ...gear.get("Multi-Focus") },
+];
+
+mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
+	.concat(
+		egr_docbot({
+			ghostrider: 1,
+			mobility: "Thurst Vector (Rocket)",
+			medichines: false,
+			armored: false, //{ hardened_skelton: false, structural_enhancement: false, self_healing: true, impact: true, reactive: false },
+			armed: { weapon_mount: 0, machine_gun: 0 }
+		})
+	)
+	.concat(
+		egr_explorenaut({ ghostrider: 0 })
+	)
+	.concat([
+		{ ...gear.get("Breadcrumb System") },
+	])
+	;
 
 mission_gear.set("SysRig.exe", {
 	sentinel: "SysRig.exe",

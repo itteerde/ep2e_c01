@@ -2,11 +2,17 @@
   "sentinel": "EGR_2.71828",
   "gear": [
     "Fake Ego ID (pg. 315, 3 gp) : Leonhard Euler",
+    "Mind Amp (pg. 320, 3 gp)",
+    "Energy Efficiency (pg. 323, 3 gp)",
+    "Cauterizer (pg. 327, 2 gp)",
+    "Defrag (pg. null, 2 gp)",
+    "Multi-Focus (pg. null, 1 gp)",
     "DocBot (pg. 347, 3 gp)",
     "Ghostrider Module (pg. 320, 1 gp) : @DocBot",
-    "Medichines (pg. 322, 3 gp) : @DocBot",
-    "Explorenaut (pg. 346, 3 gp)"
+    "Mobility System Thrust Vector (Rocket) (pg. 324, 2 gp) : @DocBot",
+    "Explorenaut (pg. 346, 3 gp)",
+    "Breadcrumb System (pg. 336, 1 gp)"
   ],
-  "gp_left": 11,
+  "gp_left": 0,
   "mp_left": 10
 }
