@@ -1,0 +1,3572 @@
+{
+  "name": "SysRig.Exe",
+  "type": "character",
+  "folder": "3uJhaUAkQr9VX95W",
+  "prototypeToken": {
+    "actorLink": true,
+    "name": "SysRig.Exe",
+    "displayName": 0,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "assets/Tokens/Top%20Down/By%20Type/Players/SysRig/SysRig1.png",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0,
+      "color": null
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "hexagonalShape": 0,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "img": "assets/Tokens/Top%20Down/By%20Type/Players/SysRig/SysRig1.png",
+  "system": {
+    "description": "",
+    "reference": "",
+    "fakeId": "",
+    "aptitudes": {
+      "cog": 20,
+      "int": 10,
+      "ref": 30,
+      "sav": 15,
+      "som": 5,
+      "wil": 15
+    },
+    "temporary": [],
+    "favoriteItems": [],
+    "purchaseLog": [],
+    "fieldSkills": {
+      "exotic": [],
+      "hardware": [
+        {
+          "points": 60,
+          "specialization": "",
+          "field": "Electronics",
+          "linkedAptitude": "cog",
+          "category": "technical",
+          "id": "rr3ayqn1tjvxyowb"
+        },
+        {
+          "points": 40,
+          "specialization": "",
+          "field": "Robotics",
+          "linkedAptitude": "cog",
+          "category": "technical",
+          "id": "06qqovy8210a8np0"
+        }
+      ],
+      "know": [
+        {
+          "points": 30,
+          "specialization": "",
+          "field": "Computer Science",
+          "linkedAptitude": "cog",
+          "category": "academics",
+          "id": "144fi6d98nygrwsy"
+        },
+        {
+          "points": 30,
+          "specialization": "",
+          "field": "Engineering",
+          "linkedAptitude": "cog",
+          "category": "academics",
+          "id": "gn7tr736n2wwiiu1"
+        },
+        {
+          "points": 40,
+          "specialization": "",
+          "field": "Bot Models",
+          "linkedAptitude": "cog",
+          "category": "interests",
+          "id": "x98ajh6h6hi77rxf"
+        },
+        {
+          "points": 60,
+          "specialization": "",
+          "field": "Habitat Ops",
+          "linkedAptitude": "cog",
+          "category": "professionalTraining",
+          "id": "s5p1jtd1na352juj"
+        },
+        {
+          "points": 60,
+          "specialization": "",
+          "field": "Systems Administration",
+          "linkedAptitude": "cog",
+          "category": "professionalTraining",
+          "id": "wfvun9j753md769k"
+        },
+        {
+          "points": 30,
+          "specialization": "",
+          "field": "Mercurials",
+          "linkedAptitude": "cog",
+          "category": "interests",
+          "id": "mw0govpbh44wk2ry"
+        },
+        {
+          "points": 10,
+          "specialization": "",
+          "field": "Sculpture",
+          "linkedAptitude": "int",
+          "category": "arts",
+          "id": "7uff6jm3bux1st8h"
+        }
+      ],
+      "medicine": [],
+      "pilot": [
+        {
+          "points": 50,
+          "specialization": "",
+          "field": "Air",
+          "linkedAptitude": "ref",
+          "category": "vehicle",
+          "id": "ojcl001ummvfrc9s"
+        }
+      ]
+    },
+    "homeDevice": {
+      "actorId": "",
+      "itemId": ""
+    },
+    "network": {
+      "masterDeviceId": "",
+      "systemDefenders": [],
+      "unslavedDevices": []
+    },
+    "assets": [],
+    "settings": {
+      "canDefault": true,
+      "trackMentalHealth": true,
+      "useThreat": false,
+      "characterDetails": true,
+      "threatDetails": false,
+      "trackPoints": true,
+      "trackReputations": true,
+      "ignoreOverburdened": false
+    },
+    "shortRecharge": {
+      "refreshStartTime": 14160819000,
+      "taken": 1
+    },
+    "longRecharge": {
+      "refreshStartTime": 0,
+      "taken": 0
+    },
+    "motivations": [
+      {
+        "cause": "AGI Personhood",
+        "stance": "support",
+        "goals": [],
+        "id": "qzymqphr5v4xoah3"
+      },
+      {
+        "cause": "Technoprogressivism",
+        "stance": "support",
+        "goals": [],
+        "id": "qkalnliv8sspdfa8"
+      },
+      {
+        "cause": "Religion",
+        "stance": "oppose",
+        "goals": [],
+        "id": "61tdmh6adic0k5am"
+      }
+    ],
+    "points": {
+      "customization": 0,
+      "gear": 0,
+      "morph": 6,
+      "rez": 8,
+      "credits": 0
+    },
+    "accumulatedTimeStart": 12884001000,
+    "tasks": [],
+    "reps": {
+      "@Rep": {
+        "major": 0,
+        "minor": 0,
+        "moderate": 0,
+        "refreshStartTime": 0,
+        "score": 59,
+        "track": true
+      },
+      "cRep": {
+        "major": 0,
+        "minor": 0,
+        "moderate": 0,
+        "refreshStartTime": 0,
+        "score": 0,
+        "track": false
+      },
+      "fRep": {
+        "major": 0,
+        "minor": 0,
+        "moderate": 0,
+        "refreshStartTime": 0,
+        "score": 0,
+        "track": false
+      },
+      "gRep": {
+        "major": 0,
+        "minor": 0,
+        "moderate": 0,
+        "refreshStartTime": 0,
+        "score": 0,
+        "track": false
+      },
+      "iRep": {
+        "major": 0,
+        "minor": 0,
+        "moderate": 0,
+        "refreshStartTime": 0,
+        "score": 59,
+        "track": true
+      },
+      "rRep": {
+        "major": 0,
+        "minor": 0,
+        "moderate": 0,
+        "refreshStartTime": 0,
+        "score": 0,
+        "track": false
+      },
+      "xRep": {
+        "major": 0,
+        "minor": 0,
+        "moderate": 0,
+        "refreshStartTime": 0,
+        "score": 0,
+        "track": false
+      }
+    },
+    "skills": {
+      "athletics": {
+        "points": 0,
+        "specialization": ""
+      },
+      "deceive": {
+        "points": 0,
+        "specialization": ""
+      },
+      "fray": {
+        "points": 35,
+        "specialization": ""
+      },
+      "freeFall": {
+        "points": 0,
+        "specialization": ""
+      },
+      "guns": {
+        "points": 50,
+        "specialization": ""
+      },
+      "infiltrate": {
+        "points": 50,
+        "specialization": ""
+      },
+      "infosec": {
+        "points": 60,
+        "specialization": ""
+      },
+      "interface": {
+        "points": 60,
+        "specialization": ""
+      },
+      "kinesics": {
+        "points": 0,
+        "specialization": ""
+      },
+      "melee": {
+        "points": 0,
+        "specialization": ""
+      },
+      "perceive": {
+        "points": 30,
+        "specialization": "See"
+      },
+      "persuade": {
+        "points": 0,
+        "specialization": ""
+      },
+      "program": {
+        "points": 60,
+        "specialization": ""
+      },
+      "provoke": {
+        "points": 0,
+        "specialization": ""
+      },
+      "psi": {
+        "points": 0,
+        "specialization": ""
+      },
+      "research": {
+        "points": 20,
+        "specialization": ""
+      },
+      "survival": {
+        "points": 0,
+        "specialization": ""
+      }
+    },
+    "spentPools": {
+      "flex": 0,
+      "insight": 0,
+      "moxie": 0,
+      "threat": 0,
+      "vigor": 0
+    },
+    "flex": 1,
+    "threat": 0,
+    "characterDetails": {
+      "age": "5",
+      "aliases": "ImpScript",
+      "background": "Infolife",
+      "career": "Techie",
+      "faction": "Mercurial",
+      "gender": "He/Him/His",
+      "interest": "Jammer",
+      "languages": ""
+    },
+    "egoType": "AGI",
+    "forkType": "",
+    "threatDetails": {
+      "level": "yellow",
+      "niche": "",
+      "numbers": "",
+      "stress": {
+        "sv": "",
+        "minSV": 1,
+        "minStressOption": "none",
+        "notes": ""
+      }
+    },
+    "combatState": {
+      "complexAim": false,
+      "fullDefense": "",
+      "aggressive": false
+    },
+    "mentalHealth": {
+      "alienation": 0,
+      "damage": 0,
+      "helplessness": 0,
+      "log": [
+        {
+          "damage": 0,
+          "wounds": 0,
+          "source": "Editor",
+          "stressType": null,
+          "cumulativeDotID": null,
+          "realTimeMS": 1715818068312,
+          "worldTimeMS": 12720687000,
+          "mode": "heal",
+          "id": "qxv3s3apfc6ltxrm"
+        },
+        {
+          "damage": 3,
+          "wounds": 0,
+          "source": "Form",
+          "stressType": null,
+          "cumulativeDotID": null,
+          "realTimeMS": 1715823131512,
+          "worldTimeMS": 12726867000,
+          "mode": "edit",
+          "id": "paockyv4o8sciobh"
+        },
+        {
+          "damage": 3,
+          "wounds": 0,
+          "source": "Editor",
+          "stressType": null,
+          "cumulativeDotID": null,
+          "realTimeMS": 1717026195965,
+          "worldTimeMS": 12795447000,
+          "mode": "heal",
+          "id": "e0g0jjvcttf1e7vx"
+        },
+        {
+          "damage": 6,
+          "wounds": 1,
+          "source": "Custom",
+          "stressType": "",
+          "cumulativeDotID": null,
+          "realTimeMS": 1717034012372,
+          "worldTimeMS": 12850182000,
+          "mode": "inflict",
+          "id": "1fl4u4br8omnokc1"
+        },
+        {
+          "damage": 4,
+          "wounds": 1,
+          "source": "Encountering Threat",
+          "stressType": "theUnknown",
+          "cumulativeDotID": null,
+          "realTimeMS": 1717034333490,
+          "worldTimeMS": 12850182000,
+          "mode": "inflict",
+          "id": "koepeyjnsg47d37s"
+        },
+        {
+          "damage": 2,
+          "wounds": 0,
+          "source": "Ada Lovelace",
+          "stressType": null,
+          "cumulativeDotID": null,
+          "realTimeMS": 1717639082071,
+          "worldTimeMS": 13566291000,
+          "mode": "heal",
+          "id": "99not7tj9sghkkhw"
+        },
+        {
+          "damage": 6,
+          "wounds": 0,
+          "source": "Ada Lovelace",
+          "stressType": null,
+          "cumulativeDotID": null,
+          "realTimeMS": 1717639423478,
+          "worldTimeMS": 13566291000,
+          "mode": "heal",
+          "id": "5vhxgeprzf7zf3bf"
+        },
+        {
+          "damage": 2,
+          "wounds": 0,
+          "source": "Ada Lovelace",
+          "stressType": null,
+          "cumulativeDotID": null,
+          "realTimeMS": 1717639655721,
+          "worldTimeMS": 13566291000,
+          "mode": "heal",
+          "id": "vmi4ii1i65vsqxqm"
+        },
+        {
+          "damage": 0,
+          "wounds": 2,
+          "source": "Ada Lovelace",
+          "stressType": null,
+          "cumulativeDotID": null,
+          "realTimeMS": 1717642180911,
+          "worldTimeMS": 13739091000,
+          "mode": "heal",
+          "id": "te5cxsfxogvcor68"
+        }
+      ],
+      "naturalHealAttempts": [
+        {
+          "heal": "stress",
+          "realTimeMS": 1717638958616,
+          "worldTimeMS": 13566291000,
+          "id": "hkiy3un2vjndmhui"
+        }
+      ],
+      "violence": 0,
+      "wounds": 0,
+      "lastGainedStressTime": -1,
+      "aidedHealTickStartTime": -1,
+      "damageRepair": {
+        "amount": "",
+        "interval": 0
+      },
+      "ownHealTickStartTime": -1,
+      "woundRepair": {
+        "interval": 0,
+        "amount": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "lkmY7zkWXgvPhutg",
+      "name": "Digital Speed",
+      "type": "trait",
+      "system": {
+        "description": "<p>This trait is only available to infomorphs. Unfettered by the physical, you reduce timeframes for mesh-based task actions by 25%; this is cumulative with reduced time from superior successes.</p>",
+        "reference": "Eclipse Phase Second Edition p. 73",
+        "restrictions": "",
+        "triggers": "",
+        "source": "morph",
+        "state": {
+          "level": 0,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 1,
+            "effects": [
+              {
+                "type": "duration",
+                "subtype": "taskActionTimeframe",
+                "modifier": -25,
+                "taskType": "mesh",
+                "halve": false,
+                "id": "3yzgi529mc"
+              }
+            ],
+            "id": "6omy0sihml"
+          }
+        ],
+        "subtype": "",
+        "traitType": "positive"
+      },
+      "sort": 100000,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714246116615,
+        "modifiedTime": 1714246116615,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": null,
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "Uz6kQEVpnPplG0Fo",
+      "name": "Exotic Morphology",
+      "type": "trait",
+      "system": {
+        "description": "<p>This morph is substantially physiologically (and possibly neurologically) different from the baseline humanoid forms most transhumans are accustomed to sleeving. You receive a -10 modifier per level on Integration Tests ▶288 when sleeving into this morph. This modifier does not apply to the original morph of uplift or infolife characters. This trait may not be applied to morphs that don’t come with it.</p>",
+        "reference": "Eclipse Phase Second Edition p. 78",
+        "restrictions": "",
+        "triggers": "",
+        "source": "morph",
+        "state": {
+          "level": 2,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 2,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "special",
+                    "test": "integration"
+                  }
+                ],
+                "modifier": -10,
+                "toOpponent": false,
+                "requirement": "",
+                "id": "8tiuasyl7d"
+              }
+            ],
+            "id": "6ats1e5arj"
+          },
+          {
+            "cost": 4,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "special",
+                    "test": "integration"
+                  }
+                ],
+                "modifier": -20,
+                "toOpponent": false,
+                "requirement": "",
+                "id": "jcdfnnbn9i"
+              }
+            ],
+            "id": "suw2tir7s8"
+          },
+          {
+            "cost": 6,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "special",
+                    "test": "integration"
+                  }
+                ],
+                "modifier": -30,
+                "toOpponent": false,
+                "requirement": "",
+                "id": "mznptjs9ra"
+              }
+            ],
+            "id": "pmr5ydgicz"
+          }
+        ],
+        "subtype": "",
+        "traitType": "negative"
+      },
+      "sort": 200000,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714246116615,
+        "modifiedTime": 1714246116615,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": null,
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "IysJ1ztmDAafmXgn",
+      "name": "Drone Rig",
+      "type": "software",
+      "system": {
+        "description": "<p>This simsense augmentation gives you better control when jamming drones (Remote Operations ▶346). You ignore the -10 modifier for jamming.</p>",
+        "reference": "Eclipse Phase Second Edition p. 320",
+        "complexity": "moderate",
+        "restricted": false,
+        "quality": "average",
+        "softwareType": "meshware",
+        "activatedEffects": [],
+        "effects": [
+          {
+            "type": "misc",
+            "unique": "",
+            "description": "Ignore the -10 modifier when jamming.",
+            "id": "s9nfaohbqj"
+          }
+        ],
+        "category": "Mental Augments",
+        "serviceDuration": -1,
+        "skills": [],
+        "activation": "",
+        "meshAttacks": 0,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 4083750000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "sort": 800000,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714246116615,
+        "modifiedTime": 1714246116615,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": null,
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "wHidgdiuTiSNOojK",
+      "name": "Mnemonics",
+      "type": "software",
+      "system": {
+        "description": "<p>The electronic minds of cyberbrains and infomorphs mimic biological brains in how they store memories &mdash; as networked but scattered groups of neurons. Despite being computerized, their memory recall is not any more efficient than bio brains. Mnemonics systems, however, allow memories to be tagged and roughly indexed. This improves memory recall, though it remains far from perfect. Mnemonics applies a +20 modifier to COG Checks for memory recall. Mnemonic data can be transferred with an ego when it resleeves, but the modifier applies only for memories that were recorded when mnemonics ware is present. Mnemonics systems are included in all cyberbrains.</p>",
+        "reference": "Eclipse Phase Second Edition p. 316",
+        "complexity": "minor",
+        "restricted": false,
+        "quality": "average",
+        "softwareType": "meshware",
+        "activatedEffects": [],
+        "effects": [
+          {
+            "type": "successTest",
+            "tags": [
+              {
+                "type": "aptitudeCheck",
+                "aptitude": "cog"
+              }
+            ],
+            "modifier": 20,
+            "toOpponent": false,
+            "requirement": "memory recall related",
+            "id": "lc14c5s743"
+          }
+        ],
+        "category": "Standard Augments",
+        "serviceDuration": -1,
+        "skills": [],
+        "activation": "",
+        "meshAttacks": 0,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 4083750000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "sort": 1200000,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714246116615,
+        "modifiedTime": 1714246116615,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": null,
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "w0S7qSVKkFwaOmUC",
+      "name": "Oracles",
+      "type": "software",
+      "system": {
+        "description": "<p>This neural macrosensing processor helps you pay attention to sensory input you are not focusing on, alerting you to important things you might otherwise overlook. Oracles provide a +10 bonus to Perceive and negate the distraction modifier for Perceive Tests.</p>",
+        "reference": "Eclipse Phase Second Edition p. 318",
+        "complexity": "moderate",
+        "restricted": false,
+        "quality": "average",
+        "softwareType": "meshware",
+        "activatedEffects": [],
+        "effects": [
+          {
+            "type": "successTest",
+            "tags": [
+              {
+                "type": "skill",
+                "skillType": "perceive"
+              }
+            ],
+            "modifier": 10,
+            "toOpponent": false,
+            "requirement": "",
+            "id": "811iq4pgca"
+          },
+          {
+            "type": "misc",
+            "unique": "",
+            "description": "Negate distraction modifiers",
+            "id": "fqtd3ky9if"
+          }
+        ],
+        "category": "Sensory Augments",
+        "serviceDuration": -1,
+        "skills": [],
+        "activation": "",
+        "meshAttacks": 0,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 4083750000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "sort": 1200001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714246116615,
+        "modifiedTime": 1714246116615,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": null,
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "MQAloMmuHcWqDTJm",
+      "name": "Drone Affinity",
+      "type": "trait",
+      "system": {
+        "description": "<p>You have an innate knack for jamming drones. You do not need to make Integration Tests when remotely operating a drone.</p>",
+        "reference": "Eclipse Phase Second Edition p. 73",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 0,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 1,
+            "effects": [
+              {
+                "type": "misc",
+                "unique": "",
+                "description": "No Integration Tests when jamming drones",
+                "id": "s5lkx8858k"
+              }
+            ],
+            "id": "r17y6v4mlp"
+          }
+        ],
+        "subtype": "",
+        "traitType": "positive"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.traits.Item.7hg993RkUcquPM9m"
+        }
+      },
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qHi89sFcK4gHlOPd": 3,
+        "sbq3hoB9A5kGnUTA": 3
+      },
+      "folder": null,
+      "sort": 100000,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714249654693,
+        "modifiedTime": 1714264463240,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.traits.Item.7hg993RkUcquPM9m",
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "6y5ygr8nDvjwQ2ZB",
+      "name": "Situational Awareness",
+      "type": "trait",
+      "system": {
+        "description": "<p>You maintain continuous partial awareness of the goings-on in your immediate environment. You do not suffer the Distracted modifier on Perceive Tests to notice things even when your attention is focused elsewhere or when making quick Perceive Tests during combat.</p>",
+        "reference": "Eclipse Phase Second Edition p. 75",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 0,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 1,
+            "effects": [
+              {
+                "type": "misc",
+                "unique": "",
+                "description": "You do not suffer the Distracted modifier",
+                "id": "qxyu5kdtuw"
+              }
+            ],
+            "id": "7l8ldwaort"
+          }
+        ],
+        "subtype": "",
+        "traitType": "positive"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.traits.Item.R8CGmgdyE8ybYxd9"
+        }
+      },
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qHi89sFcK4gHlOPd": 3,
+        "sbq3hoB9A5kGnUTA": 3
+      },
+      "folder": null,
+      "sort": 200000,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714249669494,
+        "modifiedTime": 1714264463240,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.traits.Item.R8CGmgdyE8ybYxd9",
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "czSURaoTwabykFSc",
+      "name": "Danger Sense",
+      "type": "trait",
+      "system": {
+        "description": "<p>You possess an intuitive sixth sense that warns of imminent threats. It provides a +10 modifier to Perceive Tests to avoid surprise ▶227.</p>",
+        "reference": "Eclipse Phase Second Edition p. 73",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 0,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 1,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "skill",
+                    "skillType": "perceive"
+                  }
+                ],
+                "modifier": 10,
+                "toOpponent": false,
+                "requirement": "vs surprise",
+                "id": "xca6ufnyiz"
+              }
+            ],
+            "id": "36of9drn5y"
+          }
+        ],
+        "subtype": "",
+        "traitType": "positive"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.traits.Item.Cg5MylRwzuaXldRP"
+        }
+      },
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qHi89sFcK4gHlOPd": 3,
+        "sbq3hoB9A5kGnUTA": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714249681853,
+        "modifiedTime": 1714264484558,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.traits.Item.Cg5MylRwzuaXldRP",
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "4Q05zewCS5TGno8t",
+      "name": "Black Mark",
+      "type": "trait",
+      "system": {
+        "description": "<p>You did something in your past to earn a black mark on your reputation with one particular faction that continues to haunt your interactions. Apply a -10 modifier per level to rep net interactions and social skill tests involving that faction. This trait may be taken more than once for different factions.</p>",
+        "reference": "Eclipse Phase Second Edition p. 77",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 2,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 1,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "rep",
+                    "network": "@Rep"
+                  }
+                ],
+                "modifier": -10,
+                "toOpponent": false,
+                "requirement": "",
+                "id": "nn3rr0p2up"
+              },
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "skillCategory",
+                    "category": "social"
+                  }
+                ],
+                "modifier": -10,
+                "toOpponent": false,
+                "requirement": "interacting with relevant faction",
+                "id": "v4nx3vheol"
+              }
+            ],
+            "id": "t6u815xi1b"
+          },
+          {
+            "cost": 2,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "rep",
+                    "network": "@Rep"
+                  }
+                ],
+                "modifier": -20,
+                "toOpponent": false,
+                "requirement": "",
+                "id": "51tee9aksq"
+              },
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "skillCategory",
+                    "category": "social"
+                  }
+                ],
+                "modifier": -20,
+                "toOpponent": false,
+                "requirement": "interacting with relevant faction",
+                "id": "qgomw4xvzv"
+              }
+            ],
+            "id": "exc8eww9ks"
+          },
+          {
+            "cost": 3,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "rep",
+                    "network": "@Rep"
+                  }
+                ],
+                "modifier": -30,
+                "toOpponent": false,
+                "requirement": "",
+                "id": "jw7a4go5wg"
+              },
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "skillCategory",
+                    "category": "social"
+                  }
+                ],
+                "modifier": -30,
+                "toOpponent": false,
+                "requirement": "interacting with relevant faction",
+                "id": "id0kj0l11d"
+              }
+            ],
+            "id": "k45v7mawqj"
+          }
+        ],
+        "subtype": "Junta",
+        "traitType": "negative"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.traits.Item.QSVVe9VwnkMkCdm3"
+        }
+      },
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qHi89sFcK4gHlOPd": 3,
+        "sbq3hoB9A5kGnUTA": 3
+      },
+      "folder": null,
+      "sort": 400000,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714249733262,
+        "modifiedTime": 1714264591983,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.traits.Item.QSVVe9VwnkMkCdm3",
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "5Tsqm6Tmto3L6o52",
+      "name": "Blacklisted Rep",
+      "type": "trait",
+      "system": {
+        "description": "<p>You are blacklisted in certain circles, whether you did something to deserve it or not. You are barred from having a Rep score higher than 0 in one particular reputation network. For rep nets outside your faction, this counts as Level 1. For the rep net central to your faction, this counts as Level 2. People within that network will refuse to help you out of fear of reprisals and ruining their own reputation. This trait may be taken more than once for different rep nets.</p>",
+        "reference": "Eclipse Phase Second Edition p. 77",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 0,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 1,
+            "effects": [
+              {
+                "type": "misc",
+                "unique": "",
+                "description": "Cannot have rep score in one rep network",
+                "id": "4rcdi01v0m"
+              }
+            ],
+            "id": "2mmy7c7668"
+          },
+          {
+            "cost": 4,
+            "effects": [
+              {
+                "type": "misc",
+                "unique": "",
+                "description": "Cannot have rep score in your own faction's network",
+                "id": "2m0a24my81"
+              }
+            ],
+            "id": "njau10qw1f"
+          }
+        ],
+        "subtype": "C-Rep",
+        "traitType": "negative"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.traits.Item.Lt6tPhcbsfYSPQS4"
+        }
+      },
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qHi89sFcK4gHlOPd": 3,
+        "sbq3hoB9A5kGnUTA": 3
+      },
+      "folder": null,
+      "sort": 600000,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714249779290,
+        "modifiedTime": 1714264463240,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.traits.Item.Lt6tPhcbsfYSPQS4",
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "ldsBkpJjOZq3kGLl",
+      "name": "Enemy",
+      "type": "trait",
+      "system": {
+        "description": "<p>An enemy from your past continues to haunt you. Work with your GM to establish the details of this enmity. The GM should use this enemy as an occasional threat, surprise, and hindrance.</p>",
+        "reference": "Eclipse Phase Second Edition p. 77",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 0,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 2,
+            "effects": [
+              {
+                "type": "misc",
+                "unique": "",
+                "description": "An enemy from your past continues to haunt you",
+                "id": "4d4z3uvelj"
+              }
+            ],
+            "id": "aowwb8ptpo"
+          }
+        ],
+        "subtype": "Junta",
+        "traitType": "negative"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.traits.Item.8gRlMXtBIbWcpwBn"
+        }
+      },
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qHi89sFcK4gHlOPd": 3,
+        "sbq3hoB9A5kGnUTA": 3
+      },
+      "folder": null,
+      "sort": 700000,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714249812404,
+        "modifiedTime": 1714264463240,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.traits.Item.8gRlMXtBIbWcpwBn",
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "BGNdaWNEcp1jMPFI",
+      "name": "Edited Memories",
+      "type": "trait",
+      "system": {
+        "description": "<p>At some point in your past, certain memories were strategically removed or otherwise lost to you. This may have been done to intentionally forget an unpleasant or shameful experience or to make a break with the past. Or you may have suffered lack due to an unexpected death (with no recent backup) or had the memories erased against your will. Whatever the case, the memories should be important and significant, not mundane. Either evidence of what happened or NPCs who know the full story should exist. GMs can use this as a tool to haunt you with ghosts and mysteries from your past.</p>",
+        "reference": "Eclipse Phase Second Edition p. 77",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 0,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 1,
+            "effects": [
+              {
+                "type": "misc",
+                "unique": "",
+                "description": "Missing important memories",
+                "id": "6mrwpjgybc"
+              }
+            ],
+            "id": "k8opl0ouru"
+          }
+        ],
+        "subtype": "",
+        "traitType": "negative"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.traits.Item.aaI6s3RJD2ulHI4d"
+        }
+      },
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qHi89sFcK4gHlOPd": 3,
+        "sbq3hoB9A5kGnUTA": 3
+      },
+      "folder": null,
+      "sort": 650000,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714249833144,
+        "modifiedTime": 1714264492038,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.traits.Item.aaI6s3RJD2ulHI4d",
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "QEpRdfYNi2ebgYBj",
+      "name": "Spatial Visualization",
+      "type": "trait",
+      "system": {
+        "description": "<p>You have a knack for conceptualizing dimensions, distances, volumes, and shapes. You receive a +10 modifier for any Know or Technical skill tests involving 3D visualization.</p>",
+        "reference": "Eclipse Phase Second Edition p. 75",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 0,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 2,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "fieldSkill",
+                    "fieldSkill": "know",
+                    "field": ""
+                  },
+                  {
+                    "type": "skillCategory",
+                    "category": "technical"
+                  }
+                ],
+                "modifier": 10,
+                "toOpponent": false,
+                "requirement": "involving 3D visualization.",
+                "id": "w9zu81kt6o"
+              }
+            ],
+            "id": "6nk5mtps52"
+          }
+        ],
+        "subtype": "",
+        "traitType": "positive"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.traits.Item.WhefWoDDu8EbTome"
+        }
+      },
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qHi89sFcK4gHlOPd": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "folder": null,
+      "sort": 250000,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714264435157,
+        "modifiedTime": 1714264476487,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.traits.Item.WhefWoDDu8EbTome",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Hand Laser (For Rolls Only)",
+      "type": "beamWeapon",
+      "system": {
+        "description": "<p>The morph has a weapon-grade laser implanted in its forearm, with a flexible waveguide leading to a lens located between the first two knuckles on the morph&rsquo;s dominant hand. The laser&rsquo;s batteries are implanted and not easily swapped out in biomorphs.</p>",
+        "reference": "Eclipse Phase Second Edition p. 208",
+        "complexity": "moderate",
+        "restricted": true,
+        "quality": "average",
+        "concealable": true,
+        "fragile": false,
+        "singleUse": false,
+        "twoHanded": false,
+        "blueprint": {
+          "blueprintType": "",
+          "cracked": false,
+          "used": false
+        },
+        "state": {
+          "disabled": false,
+          "equipped": true,
+          "braced": false,
+          "interface": false,
+          "used": false
+        },
+        "accessories": [
+          "smartlink",
+          "safetySystem"
+        ],
+        "battery": {
+          "charge": 10,
+          "max": 10,
+          "recharge": 0
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "1d10 + 1d6",
+          "firingModes": [
+            "semiAuto"
+          ],
+          "label": "",
+          "notes": "",
+          "areaEffect": "",
+          "areaEffectRadius": 1
+        },
+        "hasSecondaryAttack": false,
+        "range": 75,
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "firingModes": [
+            "semiAuto"
+          ],
+          "label": "",
+          "notes": "",
+          "areaEffect": "",
+          "areaEffectRadius": 1
+        },
+        "fixed": false,
+        "long": false,
+        "noClose": false,
+        "noPointBlank": false,
+        "wareType": "hardware"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.beam-weapons.Item.AVBXWRfRdBF6pC3d"
+        }
+      },
+      "effects": [],
+      "_id": "2F10mCElBcVIidlv",
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714334896859,
+        "modifiedTime": 1714334974282,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.beam-weapons.Item.AVBXWRfRdBF6pC3d",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Exploit",
+      "type": "software",
+      "system": {
+        "description": "<p>A hacker library/tool for taking advantage of known software vulnerabilities. Required for hacking.</p>",
+        "reference": "Eclipse Phase Second Edition p. 326",
+        "complexity": "moderate",
+        "restricted": true,
+        "quality": "average",
+        "softwareType": "app",
+        "activatedEffects": [],
+        "effects": [
+          {
+            "type": "misc",
+            "unique": "",
+            "description": "Hacking library tool.",
+            "id": "kvb6c2cqh1"
+          }
+        ],
+        "category": "App",
+        "serviceDuration": -1,
+        "skills": [],
+        "activation": "",
+        "meshAttacks": 1,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 11217867000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "2d10",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.apps.Item.k9xscr1cFKr0BVsR"
+        }
+      },
+      "effects": [],
+      "_id": "S7VSWU92fG3jW2wd",
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714335258451,
+        "modifiedTime": 1714335261485,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.apps.Item.k9xscr1cFKr0BVsR",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Fake Ego ID (ImpScript)",
+      "type": "physicalService",
+      "system": {
+        "description": "<p>Forged ID.</p>\n<p>&nbsp;</p>\n<p>This forged ID will pass in most inner system and Jovian Republic habitats, and sometimes others. It gives you a rep score in one network with that ID at 10.</p>",
+        "reference": "Eclipse Phase Second Edition p. 315",
+        "complexity": "major",
+        "restricted": true,
+        "quality": "average",
+        "serviceDuration": -1,
+        "reputations": [
+          {
+            "score": 1,
+            "refreshStartTime": 0,
+            "minor": 0,
+            "moderate": 0,
+            "major": 0,
+            "acronym": "g-rep",
+            "network": "Guanxi",
+            "id": "ols1rtopu5brrt3b"
+          },
+          {
+            "score": 8,
+            "refreshStartTime": 0,
+            "minor": 0,
+            "moderate": 0,
+            "major": 0,
+            "acronym": "c-rep",
+            "network": "CivicNet",
+            "id": "33xp4e5ohdehsm1k"
+          }
+        ],
+        "serviceType": "fakeEgoId",
+        "state": {
+          "serviceStartTime": 11217867000,
+          "equipped": true
+        }
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.physical-services.Item.y2T2YYgiWa78u3dA"
+        }
+      },
+      "effects": [],
+      "_id": "TfU7Tel7LdmjRrgN",
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714335292260,
+        "modifiedTime": 1714335394724,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.physical-services.Item.y2T2YYgiWa78u3dA",
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "hP8zXgGGK1bgLOZw",
+      "name": "TacNet",
+      "type": "software",
+      "system": {
+        "description": "<p>Tacnets allow a group and their muses/gear to share real-time tactical situational and sensory data over encrypted mesh channels. They are used by sports teams, security/military units, gamers, and anyone else that needs to coordinate actions. Tacnets provide the following functions:</p>\n<ul>\n<li><strong>Maps</strong>: Tacnets present maps from a bird&rsquo;s eye, three-dimensional interactive, or first-person entoptic view, tagging notable features and marking distances. They can also plot maps based on sensory input, positioning systems, and other data.<br /><br /></li>\n<li><strong>Positioning</strong>: Tacnets indicate the position of known people, bots, vehicles, and other features according to sensory input or their calculated trajectories. Friend-or-foe tags highlight allies and opponents, noting their lines of sight and fields of fire and alerting the user to areas of potential cover or danger.<br /><br /></li>\n<li><strong>Sensory Input</strong>: Tacnets share all sensory input available from members and linked devices. This includes data from physical senses, portable sensors, smartlink guncams, XP feeds, etc. Users can immediately call up and access the sensor feeds of others as needed.<br /><br /></li>\n<li><strong>Communications Management</strong>: Tacnets maintain an encrypted VPN between users. They actively monitor for dropped signals and hacking/sniffing/jamming attempts. Treat as Infosec 40.<br /><br /></li>\n<li><strong>Smartlink/Weapon Data</strong>: Tacnets monitor the status of weapons, accessories, and other gear, bringing damage, shortages, ammo counts, and other issues to the user&rsquo;s attention.<br /><br /></li>\n<li><strong>Medical Data:</strong> Tacnets monitor the health of their users via medichines, implants, and other sensors. Users can call up health reports on their allies.<br /><br /></li>\n<li><strong>Overwatch</strong>: Tacnets keep an eye out for potential threats. They provide a +10 modifier to Perceive Tests against surprise ▶227.<br /><br /></li>\n<li><strong>Indirect Fire</strong>: Members of a tacnet can provide targeting data to each other for purposes of indirect fire ▶206.<br /><br /></li>\n<li><strong>Analysis</strong>: Tacnets can analyze real-time situations to provide suggestions and warnings. The app's god&rsquo;s-eye view of a situation helps it to identify facts and details that individuals overlook. For example, a tacnet can analyze an opposing team's weapons, shots fired, and potential injuries and suggest tactical maneuvers. Querying a tacnet for advice is a quick action; treat as Know: Tactics 80.</li>\n</ul>\n<p>Many tacnet features are immediately accessible to the user via their AR display; other data can be accessed with a quick action. The GM determines when the tacnet provides important alerts to the user. At the GM&rsquo;s discretion, some of these features may apply modifiers to the character&rsquo;s tests. Tacnets are designed to be overseers, not to take action. They will not hack opponents, pilot vehicles, or interface with weapon systems.</p>\n<p>Foundry note: Assigning players the observer permission for other people's characters allows them to see what they see, without being able to control, remove things from, or otherwise edit their sheet. Note how they will be able to view the sheet.</p>",
+        "reference": "Eclipse Phase Second Edition p. 327",
+        "complexity": "moderate",
+        "restricted": false,
+        "quality": "average",
+        "softwareType": "app",
+        "activatedEffects": [],
+        "effects": [
+          {
+            "type": "misc",
+            "unique": "",
+            "description": "Share tactical data in real-time",
+            "id": "k5hwrsvwi6"
+          },
+          {
+            "type": "successTest",
+            "tags": [
+              {
+                "type": "skill",
+                "skillType": "perceive"
+              }
+            ],
+            "modifier": 10,
+            "toOpponent": false,
+            "requirement": "against surprised",
+            "id": "vhice0fve3"
+          }
+        ],
+        "category": "TacNet",
+        "serviceDuration": -1,
+        "skills": [
+          {
+            "name": "Infosec",
+            "specialization": "",
+            "total": 40,
+            "id": "pjb1vik1dc"
+          },
+          {
+            "name": "Know: Tactics",
+            "specialization": "",
+            "total": 80,
+            "id": "yiuqnmgos2"
+          }
+        ],
+        "activation": "",
+        "meshAttacks": 0,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 11217867000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.tacnet.Item.z79oQc31nlogai2M"
+        }
+      },
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714335435491,
+        "modifiedTime": 1714335438442,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.tacnet.Item.z79oQc31nlogai2M",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Anonymizer",
+      "type": "software",
+      "system": {
+        "description": "<p>You have an account with an anonymizing proxy service that masks your Mesh ID ▶246.</p>",
+        "reference": "Eclipse Phase Second Edition p. 315",
+        "complexity": "minor",
+        "restricted": false,
+        "quality": "average",
+        "softwareType": "meshService",
+        "activatedEffects": [],
+        "effects": [
+          {
+            "type": "misc",
+            "unique": "",
+            "description": "Masks your mesh ID",
+            "id": "08imxj7zs9"
+          }
+        ],
+        "category": "Mesh Service",
+        "serviceDuration": -1,
+        "skills": [],
+        "activation": "",
+        "meshAttacks": 0,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 14044863000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.mesh-services.Item.4aLEovrn80sb3bf9"
+        }
+      },
+      "effects": [],
+      "_id": "P8X1R1pPAvvnOrmc",
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714335450056,
+        "modifiedTime": 1718847405539,
+        "lastModifiedBy": "sbq3hoB9A5kGnUTA",
+        "compendiumSource": "Compendium.ep2e.mesh-services.Item.4aLEovrn80sb3bf9",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Enhanced Security",
+      "type": "software",
+      "system": {
+        "description": "<p>This meshware installs additional firewall and security layers, making the infomorph/cyberbrain harder to hack. Apply a -10 modifier to attempts to brainhack your digital mind.</p>\n<p>You can also use this meshware to enter a heightened state of security &mdash; Defensive Mode. When activated with a quick action, the modifier to brainhack you is increased to -30. This lock-down status impairs your functions, however; you cannot use Insight pool while it is active and suffer a -3 Initiative modifier.</p>",
+        "reference": "Eclipse Phase Second Edition p. 326",
+        "complexity": "moderate",
+        "restricted": false,
+        "quality": "average",
+        "softwareType": "meshware",
+        "activatedEffects": [
+          {
+            "type": "successTest",
+            "tags": [
+              {
+                "type": "skill",
+                "skillType": "infosec"
+              }
+            ],
+            "modifier": -30,
+            "toOpponent": true,
+            "requirement": "hacking your mind",
+            "id": "ztmv537ejw"
+          },
+          {
+            "type": "initiative",
+            "modifier": -3,
+            "id": "329t6l83ji"
+          },
+          {
+            "type": "pool",
+            "pool": "insight",
+            "modifier": 1,
+            "usabilityModification": "disable",
+            "id": "847qckwlak"
+          }
+        ],
+        "effects": [
+          {
+            "type": "successTest",
+            "tags": [
+              {
+                "type": "skill",
+                "skillType": "infosec"
+              }
+            ],
+            "modifier": -10,
+            "toOpponent": true,
+            "requirement": "hacking your mind",
+            "id": "9z4gusdopx"
+          }
+        ],
+        "category": "Meshware",
+        "serviceDuration": -1,
+        "skills": [],
+        "activation": "quick",
+        "meshAttacks": 0,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 11217867000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.meshware.Item.PdHJjwJLYacHKuoD"
+        }
+      },
+      "effects": [],
+      "_id": "08m8WMe86Gm9tvVJ",
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "tI5zBTpntnLUwL77": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714267310856,
+        "modifiedTime": 1714335605098,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.meshware.Item.PdHJjwJLYacHKuoD",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Drone Whisperer",
+      "type": "trait",
+      "folder": "Ea0SaNV9RJ3H3Ri8",
+      "img": "systems/ep2e/build/dist/icons/nested-eclipses.svg",
+      "system": {
+        "description": "<p>Your ability to control drones and push them to their limits is unchallenged. Once per session, you may use a point of your Flex pool on a test made by a drone that is following your orders or programming in&nbsp;<a href=\"https://eclipsephase.github.io/en/16/21-robots.html#autonomous-mode\">autonomous mode</a>&nbsp;(<em>EP2</em>).</p>",
+        "reference": "https://eclipsephase.github.io/en/SUPP/02-CO/04/07-new-ego-traits.html#drone-whisperer",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 0,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 1,
+            "effects": [],
+            "id": "_defaultLevel"
+          }
+        ],
+        "subtype": "",
+        "traitType": "positive"
+      },
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "tI5zBTpntnLUwL77": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.tablerules.tablerules-items.Item.PXKbVB8xBPOnJMZN"
+        }
+      },
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714271893644,
+        "modifiedTime": 1714612633234,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.tablerules.tablerules-items.Item.PXKbVB8xBPOnJMZN",
+        "duplicateSource": null
+      },
+      "_id": "kHMmcck62zM9HnMd",
+      "sort": 1000000
+    },
+    {
+      "_id": "8jRpFb1C7t10rFVR",
+      "name": "Morph Familiarity",
+      "type": "trait",
+      "system": {
+        "description": "<p>You are accustomed to one specific type of morph (e.g., bouncers, rusters, agents, or flexbots) and do not need to make Integration Tests when sleeving them. You may take this trait more than once for different morphs.</p>",
+        "reference": "Eclipse Phase Second Edition p. 74",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 0,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 1,
+            "effects": [
+              {
+                "type": "misc",
+                "unique": "",
+                "description": "No need to make Integration Tests when sleeving this morph (choose one)",
+                "id": "60boo20azq"
+              }
+            ],
+            "id": "9y20br8pii"
+          }
+        ],
+        "subtype": "Operator",
+        "traitType": "positive"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.traits.Item.9xoREbjsEqYsl7Ua"
+        }
+      },
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qHi89sFcK4gHlOPd": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714612896670,
+        "modifiedTime": 1714612949478,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.traits.Item.9xoREbjsEqYsl7Ua",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "VPN",
+      "type": "software",
+      "system": {
+        "description": "<p>This app enables you to communicate over a virtual private network (VPNs ▶241). VPNs provide a -30 modifier to sniffing attacks (Sniffing ▶245).</p>",
+        "reference": "Eclipse Phase Second Edition p. 326",
+        "complexity": "minor",
+        "restricted": false,
+        "quality": "average",
+        "softwareType": "app",
+        "activatedEffects": [],
+        "effects": [
+          {
+            "type": "misc",
+            "unique": "",
+            "description": "Creates virtual private network.",
+            "id": "9ca5h4odm9"
+          }
+        ],
+        "category": "App",
+        "serviceDuration": -1,
+        "skills": [],
+        "activation": "",
+        "meshAttacks": 0,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 12711267000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.apps.Item.IFcUsEtr48727rfk"
+        }
+      },
+      "effects": [],
+      "_id": "ntHeVNGhWfEd5Mq4",
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714617517870,
+        "modifiedTime": 1714617517870,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.apps.Item.IFcUsEtr48727rfk",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Biometric Matcher",
+      "type": "software",
+      "system": {
+        "description": "<p>This app takes any biometric pattern &mdash; face, gait, morph, voice, etc &mdash; and runs a pattern-matching search (Tracking by Biometrics ▶256).</p>",
+        "reference": "Eclipse Phase Second Edition p. 326",
+        "complexity": "minor",
+        "restricted": false,
+        "quality": "average",
+        "softwareType": "app",
+        "activatedEffects": [],
+        "effects": [
+          {
+            "type": "misc",
+            "unique": "",
+            "description": "Match biometric patterns.",
+            "id": "xq329a2ynb"
+          }
+        ],
+        "category": "App",
+        "serviceDuration": -1,
+        "skills": [],
+        "activation": "",
+        "meshAttacks": 0,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 12711267000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.apps.Item.IqxYKbQP9Jxf8hZc"
+        }
+      },
+      "effects": [],
+      "_id": "XnUnvBuKXj3m25Zj",
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714617539781,
+        "modifiedTime": 1714617539781,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.apps.Item.IqxYKbQP9Jxf8hZc",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Crypto",
+      "type": "software",
+      "system": {
+        "description": "<p>This app generates key pairs, encrypts messages using public keys, and decrypts with secret keys (Encryption ▶247).</p>",
+        "reference": "Eclipse Phase Second Edition p. 326",
+        "complexity": "minor",
+        "restricted": false,
+        "quality": "average",
+        "softwareType": "app",
+        "activatedEffects": [],
+        "effects": [
+          {
+            "type": "misc",
+            "unique": "",
+            "description": "Encrypt/decrypt files and messages.",
+            "id": "529ginlsoi"
+          }
+        ],
+        "category": "App",
+        "serviceDuration": -1,
+        "skills": [],
+        "activation": "",
+        "meshAttacks": 0,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 12711267000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.apps.Item.yW8QIFGSek3Jiaea"
+        }
+      },
+      "effects": [],
+      "_id": "hR8LEtGzLpJ615qV",
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714617553092,
+        "modifiedTime": 1714617553092,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.apps.Item.yW8QIFGSek3Jiaea",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Persistence",
+      "type": "software",
+      "system": {
+        "description": "<p>This meshware uses rootkit techniques to keep the digital mind active despite attempts to crash it. Increase the infomorph&rsquo;s Durability by 10 and Wound Threshold by 2.</p>",
+        "reference": "Eclipse Phase Second Edition p. 326",
+        "complexity": "moderate",
+        "restricted": false,
+        "quality": "average",
+        "softwareType": "meshware",
+        "activatedEffects": [],
+        "effects": [
+          {
+            "type": "health",
+            "health": "mesh",
+            "stat": "durability",
+            "modifier": 10,
+            "id": "3m4yh8knt4"
+          },
+          {
+            "type": "health",
+            "health": "mesh",
+            "stat": "woundThreshold",
+            "modifier": 2,
+            "id": "etkcoqwfz8"
+          },
+          {
+            "type": "misc",
+            "unique": "",
+            "description": "Keeps infomorph running",
+            "id": "h7zj64eo9y"
+          }
+        ],
+        "category": "Meshware",
+        "serviceDuration": -1,
+        "skills": [],
+        "activation": "",
+        "meshAttacks": 0,
+        "meshHealth": {
+          "baseDurability": 10,
+          "damage": 0,
+          "log": [],
+          "wounds": 0,
+          "rebootEndTime": -1,
+          "crashWounds": 0
+        },
+        "state": {
+          "activated": false,
+          "equipped": true,
+          "serviceStartTime": 12711267000,
+          "paused": false
+        },
+        "primaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        },
+        "secondaryAttack": {
+          "armorPiercing": false,
+          "attackTraits": [],
+          "damageFormula": "",
+          "damageType": "mesh",
+          "useMeshArmor": true,
+          "notes": "",
+          "aptitudeCheckInfo": {
+            "armorAsModifier": "",
+            "check": "",
+            "checkModifier": 0,
+            "checkFailure": [],
+            "checkSuccess": [],
+            "criticalCheckFailure": []
+          },
+          "label": "",
+          "reduceAVbyDV": false
+        }
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.meshware.Item.8a4K1FxOfXKQpQf0"
+        }
+      },
+      "effects": [],
+      "_id": "eYwoTI911VpwIe8V",
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1714617589718,
+        "modifiedTime": 1714617589718,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.meshware.Item.8a4K1FxOfXKQpQf0",
+        "duplicateSource": null
+      }
+    },
+    {
+      "_id": "aa5tdxQldz7uriij",
+      "name": "Resolve",
+      "type": "trait",
+      "system": {
+        "description": "<p>You are unwavering and firm. Receive +5 per level to WIL Checks.</p>",
+        "reference": "Eclipse Phase Second Edition p. 75",
+        "restrictions": "",
+        "triggers": "",
+        "source": "ego",
+        "state": {
+          "level": 2,
+          "triggered": false
+        },
+        "levels": [
+          {
+            "cost": 1,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "aptitudeCheck",
+                    "aptitude": "wil"
+                  }
+                ],
+                "modifier": 5,
+                "toOpponent": false,
+                "requirement": "",
+                "id": "r2oxn16hta"
+              }
+            ],
+            "id": "zbhqtgrwia"
+          },
+          {
+            "cost": 2,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "aptitudeCheck",
+                    "aptitude": "wil"
+                  }
+                ],
+                "modifier": 10,
+                "toOpponent": false,
+                "requirement": "",
+                "id": "r2oxn16hta"
+              }
+            ],
+            "id": "01dxwltvq2"
+          },
+          {
+            "cost": 3,
+            "effects": [
+              {
+                "type": "successTest",
+                "tags": [
+                  {
+                    "type": "aptitudeCheck",
+                    "aptitude": "wil"
+                  }
+                ],
+                "modifier": 15,
+                "toOpponent": false,
+                "requirement": "",
+                "id": "r2oxn16hta"
+              }
+            ],
+            "id": "8lw6m2h5io"
+          }
+        ],
+        "subtype": "",
+        "traitType": "positive"
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.traits.Item.rF3KqXskNfHL33DH"
+        }
+      },
+      "img": "icons/svg/mystery-man.svg",
+      "effects": [],
+      "ownership": {
+        "default": 0,
+        "qHi89sFcK4gHlOPd": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1717641289044,
+        "modifiedTime": 1717641289044,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.traits.Item.rF3KqXskNfHL33DH",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Fake Ego ID (FigBase)",
+      "type": "physicalService",
+      "system": {
+        "description": "<p>Forged ID.</p>\n<p>&nbsp;</p>\n<p>This forged ID will pass in most inner system and Jovian Republic habitats, and sometimes others. It gives you a rep score in one network with that ID at 10.</p>",
+        "reference": "Eclipse Phase Second Edition p. 315",
+        "complexity": "major",
+        "restricted": true,
+        "quality": "average",
+        "serviceDuration": -1,
+        "reputations": [
+          {
+            "score": 10,
+            "refreshStartTime": 0,
+            "minor": 0,
+            "moderate": 0,
+            "major": 0,
+            "acronym": "r-rep",
+            "network": "Research Network Affiliates",
+            "id": "kyemrb48bagqaz3a"
+          }
+        ],
+        "serviceType": "fakeEgoId",
+        "state": {
+          "serviceStartTime": 13739091000,
+          "equipped": true
+        }
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.ep2e.physical-services.Item.y2T2YYgiWa78u3dA"
+        }
+      },
+      "effects": [],
+      "_id": "lmIQFjSvNT7oKgb0",
+      "ownership": {
+        "default": 0,
+        "qJl17WpEHiovQQBC": 3,
+        "50B2FFgJBAuhoc6g": 3
+      },
+      "img": "icons/svg/item-bag.svg",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1718229682370,
+        "modifiedTime": 1718229705281,
+        "lastModifiedBy": "50B2FFgJBAuhoc6g",
+        "compendiumSource": "Compendium.ep2e.physical-services.Item.y2T2YYgiWa78u3dA",
+        "duplicateSource": null
+      }
+    },
+    {
+      "name": "Fabrication Materials (Minor)",
+      "type": "substance",
+      "folder": null,
+      "_id": "IYP2JovxUcsIJ8HP",
+      "img": "systems/ep2e/build/dist/icons/nested-eclipses.svg",
+      "system": {
+        "description": "",
+        "reference": "",
+        "complexity": "minor",
+        "restricted": false,
+        "quality": "average",
+        "blueprint": {
+          "blueprintType": "",
+          "cracked": false,
+          "used": false
+        },
+        "quantity": 1,
+        "state": {
+          "stashed": false
+        },
+        "addiction": "",
+        "addictionMod": 0,
+        "hasSeverity": false,
+        "application": [
+          "dermal"
+        ],
+        "base": {
+          "damage": {
+            "damageFormula": "",
+            "perTurn": false,
+            "armorPiercing": false,
+            "attackTraits": [],
+            "reduceAVbyDV": false,
+            "armorUsed": [],
+            "damageType": "physical"
+          },
+          "duration": 3000,
+          "effects": [],
+          "wearOffStress": "",
+          "notes": ""
+        },
+        "category": "",
+        "classification": "nano",
+        "consumeOnUse": false,
+        "substanceType": "drug",
+        "quantityPerCost": 1,
+        "severity": {
+          "check": "som",
+          "checkMod": 0,
+          "conditions": [],
+          "wearOffStress": "",
+          "damage": {
+            "damageFormula": "",
+            "perTurn": false,
+            "armorPiercing": false,
+            "attackTraits": [],
+            "reduceAVbyDV": false,
+            "armorUsed": [],
+            "damageType": "physical"
+          },
+          "duration": 3000,
+          "effects": [],
+          "notes": ""
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "50B2FFgJBAuhoc6g": 3,
+        "sbq3hoB9A5kGnUTA": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Item.AZG9xwNtHEA2JJ2F"
+        },
+        "ep2e": {
+          "awaitingOnset": {
+            "useMethod": "dermal",
+            "onsetStartTime": 14112675000,
+            "hidden": false
+          }
+        }
+      },
+      "_stats": {
+        "systemId": "ep2e",
+        "systemVersion": "1.1.7",
+        "coreVersion": "12.328",
+        "createdTime": 1718301940420,
+        "modifiedTime": 1719453990010,
+        "lastModifiedBy": "sbq3hoB9A5kGnUTA",
+        "compendiumSource": "Item.AZG9xwNtHEA2JJ2F",
+        "duplicateSource": null
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "ep2e": {
+      "infomorph": {
+        "name": "Operator",
+        "type": "infomorph",
+        "system": {
+          "description": "<p>This infomorph is ideal for professions that involve drone remote operation, whether maintenance bot fleets, surveillance drones, or fighter craft and combat machines.</p>",
+          "reference": "Eclipse Phase Second Edition p. 67",
+          "acquisition": {
+            "availability": 100,
+            "complexity": "minor",
+            "cost": 2,
+            "resource": "morphPoints",
+            "restricted": false
+          },
+          "pools": {
+            "insight": 3,
+            "moxie": 0,
+            "vigor": 0,
+            "flex": 1
+          },
+          "damagedArmor": [],
+          "conditions": [],
+          "meshHealth": {
+            "baseDurability": 35,
+            "damage": 0,
+            "aidedHealTickStartTime": 0,
+            "ownHealTickStartTime": 0,
+            "damageRepair": {
+              "amount": "1d10",
+              "interval": 60000
+            },
+            "woundRepair": {
+              "amount": 1,
+              "interval": 60000
+            },
+            "log": [],
+            "rebootEndTime": -1,
+            "crashWounds": 0,
+            "wounds": 0
+          }
+        },
+        "flags": {
+          "core": {
+            "sourceId": "Compendium.ep2e.infomorphs.Actor.eWfzNwmiOCfCC6fQ"
+          }
+        },
+        "prototypeToken": {
+          "flags": {},
+          "name": "Operator",
+          "displayName": 0,
+          "width": 1,
+          "height": 1,
+          "lockRotation": false,
+          "rotation": 0,
+          "actorLink": true,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": null
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "randomImg": false,
+          "light": {
+            "dim": 0,
+            "bright": 0,
+            "angle": 360,
+            "alpha": 1,
+            "animation": {
+              "speed": 5,
+              "intensity": 5,
+              "type": null,
+              "reverse": false
+            },
+            "coloration": 1,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "tint": null,
+            "scaleX": 1,
+            "scaleY": 1,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotation": 0
+          },
+          "sight": {
+            "angle": 360,
+            "enabled": false,
+            "range": 0,
+            "brightness": 1,
+            "visionMode": "basic",
+            "attenuation": 0.1,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "appendNumber": false,
+          "prependAdjective": false,
+          "alpha": 1,
+          "detectionModes": [],
+          "scale": 1,
+          "mirrorX": false,
+          "mirrorY": false,
+          "vision": false,
+          "dimSight": 0,
+          "brightSight": 0,
+          "dimLight": 0,
+          "brightLight": 0,
+          "sightAngle": 360,
+          "lightAngle": 360,
+          "lightColor": "",
+          "lightAlpha": 1,
+          "actorId": "qzldnmevk0fegbdf",
+          "delta": {}
+        },
+        "items": [
+          {
+            "_id": "xGE4RiuIKFgTIiXK",
+            "name": "Digital Speed",
+            "type": "trait",
+            "system": {
+              "description": "<p>This trait is only available to infomorphs. Unfettered by the physical, you reduce timeframes for mesh-based task actions by 25%; this is cumulative with reduced time from superior successes.</p>",
+              "reference": "Eclipse Phase Second Edition p. 73",
+              "restrictions": "",
+              "triggers": "",
+              "source": "morph",
+              "state": {
+                "level": 0,
+                "triggered": false
+              },
+              "levels": [
+                {
+                  "cost": 1,
+                  "effects": [
+                    {
+                      "type": "duration",
+                      "subtype": "taskActionTimeframe",
+                      "modifier": -25,
+                      "taskType": "mesh",
+                      "halve": false,
+                      "id": "3yzgi529mc"
+                    }
+                  ],
+                  "id": "6omy0sihml"
+                }
+              ],
+              "subtype": "",
+              "traitType": "positive"
+            },
+            "sort": 100000,
+            "flags": {},
+            "img": "icons/svg/mystery-man.svg",
+            "effects": [],
+            "folder": null,
+            "ownership": {
+              "default": 0
+            },
+            "_stats": {
+              "systemId": null,
+              "systemVersion": null,
+              "coreVersion": null,
+              "createdTime": null,
+              "modifiedTime": null,
+              "lastModifiedBy": null
+            }
+          },
+          {
+            "_id": "UnncxaeLAjNV0vz2",
+            "name": "Exotic Morphology",
+            "type": "trait",
+            "system": {
+              "description": "<p>This morph is substantially physiologically (and possibly neurologically) different from the baseline humanoid forms most transhumans are accustomed to sleeving. You receive a -10 modifier per level on Integration Tests ▶288 when sleeving into this morph. This modifier does not apply to the original morph of uplift or infolife characters. This trait may not be applied to morphs that don’t come with it.</p>",
+              "reference": "Eclipse Phase Second Edition p. 78",
+              "restrictions": "",
+              "triggers": "",
+              "source": "morph",
+              "state": {
+                "level": 2,
+                "triggered": false
+              },
+              "levels": [
+                {
+                  "cost": 2,
+                  "effects": [
+                    {
+                      "type": "successTest",
+                      "tags": [
+                        {
+                          "type": "special",
+                          "test": "integration"
+                        }
+                      ],
+                      "modifier": -10,
+                      "toOpponent": false,
+                      "requirement": "",
+                      "id": "8tiuasyl7d"
+                    }
+                  ],
+                  "id": "6ats1e5arj"
+                },
+                {
+                  "cost": 4,
+                  "effects": [
+                    {
+                      "type": "successTest",
+                      "tags": [
+                        {
+                          "type": "special",
+                          "test": "integration"
+                        }
+                      ],
+                      "modifier": -20,
+                      "toOpponent": false,
+                      "requirement": "",
+                      "id": "jcdfnnbn9i"
+                    }
+                  ],
+                  "id": "suw2tir7s8"
+                },
+                {
+                  "cost": 6,
+                  "effects": [
+                    {
+                      "type": "successTest",
+                      "tags": [
+                        {
+                          "type": "special",
+                          "test": "integration"
+                        }
+                      ],
+                      "modifier": -30,
+                      "toOpponent": false,
+                      "requirement": "",
+                      "id": "mznptjs9ra"
+                    }
+                  ],
+                  "id": "pmr5ydgicz"
+                }
+              ],
+              "subtype": "",
+              "traitType": "negative"
+            },
+            "sort": 200000,
+            "flags": {},
+            "img": "icons/svg/mystery-man.svg",
+            "effects": [],
+            "folder": null,
+            "ownership": {
+              "default": 0
+            },
+            "_stats": {
+              "systemId": null,
+              "systemVersion": null,
+              "coreVersion": null,
+              "createdTime": null,
+              "modifiedTime": null,
+              "lastModifiedBy": null
+            }
+          },
+          {
+            "_id": "pvaR3nbKgvNW6Mib",
+            "name": "Drone Rig",
+            "type": "software",
+            "system": {
+              "description": "<p>This simsense augmentation gives you better control when jamming drones (Remote Operations ▶346). You ignore the -10 modifier for jamming.</p>",
+              "reference": "Eclipse Phase Second Edition p. 320",
+              "complexity": "moderate",
+              "restricted": false,
+              "quality": "average",
+              "softwareType": "meshware",
+              "activatedEffects": [],
+              "effects": [
+                {
+                  "type": "misc",
+                  "unique": "",
+                  "description": "Ignore the -10 modifier when jamming.",
+                  "id": "s9nfaohbqj"
+                }
+              ],
+              "category": "Mental Augments",
+              "serviceDuration": -1,
+              "skills": [],
+              "activation": "",
+              "meshAttacks": 0,
+              "meshHealth": {
+                "baseDurability": 10,
+                "damage": 0,
+                "log": [],
+                "wounds": 0,
+                "rebootEndTime": -1,
+                "crashWounds": 0
+              },
+              "state": {
+                "activated": false,
+                "equipped": true,
+                "serviceStartTime": 4083750000,
+                "paused": false
+              },
+              "primaryAttack": {
+                "armorPiercing": false,
+                "attackTraits": [],
+                "damageFormula": "",
+                "damageType": "mesh",
+                "useMeshArmor": true,
+                "notes": "",
+                "aptitudeCheckInfo": {
+                  "armorAsModifier": "",
+                  "check": "",
+                  "checkModifier": 0,
+                  "checkFailure": [],
+                  "checkSuccess": [],
+                  "criticalCheckFailure": []
+                },
+                "label": "",
+                "reduceAVbyDV": false
+              },
+              "secondaryAttack": {
+                "armorPiercing": false,
+                "attackTraits": [],
+                "damageFormula": "",
+                "damageType": "mesh",
+                "useMeshArmor": true,
+                "notes": "",
+                "aptitudeCheckInfo": {
+                  "armorAsModifier": "",
+                  "check": "",
+                  "checkModifier": 0,
+                  "checkFailure": [],
+                  "checkSuccess": [],
+                  "criticalCheckFailure": []
+                },
+                "label": "",
+                "reduceAVbyDV": false
+              }
+            },
+            "sort": 800000,
+            "flags": {},
+            "img": "icons/svg/mystery-man.svg",
+            "effects": [],
+            "folder": null,
+            "ownership": {
+              "default": 0
+            },
+            "_stats": {
+              "systemId": null,
+              "systemVersion": null,
+              "coreVersion": null,
+              "createdTime": null,
+              "modifiedTime": null,
+              "lastModifiedBy": null
+            }
+          },
+          {
+            "_id": "iNt2o3wTQtYhqxFx",
+            "name": "Mnemonics",
+            "type": "software",
+            "system": {
+              "description": "<p>The electronic minds of cyberbrains and infomorphs mimic biological brains in how they store memories &mdash; as networked but scattered groups of neurons. Despite being computerized, their memory recall is not any more efficient than bio brains. Mnemonics systems, however, allow memories to be tagged and roughly indexed. This improves memory recall, though it remains far from perfect. Mnemonics applies a +20 modifier to COG Checks for memory recall. Mnemonic data can be transferred with an ego when it resleeves, but the modifier applies only for memories that were recorded when mnemonics ware is present. Mnemonics systems are included in all cyberbrains.</p>",
+              "reference": "Eclipse Phase Second Edition p. 316",
+              "complexity": "minor",
+              "restricted": false,
+              "quality": "average",
+              "softwareType": "meshware",
+              "activatedEffects": [],
+              "effects": [
+                {
+                  "type": "successTest",
+                  "tags": [
+                    {
+                      "type": "aptitudeCheck",
+                      "aptitude": "cog"
+                    }
+                  ],
+                  "modifier": 20,
+                  "toOpponent": false,
+                  "requirement": "memory recall related",
+                  "id": "lc14c5s743"
+                }
+              ],
+              "category": "Standard Augments",
+              "serviceDuration": -1,
+              "skills": [],
+              "activation": "",
+              "meshAttacks": 0,
+              "meshHealth": {
+                "baseDurability": 10,
+                "damage": 0,
+                "log": [],
+                "wounds": 0,
+                "rebootEndTime": -1,
+                "crashWounds": 0
+              },
+              "state": {
+                "activated": false,
+                "equipped": true,
+                "serviceStartTime": 4083750000,
+                "paused": false
+              },
+              "primaryAttack": {
+                "armorPiercing": false,
+                "attackTraits": [],
+                "damageFormula": "",
+                "damageType": "mesh",
+                "useMeshArmor": true,
+                "notes": "",
+                "aptitudeCheckInfo": {
+                  "armorAsModifier": "",
+                  "check": "",
+                  "checkModifier": 0,
+                  "checkFailure": [],
+                  "checkSuccess": [],
+                  "criticalCheckFailure": []
+                },
+                "label": "",
+                "reduceAVbyDV": false
+              },
+              "secondaryAttack": {
+                "armorPiercing": false,
+                "attackTraits": [],
+                "damageFormula": "",
+                "damageType": "mesh",
+                "useMeshArmor": true,
+                "notes": "",
+                "aptitudeCheckInfo": {
+                  "armorAsModifier": "",
+                  "check": "",
+                  "checkModifier": 0,
+                  "checkFailure": [],
+                  "checkSuccess": [],
+                  "criticalCheckFailure": []
+                },
+                "label": "",
+                "reduceAVbyDV": false
+              }
+            },
+            "sort": 1200000,
+            "flags": {},
+            "img": "icons/svg/mystery-man.svg",
+            "effects": [],
+            "folder": null,
+            "ownership": {
+              "default": 0
+            },
+            "_stats": {
+              "systemId": null,
+              "systemVersion": null,
+              "coreVersion": null,
+              "createdTime": null,
+              "modifiedTime": null,
+              "lastModifiedBy": null
+            }
+          },
+          {
+            "_id": "6ILtQaiHKv0D893a",
+            "name": "Oracles",
+            "type": "software",
+            "system": {
+              "description": "<p>This neural macrosensing processor helps you pay attention to sensory input you are not focusing on, alerting you to important things you might otherwise overlook. Oracles provide a +10 bonus to Perceive and negate the distraction modifier for Perceive Tests.</p>",
+              "reference": "Eclipse Phase Second Edition p. 318",
+              "complexity": "moderate",
+              "restricted": false,
+              "quality": "average",
+              "softwareType": "meshware",
+              "activatedEffects": [],
+              "effects": [
+                {
+                  "type": "successTest",
+                  "tags": [
+                    {
+                      "type": "skill",
+                      "skillType": "perceive"
+                    }
+                  ],
+                  "modifier": 10,
+                  "toOpponent": false,
+                  "requirement": "",
+                  "id": "811iq4pgca"
+                },
+                {
+                  "type": "misc",
+                  "unique": "",
+                  "description": "Negate distraction modifiers",
+                  "id": "fqtd3ky9if"
+                }
+              ],
+              "category": "Sensory Augments",
+              "serviceDuration": -1,
+              "skills": [],
+              "activation": "",
+              "meshAttacks": 0,
+              "meshHealth": {
+                "baseDurability": 10,
+                "damage": 0,
+                "log": [],
+                "wounds": 0,
+                "rebootEndTime": -1,
+                "crashWounds": 0
+              },
+              "state": {
+                "activated": false,
+                "equipped": true,
+                "serviceStartTime": 4083750000,
+                "paused": false
+              },
+              "primaryAttack": {
+                "armorPiercing": false,
+                "attackTraits": [],
+                "damageFormula": "",
+                "damageType": "mesh",
+                "useMeshArmor": true,
+                "notes": "",
+                "aptitudeCheckInfo": {
+                  "armorAsModifier": "",
+                  "check": "",
+                  "checkModifier": 0,
+                  "checkFailure": [],
+                  "checkSuccess": [],
+                  "criticalCheckFailure": []
+                },
+                "label": "",
+                "reduceAVbyDV": false
+              },
+              "secondaryAttack": {
+                "armorPiercing": false,
+                "attackTraits": [],
+                "damageFormula": "",
+                "damageType": "mesh",
+                "useMeshArmor": true,
+                "notes": "",
+                "aptitudeCheckInfo": {
+                  "armorAsModifier": "",
+                  "check": "",
+                  "checkModifier": 0,
+                  "checkFailure": [],
+                  "checkSuccess": [],
+                  "criticalCheckFailure": []
+                },
+                "label": "",
+                "reduceAVbyDV": false
+              }
+            },
+            "sort": 1200001,
+            "flags": {},
+            "img": "icons/svg/mystery-man.svg",
+            "effects": [],
+            "folder": null,
+            "ownership": {
+              "default": 0
+            },
+            "_stats": {
+              "systemId": null,
+              "systemVersion": null,
+              "coreVersion": null,
+              "createdTime": null,
+              "modifiedTime": null,
+              "lastModifiedBy": null
+            }
+          }
+        ],
+        "effects": [],
+        "ownership": {
+          "default": 0,
+          "50B2FFgJBAuhoc6g": 3
+        },
+        "img": "icons/svg/mystery-man.svg",
+        "folder": null,
+        "_stats": {
+          "systemId": "ep2e",
+          "systemVersion": "1.1.7",
+          "coreVersion": "11.315",
+          "createdTime": 1714246092912,
+          "modifiedTime": 1714246092912,
+          "lastModifiedBy": "50B2FFgJBAuhoc6g"
+        },
+        "_id": "UWB8yKoddLuclUkg",
+        "sort": 0
+      },
+      "compactSheet": false,
+      "biological": null,
+      "synthetic": null
+    },
+    "exportSource": {
+      "world": "ep2e",
+      "system": "ep2e",
+      "coreVersion": "12.328",
+      "systemVersion": "1.2.4"
+    }
+  },
+  "_stats": {
+    "systemId": "ep2e",
+    "systemVersion": "1.2.3",
+    "coreVersion": "12.328",
+    "createdTime": 1714246116563,
+    "modifiedTime": 1720664707519,
+    "lastModifiedBy": "sbq3hoB9A5kGnUTA"
+  }
+}

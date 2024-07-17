@@ -18,8 +18,14 @@ function getGearData() {
 	gear.set("Cauterizer", {
 		name: "Cauterizer", complexity: "Mod", restricted: true, gp: 2, pg: 327, description: `This scorch app rips into the ego with destructive neurofeedback routines. Against a cyberbrained ego, the cauterizer inflicts DV 1d10 + 5, +1d6 per superior success, to the target's morph (this is physical damage, not mesh damage). Against an infomorph, the cauterizer inflicts a DV 3d10 mesh attack of digitized neurological damage.`
 	});
+	gear.set("Cleaner", {
+		name: "Cleaner", complexity: "Min", restricted: false, gp: 1, pg: 345, description: `This nanoswarm cleans, polishes, and removes dirt and stains. You may deploy it to sanitize an area, specific objects, or people. Some facilities employ permanent cleaner swarms to keep their area spotless. Cleaners are especially useful for decontaminating an area of hazardous toxins or chemicals. Covert operatives and criminals use cleaners to eliminate potential forensic evidence, such as blood, hair, or anything that could be DNA-typed.`
+	});
 	gear.set("Defrag", {
 		name: "Defrag", complexity: "Mod", restricted: false, gp: 2, pg: null, description: `This app monitors your digital mental-state and takes measures to keep it in prime condition and optimize its performance. Whenever you take a short rest, you recover an additional pool point.`
+	});
+	gear.set("Disassembler", {
+		name: "Disassember", complexity: "Mod", restricted: true, gp: 2, pg: 345, description: `Also known as smart corrosives, these nanobots break down matter. They can be programmed to take apart specific materials while ignoring others, leaving them intact. They are sometimes used as an anti-matériel weapon, eating away at synthmorphs, weapons, and gear while ignoring biomorphs (or vice versa). Upon contact, disassemblers inflict DV 1d6 per action turn. Accumulated damage counts as a wound when your Wound Threshold is reached. Worn armor (both energy and kinetic) protects against this damage (unless the swarm is programmed to ignore it), but is also eaten away; reduce the AV by the damage inflicted, splitting it between armor types (i.e., a disassembler inflicting DV 2 turns AV 4/2 into 3/1).`
 	});
 	gear.set("DocBot", {
 		name: "DocBot", complexity: "Maj", restricted: false, gp: 3, pg: 347, type: ["Robot"],
@@ -42,6 +48,9 @@ function getGearData() {
 	gear.set("Energy Efficiency", {
 		name: "Energy Efficiency", complexity: "Maj", restricted: false, gp: 3, pg: 323, description: `The bioware version of this ware boosts your metabolism. The hardware version optimizes your shell’s energy usage. The meshware version optimizes code. This gives you 1 extra short recharge per day.`
 	});
+	gear.set("Engineer", {
+		name: "Engineer", complexity: "Min", restricted: false, gp: 1, pg: 345, description: `Engineer microswarms are used for construction purposes: erecting walls, digging tunnels, sealing holes, reinforcing foundations, and so on. Though they work slower than robots, they are useful for hard-to-get areas, complex designs, or handling difficult materials.`
+	});
 	gear.set("Enhanced Security", {
 		name: "Enhanced Security", complexity: "Mod", restricted: false, gp: 2, pg: 326, description: `This meshware installs additional firewall and security layers, making the infomorph/cyberbrain harder to hack. Apply a −10 modifier to attempts to brainhack your digital mind. You can also use this meshware to enter a heightened state of security — Defensive Mode. When activated with a quick action, the modifier to brainhack you is increased to −30. This lock-down status impairs your functions, however; you cannot use Insight pool while it is active and suffer a −3 Initiative modifier.`
 	});
@@ -61,8 +70,8 @@ function getGearData() {
 	gear.set("Fault Tolerance", {
 		name: "Fault Tolerance", complexity: "Mod", restricted: false, gp: 2, pg: 326, description: `This module provides redundancy and loadsharing functions. You receive AV 5 against mesh attacks.`
 	});
-	gear.set("Fixer Swarm", {
-		name: "Fixer Swarm", complexity: "Mod", restricted: false, gp: 2, pg: 345, description: 'Fixers repair objects and restore them to their original specifications. They must be programmed with the item’s nanofabrication blueprints or given time (~an hour) to scan an identical object; they are not smart enough to recognize and repair damage on their own. A fixer swarm repairs 1d10 [6] damage per hour. Once all damage is repaired, it will restore 1 wound per day. Fixers also clean and polish items, returning them to a new, pristine state. Fixer swarms cannot effect repairs on objects with more than 3 wounds, but they will apply a +30 modifier to Hardware Tests for repair.'
+	gear.set("Fixer", {
+		name: "Fixer", complexity: "Mod", restricted: false, gp: 2, pg: 345, description: 'Fixers repair objects and restore them to their original specifications. They must be programmed with the item’s nanofabrication blueprints or given time (~an hour) to scan an identical object; they are not smart enough to recognize and repair damage on their own. A fixer swarm repairs 1d10 [6] damage per hour. Once all damage is repaired, it will restore 1 wound per day. Fixers also clean and polish items, returning them to a new, pristine state. Fixer swarms cannot effect repairs on objects with more than 3 wounds, but they will apply a +30 modifier to Hardware Tests for repair.'
 	});
 	gear.set("Gas-Jet System", {
 		name: "Gas-Jet System", complexity: "Mod", restricted: false, gp: 2, pg: 324, description: 'Maneuver in microgravity with embedded nozzles. Gain the Movement Rate Thrust Vector (Gas Jet) at 4/12 (biomorphs) or 8/40 (synthmorphs).'
@@ -134,6 +143,9 @@ function getGearData() {
 	});
 	gear.set("Satnet-in-a-Can", {
 		name: "Satnet-in-a-Can", complexity: "Maj", restricted: false, gp: 3, pg: 336, description: 'This medium-sized metallic-hydrogen missile can be launched on any world with a gravity of 2 g or less. A smart-material launch tube automatically extends struts and aims it at the proper trajectory. It deploys 32 small satellites into orbit, which after 1–2 days will be in position to cover the planet with GPS data, low-resolution hyperspectral imaging (down to 100 meters), and communication/mesh relay between anyone on the planet with a radio booster. The satellites can map the planet and provide weather data using Know: Meteorology 60.'
+	});
+	gear.set("Scout", {
+		name: "Scout", complexity: "Min", restricted: false, gp: 1, pg: 345, description: `A scout nanoswarm will systematically map and explore an area, sampling and chemically analyzing all materials and substances it encounters. Scouts can thoroughly map a room, identify all of the objects, and collect forensic evidence about who recently visited and what has gone on there. Scouts have Know: Chemistry 60 and Medicine: Forensics at 60. They can identify DNA, gunpowder residue from firearms, clothing fibers, smart animal dander, and similar evidence up to 2 weeks old. Scouts can penetrate inside drawers, closets, clothing, and other areas that are not air-tight.`
 	});
 	gear.set("Self-Healing", {
 		name: "Self-Healing", complexity: "Min", restricted: false, gp: 1, pg: 217, description: 'This mod can only be applied to armor. When activated, it repairs the armor at a rate of 1d10 per hour.'
