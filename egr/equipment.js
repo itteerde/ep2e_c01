@@ -41,6 +41,9 @@ function getGearData() {
 		name: "E-Veil", complexity: "Min", restricted: true, gp: 1, pg: 326, description: `E-veil obfuscates the presence of designated apps within the infomorph’s code. Any attempt to scan the infomorph using Interface is opposed with a Program skill of 80. The hidden apps must be designated when e-veil is activated.`
 	});
 	gear.set("Ecto", { name: "Ecto", gp: 1 });
+	gear.set("Ego Bridge", {
+		name: "Ego Bridge", complexity: "Mod", restricted: false, gp: 2, pg: 342, description: `Ego Bridge: Ego bridges are devices used for uploading from and downloading to biological brains (Backups & Uploading ▶286). The bridge’s cranial sensors unfold around your head when in use, imaging and scanning your brain. Needles in the neck rest deploy nanobots that either measure your mind and neural connections (uploading) or physically re-map them (downloading).`
+	});
 	gear.set("Emergency Bubble", {
 		name: "Emergency Bubble", complexity: "Maj", restricted: false, gp: 3, pg: 341,
 		description: 'Used as a last-resort life raft on spaceships, an emergency bubble is made of advanced smart materials and comes in a large but portable package that can be quickly inflated around you in 1 action turn, usually inside an airlock. The bubble has a 5-meter diameter and can comfortably accommodate 4 people for 1 week. It maintains 1 atmosphere of pressure in a vacuum, protects the inhabitants from temperatures ranging from −175 to 140 C, and provides light and breathable air. A built-in autocook ▶343 provides food and liquids. It features a simple airlock, carries an emergency distress beacon, and can be transparent, opaque, or polarized. It is powered by a nuclear battery and includes comfortable inflatable furniture. This bubble can also be partially inflated as a dome and staked down to a surface to serve as an emergency shelter on asteroids or other surfaced environments.'
@@ -197,6 +200,9 @@ function getGearData() {
 
 		Many tacnet features are immediately accessible to the user via their AR display; other data can be accessed with a quick action. The GM determines when the tacnet provides important alerts to the user. At the GM’s discretion, some of these features may apply modifiers to the character’s tests. Tacnets are designed to be overseers, not to take action. They will not hack opponents, pilot vehicles, or interface with weapon systems.`
 	});
+	gear.set("Tactical Multipurpose (TMP)", {
+		name: "Tactical Multipurpose (TMP)", complexity: "Mod", restricted: true, gp: 2, pg: 212, description: `Tactical Multipurpose (TMP): TMP devices can be set to detonate in either fragmentation or high-explosive mode. Fragmentation explosives spread a cloud of lethal flechettes over the area of effect. High-explosive seekers/grenades create a destructive shock and heat wave.`
+	});
 	gear.set("Thruster Pack", {
 		name: "Thruster Pack", complexity: "Min", restricted: false, gp: 1, pg: 352, description: 'Worn for micrograv operations or EVA in vacuum, this thruster pack uses vectored thrust nozzles to maneuver.'
 	});
@@ -205,6 +211,9 @@ function getGearData() {
 	return gear;
 }
 
+function toBlueprint(item) {
+	return { ...gear.get(item), name: `${gear.get(item).name} Blueprint Multi-Use`, gp: gear.get(item).gp + 1 }
+}
 
 const gear = getGearData();
 const mission_gear = new Map();
@@ -542,11 +551,12 @@ function egt_parisphere_upgrade(options = {}) {
 	return package;
 }
 
+const downtime = 28;
 
 mission_gear.set("EGR_2.71828", {
 	sentinel: "EGR_2.71828",
 	mp: 10,
-	gp: 24,
+	gp: 24 + (Math.floor(downtime / 7) * 5),
 	gear: [
 		{ ...gear.get("Fake Ego ID"), notes: `Leonhard Euler` },
 	],
@@ -603,9 +613,9 @@ mission_gear.get("EGR_2.71828").gear = [
 	{ ...gear.get("Fake Ego ID"), notes: `Leonhard Euler` },
 	{ ...gear.get("Mind Amp") },
 	{ ...gear.get("Energy Efficiency") },
-	{ ...gear.get("Cauterizer") },
-	{ ...gear.get("Defrag") },
-	{ ...gear.get("Multi-Focus") },
+	toBlueprint("Cauterizer"),
+	toBlueprint("Defrag"),
+	toBlueprint("Multi-Focus")
 ];
 
 mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
@@ -623,9 +633,12 @@ mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 	)
 	.concat([
 		{ ...gear.get("Breadcrumb System") },
+		{ ...gear.get("Tactical Multipurpose (TMP)"), name: `${gear.get("Tactical Multipurpose (TMP)").name} Grenade (Standard) Blueprint Multi-Use`, gp: gear.get("Tactical Multipurpose (TMP)").gp + 1 },
+		toBlueprint("Ego Bridge")
 	])
 	;
 
+/*
 mission_gear.set("SysRig.exe", {
 	sentinel: "SysRig.exe",
 	mp: 6,
@@ -649,6 +662,7 @@ mission_gear.set("SysRig.exe", {
 	],
 	morph: []
 });
+*/
 
 console.clear();
 
