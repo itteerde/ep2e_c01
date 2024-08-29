@@ -1,20 +1,15 @@
 {
   "sentinel": "EGR_2.71828",
   "gear": [
-    "Fake Ego ID (pg. 315, 3 gp) : Leonhard Euler",
     "Mind Amp (pg. 320, 3 gp)",
     "Energy Efficiency (pg. 323, 3 gp)",
-    "Cauterizer Blueprint Multi-Use (pg. 327, 3 gp)",
     "Defrag Blueprint Multi-Use (pg. null, 3 gp)",
     "Multi-Focus Blueprint Multi-Use (pg. null, 2 gp)",
-    "DocBot (pg. 347, 3 gp)",
-    "Ghostrider Module (pg. 320, 1 gp) : @DocBot",
-    "Mobility System Thrust Vector (Rocket) (pg. 324, 2 gp) : @DocBot",
-    "Explorenaut (pg. 346, 3 gp)",
-    "Breadcrumb System (pg. 336, 1 gp)",
-    "Tactical Multipurpose (TMP) Grenade (Standard) Blueprint Multi-Use (pg. 212, 3 gp)",
-    "Ego Bridge Blueprint Multi-Use (pg. 342, 3 gp)"
+    "Multi-Tasking Blueprint Multi-Use (pg. 320, 3 gp)",
+    "Cauterizer Blueprint Multi-Use (pg. 327, 3 gp)",
+    "Fault Tolerance (pg. 326, 2 gp)",
+    "MP2GP (pg. undefined, -5 gp)"
   ],
-  "gp_left": 11,
-  "mp_left": 10
+  "gp_left": 0,
+  "mp_left": 0
 }

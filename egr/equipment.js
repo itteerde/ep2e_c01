@@ -60,6 +60,10 @@ function getGearData() {
 	gear.set("Envirosuit", {
 		name: "Envirosuit", complexity: "Maj", restricted: false, gp: 3, pg: 351, description: `These shells feature both increased radiation shielding and thermal regulation systems to withstand extreme environments such as deep undersea and the surfaces of Mercury and Venus. They can withstand temperatures from −270 to 1,000 C.`
 	});
+	gear.set("Exploit", {
+		name: "Exploit", complexity: "Mod", restricted: true, gp: 2, pg: 326,
+		description: 'A hacker library/tool for taking advantage of known software vulnerabilities. Required for hacking.'
+	});
 	gear.set("Explorenaut", {
 		name: "Explorenaut", complexity: "Maj", restricted: false, gp: 3, pg: 346,
 		description: 'These small-sized bots travel on smart treads or with thrust-vector jets. They are loaded with sensors and favored for gatecrashing and similar exploration ops.  A pair of manipulator arms are used for taking samples.'
@@ -261,9 +265,12 @@ function egr_docbot(options = {}) {
 	}
 
 	if (options?.armored) {
-		package.push(
-			{ ...gear.get("Heavy Combat Armor"), notes: `@DocBot` },
-		);
+
+		if (options.armored.heavy_combat_armor) {
+			package.push(
+				{ ...gear.get("Heavy Combat Armor"), notes: `@DocBot` },
+			);
+		}
 
 		if (options.armored.hardened_skelton) {
 			package.push(
@@ -551,118 +558,46 @@ function egt_parisphere_upgrade(options = {}) {
 	return package;
 }
 
-const downtime = 28;
+const downtime = 0;
 
 mission_gear.set("EGR_2.71828", {
 	sentinel: "EGR_2.71828",
 	mp: 10,
-	gp: 24 + (Math.floor(downtime / 7) * 5),
+	gp: 14,
 	gear: [
-		{ ...gear.get("Fake Ego ID"), notes: `Leonhard Euler` },
+		//{ ...gear.get("Fake Ego ID"), notes: `Leonhard Euler` },
+		{ ...gear.get("Mind Amp") },
+		{ ...gear.get("Energy Efficiency") },
+		toBlueprint("Defrag"),
+		toBlueprint("Multi-Focus"),
+		toBlueprint("Multi-Tasking"),
+		toBlueprint("Cauterizer"),
+		{ ...gear.get("Fault Tolerance") },
+		{ name: "MP2GP", gp: -5 },
 	],
 	morph: [
+		{ name: "Operator", mp: 2, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/06-infomorphs.html#operator' },
+		{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
+		{ name: "Morph upgrade Flex +1", mp: 2 },
+		{ name: "MP2GP", mp: 5 },
 	]
 });
 
-mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
-	.concat(
-		egr_docbot({
-			ghostrider: 1,
-			mobility: "Thurst Vector (Rocket)",
-			medichines: true,
-			armored: { hardened_skelton: false, structural_enhancement: false, self_healing: true, impact: true, reactive: false },
-			armed: { weapon_mount: 0, machine_gun: 1 }
-		})
-	)
-	.concat(
-		egr_explorenaut({ ghostrider: 0 })
-	)
-	.concat([
-		{ ...gear.get("Breadcrumb System") },
-	])
-	;
+if (false) {
+	mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
+		.concat(
+			egr_docbot({
+				ghostrider: 1,
+				//mobility: "Thurst Vector (Rocket)",
+				medichines: false,
+				armored: { hardened_skelton: false, structural_enhancement: false, self_healing: false, impact: false, reactive: false },
+				armed: { weapon_mount: 0, machine_gun: 0 }
+			})
+		)
+		;
+}
 
-/*
-mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
-	.concat(
-		egr_dwarf_fullcombat({
-			medichines: true,
-			armored: { hardened_skelton: false, structural_enhancement: false, self_healing: true, impact: true, reactive: false },
-			armed: { weapon_mount: 4, machine_gun: 1 }
-		})
-	)
-	//.concat(egr_meshware_installed())
-	;
-*/
 
-/*
-mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
-	.concat(
-		egt_parisphere_upgrade({
-			ghostrider: true,
-			medichines: true,
-			armored: { hardened_skelton: true, self_healing: true, impact: true, reactive: false },
-			armed: { battle_laser: 2, machine_gun: 2 }
-		})
-	)
-	//.concat(egr_meshware_installed())
-	;
-	*/
-
-mission_gear.get("EGR_2.71828").gear = [
-	{ ...gear.get("Fake Ego ID"), notes: `Leonhard Euler` },
-	{ ...gear.get("Mind Amp") },
-	{ ...gear.get("Energy Efficiency") },
-	toBlueprint("Cauterizer"),
-	toBlueprint("Defrag"),
-	toBlueprint("Multi-Focus")
-];
-
-mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
-	.concat(
-		egr_docbot({
-			ghostrider: 1,
-			mobility: "Thurst Vector (Rocket)",
-			medichines: false,
-			armored: false, //{ hardened_skelton: false, structural_enhancement: false, self_healing: true, impact: true, reactive: false },
-			armed: { weapon_mount: 0, machine_gun: 0 }
-		})
-	)
-	.concat(
-		egr_explorenaut({ ghostrider: 0 })
-	)
-	.concat([
-		{ ...gear.get("Breadcrumb System") },
-		{ ...gear.get("Tactical Multipurpose (TMP)"), name: `${gear.get("Tactical Multipurpose (TMP)").name} Grenade (Standard) Blueprint Multi-Use`, gp: gear.get("Tactical Multipurpose (TMP)").gp + 1 },
-		toBlueprint("Ego Bridge")
-	])
-	;
-
-/*
-mission_gear.set("SysRig.exe", {
-	sentinel: "SysRig.exe",
-	mp: 6,
-	gp: 20,
-	gear: [
-		structuredClone(gear.get("Fake Ego ID")),
-		structuredClone(gear.get("Large Fabber")),
-		structuredClone(gear.get("Robomule")),
-		//{ ...gear.get("Mobility System"), notes: `(Thrust Vector (Rocket)) installed@Robomule` },
-		{ ...gear.get("Dwarf"), notes: `Disassembly Tools (pg. 340)` },
-		{ ...gear.get("Mobility System"), notes: `(Thrust Vector (Rocket)) installed@Dwarf` },
-		{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf` },
-		structuredClone(gear.get("Guardian Angel")),
-		{ ...gear.get("Mobility System"), notes: `(Thrust Vector (Rocket)) installed@Guardian Angel` },
-		{ ...gear.get("Hand Laser"), notes: `installed@Guardian Angel` }
-		//{ ...gear.get("Weapon Mount"), notes: `installed@Dwarf` },
-		//{ ...gear.get("Heavy Combat Armor"), notes: `installed@Dwarf` },
-		//{ ...gear.get("Machine Gun"), notes: `Railgun installed@Dwarf` },
-		//{ ...gear.get("Ghostrider Module"), notes: `installed@Dwarf` },
-		//{ ...gear.get("Self-Healing"), notes: `installed@Dwarf` }
-	],
-	morph: []
-});
-*/
 
 console.clear();
 
@@ -672,6 +607,7 @@ function report_mission_gear(options = { mg: mission_gear, json: false }) {
 			console.log({
 				sentinel: key,
 				gear: value.gear.map(i => `${i.name} (pg. ${i.pg}, ${i.gp} gp)${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
+				morph: value.morph.map(m => `${m.name}, mp: ${m.mp}`),
 				gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
 				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
 			});
