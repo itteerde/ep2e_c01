@@ -583,6 +583,20 @@ mission_gear.set("EGR_2.71828", {
 	]
 });
 
+mission_gear.set("Doc#1", {
+	sentinel: "Doc#1",
+	mp: 3,
+	gp: 10,
+	gear: [],
+	morph: [
+		{ name: "Doc#1", mp: 3, description: "DocBot" }
+	]
+});
+mission_gear.get("Doc#1").gear = egr_docbot({
+	ghostrider: 1,
+	armored: true
+});
+
 if (false) {
 	mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 		.concat(
