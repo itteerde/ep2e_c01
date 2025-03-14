@@ -1,0 +1,54 @@
+game.messages.contents.filter(m => m.speaker.actor === game.user.character.id)[game.messages.contents.filter(m => m.speaker.actor === game.user.character.id).length-1].delete()
+
+let msg = [];
+
+// parental advisory: explicit content
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"></div><div><img src="https://barbican-sites-cncmbjdqaygzhfd0.a03.azurefd.net/censoredsounds/assets/mbzLLS6Ds1/censorship_lead-2560x1440.jpeg" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// nothing to see here
+msg.push( await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"></div><div><img src="https://www.creativefabrica.com/wp-content/uploads/2020/07/03/Nothing-to-See-Here-Illustration-Graphics-4531211-1.png" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// destroy the evidence
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"></div><div><img src="https://i1.sndcdn.com/avatars-rcpAzyz1tsfBKMk9-GQieZg-t1080x1080.jpg" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// radar animation: Overwatch, Active Defender
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">Overwatch, Active Defender</div><div><img src="https://i.gifer.com/JT72.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// nuclear explosion shaking trees
+msg.push( await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">uprading plan N to ...</div><div><img src="https://media2.giphy.com/media/FC4WzgUnsT57i/giphy.gif?cid=6c09b952fldup7cwf30cw4ospczu76wjmrxy2hieqpeiacsp&ep=v1_gifs_search&rid=giphy.gif&ct=g" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// nuke 
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">uprading plan N to ...</div><div><img src="https://i.pinimg.com/originals/47/12/89/471289cde2490c80f60d5e85bcdfb6da.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+
+// quad-minigun
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">preparing fallback solution of last resort</div><div><img src="https://media2.giphy.com/media/s4g0oUnOWRf3eI0IIa/giphy.gif?cid=6c09b952fcq8f4uf8f8u2bc6k1u2y7wse53gi92ou9cpj9o6&ep=v1_gifs_search&rid=giphy.gif&ct=g" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// EGR making an argument
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"><a href="https://coq.inria.fr/">let us explain the argument in simple terms</a></div><div><img src="https://www.researchgate.net/publication/339007786/figure/fig1/AS:854657937207300@1580777739768/Examples-of-formal-development-in-Coq.png" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// matrix code waterfall animation
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"></div><div><img src="https://i.gifer.com/3HeZ.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// deleting
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">Deleting tracks</div><div><img src="https://i.gifer.com/3qVd.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// scanning ( aliens, scanner bot entering frozen escape vessel )
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">Scanning, will keep TacNet updated</div><div><img src="https://64.media.tumblr.com/0ecffb18435a4119212597970beff9a3/tumblr_o80bl7OzhY1qmob6ro1_500.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// programming
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">on it...</div><div><img src="https://i.makeagif.com/media/5-20-2018/iS2N04.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// nanofabbing (laser cutting) 
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">on it...</div><div><img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_416,h_240/https://www.makerverse.com/wp-content/uploads/2024/04/90a108_fa0d5bd176e54837bde28059f5db9fc7mv2.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+// losing connection
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"></div><div><img src="https://coachparents.co.za/wp-content/uploads/2016/05/disconnet2.png" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+
+// EGR thinking (friendly blue AI supremacy version
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">they'll be fine. we have their backups.</div><div><img src="https://media.licdn.com/dms/image/v2/D4D12AQFf3OyGWlKARw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1697023952037?e=2147483647&v=beta&t=_vSyekK5XOfhdMK8ozNDpwiqQvzsZRFaseg9Y-LdWls" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"></div><div><img src="https://www.njcu.edu/sites/default/files/styles/ifde_wysiwyg__natural/public/images/2020-01/toaster%20safety.jpg?itok=SMY9dP9-" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
