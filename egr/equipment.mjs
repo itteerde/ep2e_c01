@@ -1,4 +1,6 @@
-const fs = require('fs');
+import fs from 'fs';
+import * as readline from 'node:readline/promises';
+import { stdin as input, stdout as output } from 'node:process';
 
 function getGearData() {
 	const gear = new Map();
@@ -226,7 +228,7 @@ function egr_docbot(options = {}) {
 
 	const install_string = "@DocBot";
 
-	const package = [
+	const pack = [
 		{ ...gear.get("DocBot"), notes: `` },
 	];
 
@@ -234,12 +236,12 @@ function egr_docbot(options = {}) {
 
 		if (Number.isInteger(options.ghostrider) && options.ghostrider > 1 && options.ghostrider <= 4) {
 			for (let n = 0; n < options.ghostrider; n++) {
-				package.push(
+				pack.push(
 					{ ...gear.get("Ghostrider Module"), notes: install_string },
 				);
 			}
 		} else {
-			package.push(
+			pack.push(
 				{ ...gear.get("Ghostrider Module"), notes: install_string },
 			);
 		}
@@ -247,19 +249,19 @@ function egr_docbot(options = {}) {
 	}
 
 	if (options?.mobility) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: install_string },
 		);
 	}
 
 	if (options?.medichines) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Medichines"), notes: `@DocBot` },
 		);
 	}
 
 	if (options?.breadcrumb) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Breadcrumb System "), notes: `@DocBot` },
 		);
 	}
@@ -267,37 +269,37 @@ function egr_docbot(options = {}) {
 	if (options?.armored) {
 
 		if (options.armored.heavy_combat_armor) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Heavy Combat Armor"), notes: `@DocBot` },
 			);
 		}
 
 		if (options.armored.hardened_skelton) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Hardened Skeleton"), notes: `@DocBot` },
 			);
 		}
 
 		if (options.armored.structural_enhancement) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Structural Enhancement"), notes: `@DocBot` },
 			);
 		}
 
 		if (options.armored.self_healing) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Self-Healing"), notes: `@DocBot` },
 			);
 		}
 
 		if (options.armored.impact) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Impact"), notes: `@DocBot` },
 			);
 		}
 
 		if (options.armored.reactive) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Reactive"), notes: `@DocBot` },
 			);
 		}
@@ -306,76 +308,76 @@ function egr_docbot(options = {}) {
 	if (options?.armed) {
 		if (options.armed.machine_gun > 0 && options.armed.machine_gun <= 4) {
 			for (let i = 0; i < options.armed.machine_gun; i++) {
-				package.push(
+				pack.push(
 					{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: `@DocBot` },
 				);
 			}
 		}
 	}
 
-	return package;
+	return pack;
 }
 
 function egr_explorenaut(options = {}) {
-	const package = [
+	const pack = [
 		{ ...gear.get("Explorenaut"), notes: `` },
 	];
 
 	if (options?.ghostrider) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Ghostrider Module"), notes: `@Explorenaut` },
 		);
 	}
 
 	if (options?.mobility) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: `@Explorenaut` },
 		);
 	}
 
 	if (options?.medichines) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Medichines"), notes: `@Explorenaut` },
 		);
 	}
 
 	if (options?.breadcrumb) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Breadcrumb System "), notes: `@DocBot` },
 		);
 	}
 
 	if (options?.armored) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Heavy Combat Armor"), notes: `@Explorenaut` },
 		);
 
 		if (options.armored.hardened_skelton) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Hardened Skeleton"), notes: `@Explorenaut` },
 			);
 		}
 
 		if (options.armored.structural_enhancement) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Structural Enhancement"), notes: `@Explorenaut` },
 			);
 		}
 
 		if (options.armored.self_healing) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Self-Healing"), notes: `@Explorenaut` },
 			);
 		}
 
 		if (options.armored.impact) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Impact"), notes: `@Explorenaut` },
 			);
 		}
 
 		if (options.armored.reactive) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Reactive"), notes: `@Explorenaut` },
 			);
 		}
@@ -384,60 +386,60 @@ function egr_explorenaut(options = {}) {
 	if (options?.armed) {
 		if (options.armed.machine_gun > 0 && options.armed.machine_gun <= 4) {
 			for (let i = 0; i < options.armed.machine_gun; i++) {
-				package.push(
+				pack.push(
 					{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: `@DocBot` },
 				);
 			}
 		}
 	}
 
-	return package;
+	return pack;
 }
 
 function egr_dwarf_fullcombat(options = {}) {
-	const package = [
+	const pack = [
 		{ ...gear.get("Dwarf"), notes: `` },
 		{ ...gear.get("Ghostrider Module"), notes: `@Dwarf` },
 		{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} Thrust Vector (Rocket)`, notes: `@Dwarf` },
 	];
 
 	if (options?.medichines) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Medichines"), notes: `@Dwarf` },
 		);
 	}
 
 	if (options?.armored) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Heavy Combat Armor"), notes: `@Dwarf` },
 		);
 
 		if (options.armored.hardened_skelton) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Hardened Skeleton"), notes: `@Dwarf` },
 			);
 		}
 
 		if (options.armored.structural_enhancement) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Structural Enhancement"), notes: `@Dwarf` },
 			);
 		}
 
 		if (options.armored.self_healing) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Self-Healing"), notes: `@Dwarf` },
 			);
 		}
 
 		if (options.armored.impact) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Impact"), notes: `@Dwarf` },
 			);
 		}
 
 		if (options.armored.reactive) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Reactive"), notes: `@Dwarf` },
 			);
 		}
@@ -446,7 +448,7 @@ function egr_dwarf_fullcombat(options = {}) {
 	if (options?.armed) {
 		if (options.armed.weapon_mount > 0 && options.armed.weapon_mount <= 8) {
 			for (let i = 0; i < options.armed.weapon_mount; i++) {
-				package.push(
+				pack.push(
 					{ ...gear.get("Weapon Mount"), notes: `@Dwarf` },
 				);
 			}
@@ -454,7 +456,7 @@ function egr_dwarf_fullcombat(options = {}) {
 
 		if (options.armed.machine_gun > 0 && options.armed.machine_gun <= 4) {
 			for (let i = 0; i < options.armed.machine_gun; i++) {
-				package.push(
+				pack.push(
 					{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: `@Dwarf` },
 				);
 			}
@@ -462,19 +464,19 @@ function egr_dwarf_fullcombat(options = {}) {
 
 		if (options.armed.battle_laser > 0 && options.armed.battle_laser <= 4) {
 			for (let i = 0; i < options.armed.battle_laser; i++) {
-				package.push(
+				pack.push(
 					{ ...gear.get("Battle Laser"), notes: `@Dwarf` },
 				);
 			}
 		}
 	}
 
-	return package;
+	return pack;
 }
 
 function egr_meshware_installed(options = {}) {
 
-	const package = [
+	const pack = [
 		{ ...gear.get("Enhanced Security"), gp: 0, notes: `from Agent` },
 		{ ...gear.get("Drone Rig") },
 		{ ...gear.get("Skillware") },
@@ -490,22 +492,22 @@ function egr_meshware_installed(options = {}) {
 		{ ...gear.get("Mnemonics"), gp: 0, notes: `from Agent` },
 	];
 
-	return package;
+	return pack;
 }
 
 function egt_parisphere_upgrade(options = {}) {
-	const package = [
+	const pack = [
 		{ name: "acquired from Resources IV", gp: 0 }
 	];
 
 	if (options?.ghostrider) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Ghostrider Module"), notes: `@Parisphere` },
 		);
 	}
 
 	if (options?.medichines) {
-		package.push(
+		pack.push(
 			{ ...gear.get("Medichines"), notes: `@Parisphere` },
 		);
 	}
@@ -513,25 +515,25 @@ function egt_parisphere_upgrade(options = {}) {
 	if (options?.armored) {
 
 		if (options.armored.hardened_skelton) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Hardened Skeleton"), notes: `@DocBot` },
 			);
 		}
 
 		if (options.armored.self_healing) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Self-Healing"), notes: `@DocBot` },
 			);
 		}
 
 		if (options.armored.impact) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Impact"), notes: `@DocBot` },
 			);
 		}
 
 		if (options.armored.reactive) {
-			package.push(
+			pack.push(
 				{ ...gear.get("Reactive"), notes: `@DocBot` },
 			);
 		}
@@ -540,7 +542,7 @@ function egt_parisphere_upgrade(options = {}) {
 	if (options?.armed) {
 		if (options.armed.battle_laser > 0 && options.armed.battle_laser <= 4) {
 			for (let i = 0; i < options.armed.battle_laser; i++) {
-				package.push(
+				pack.push(
 					{ ...gear.get("Battle Laser"), notes: `@DocBot` },
 				);
 			}
@@ -548,14 +550,14 @@ function egt_parisphere_upgrade(options = {}) {
 
 		if (options.armed.machine_gun > 0 && options.armed.machine_gun <= 4) {
 			for (let i = 0; i < options.armed.machine_gun; i++) {
-				package.push(
+				pack.push(
 					{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: `@DocBot` },
 				);
 			}
 		}
 	}
 
-	return package;
+	return pack;
 }
 
 const downtime = 0;
@@ -602,10 +604,10 @@ if (false) {
 		.concat(
 			egr_docbot({
 				ghostrider: 1,
-				//mobility: "Thurst Vector (Rocket)",
-				medichines: false,
-				armored: { hardened_skelton: false, structural_enhancement: false, self_healing: false, impact: false, reactive: false },
-				armed: { weapon_mount: 0, machine_gun: 0 }
+				mobility: "Thurst Vector (Rocket)",
+				medichines: true,
+				armored: { hardened_skelton: true, structural_enhancement: true, self_healing: true, impact: true, reactive: true },
+				armed: { weapon_mount: 2, machine_gun: 0 }
 			})
 		)
 		;
@@ -639,3 +641,19 @@ function report_mission_gear(options = { mg: mission_gear, json: false }) {
 report_mission_gear();
 report_mission_gear({ mg: mission_gear, json: true });
 // fs.writeFileSync('file.json', JSON.stringify(jsonVariable));
+
+const rl = readline.createInterface({ input, output });
+
+do {
+	var answer = await rl.question('> ');
+	if (answer === '.exit') break;
+	try {
+		console.log(eval(answer));
+	} catch (e) {
+		console.error(e);
+		console.log("\n.exit to close CLI.");
+	}
+} while (true);
+
+rl.close();
+process.exit();
