@@ -37,10 +37,10 @@ msg.push(await ChatMessage.create({content:`<div><div style="background-color: b
 msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">Scanning, will keep TacNet updated</div><div><img src="https://64.media.tumblr.com/0ecffb18435a4119212597970beff9a3/tumblr_o80bl7OzhY1qmob6ro1_500.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
 
 // programming
-msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">on it...</div><div><img src="https://i.makeagif.com/media/5-20-2018/iS2N04.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">plan [C..M] on it...</div><div><img src="https://i.makeagif.com/media/5-20-2018/iS2N04.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
 
 // nanofabbing (laser cutting) 
-msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">on it...</div><div><img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_416,h_240/https://www.makerverse.com/wp-content/uploads/2024/04/90a108_fa0d5bd176e54837bde28059f5db9fc7mv2.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">done.</div><div><img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_416,h_240/https://www.makerverse.com/wp-content/uploads/2024/04/90a108_fa0d5bd176e54837bde28059f5db9fc7mv2.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
 
 // losing connection
 msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"></div><div><img src="https://coachparents.co.za/wp-content/uploads/2016/05/disconnet2.png" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
@@ -50,5 +50,16 @@ msg.push(await ChatMessage.create({content:`<div><div style="background-color: b
 msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">they'll be fine. we have their backups.</div><div><img src="https://media.licdn.com/dms/image/v2/D4D12AQFf3OyGWlKARw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1697023952037?e=2147483647&v=beta&t=_vSyekK5XOfhdMK8ozNDpwiqQvzsZRFaseg9Y-LdWls" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
 
 
+// Droideka
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">DocBot advancing.</div><div><img src="https://i.imgur.com/zRKVdgE.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+
 msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"></div><div><img src="https://www.njcu.edu/sites/default/files/styles/ifde_wysiwyg__natural/public/images/2020-01/toaster%20safety.jpg?itok=SMY9dP9-" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
 
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">Scorchers/Exploits at will! WE ARE LEGION</div><div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/SADM%28cropped%29.jpg/220px-SADM%28cropped%29.jpg" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">Please let us know if our support is required:</div><div><img src="https://www.bigfooty.com/forum/media/nuclear-atom-bomg-explosion-animated-gif-4-1883555046-gif.78924/full" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+
+assets/Tokens/Top%20Down/PC/Gial%20Engstrand/Prof1.png
