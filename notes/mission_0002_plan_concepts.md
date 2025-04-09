@@ -1,3 +1,5 @@
+> 🚨🚨🚨 THIS IS CHAT-GPT BS, this page is a JOKE! 🚨🚨🚨
+
 Nice. You're setting up a classic slow-burn bootstrap op—very Eclipse Phase. Here's a plan structured around your parameters, aimed at going from low-profile survival to full ambush capability, while staying below the radar of a heavily armed enemy force. Your assets:
 
 - **Breadcrumb System + Radio Booster** for long-distance Mesh connection.
