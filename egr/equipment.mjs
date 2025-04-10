@@ -599,7 +599,7 @@ mission_gear.get("Doc#1").gear = egr_docbot({
 	armored: true
 });
 
-if (false) {
+if (true) {
 	mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 		.concat(
 			egr_docbot({
