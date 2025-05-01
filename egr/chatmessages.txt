@@ -1,3 +1,5 @@
+new Date("2011-01-19").toLocaleDateString("en-US", {weekday:"long",year:"numeric",month:"long",day:"numeric"}) // reset Resources I-IV Sunday 0:00
+
 game.messages.contents.filter(m => m.speaker.actor === game.user.character.id)[game.messages.contents.filter(m => m.speaker.actor === game.user.character.id).length-1].delete()
 
 let msg = [];
@@ -22,7 +24,7 @@ msg.push(await ChatMessage.create({content:`<div><div style="background-color: b
 
 
 // quad-minigun
-msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">preparing fallback solution of last resort</div><div><img src="https://media2.giphy.com/media/s4g0oUnOWRf3eI0IIa/giphy.gif?cid=6c09b952fcq8f4uf8f8u2bc6k1u2y7wse53gi92ou9cpj9o6&ep=v1_gifs_search&rid=giphy.gif&ct=g" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">good form</div><div><img src="https://media2.giphy.com/media/s4g0oUnOWRf3eI0IIa/giphy.gif?cid=6c09b952fcq8f4uf8f8u2bc6k1u2y7wse53gi92ou9cpj9o6&ep=v1_gifs_search&rid=giphy.gif&ct=g" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
 
 // EGR making an argument
 msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"><a href="https://coq.inria.fr/">let us explain the argument in simple terms</a></div><div><img src="https://www.researchgate.net/publication/339007786/figure/fig1/AS:854657937207300@1580777739768/Examples-of-formal-development-in-Coq.png" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
@@ -50,8 +52,26 @@ msg.push(await ChatMessage.create({content:`<div><div style="background-color: b
 msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">they'll be fine. we have their backups.</div><div><img src="https://media.licdn.com/dms/image/v2/D4D12AQFf3OyGWlKARw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1697023952037?e=2147483647&v=beta&t=_vSyekK5XOfhdMK8ozNDpwiqQvzsZRFaseg9Y-LdWls" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
 
 
+// loading (scouting)
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">preparing to scout: relevant world model loading.</div><div><img src="https://cdn.dribbble.com/userupload/24102843/file/original-312073f1afffa8d99228bbdc09972821.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">preparing to scout: relevant world model loading.</div><div><img src="https://i.pinimg.com/originals/b5/db/46/b5db46949d9005be06ebf248ab1dbb00.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">preparing to scout: relevant world model loading.</div><div><img src="https://scitechdaily.com/images/Machine-Learning-AI-Concept.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">preparing to scout: relevant world model loading.</div><div><img src="https://i.pinimg.com/originals/19/e4/3c/19e43c53725c7fa48df0843e096da2ec.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">preparing to scout: relevant world model loading.</div><div><img src="https://i.pinimg.com/originals/57/84/08/578408947ec37a138619034dfabab227.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">preparing to scout: relevant world model loading.</div><div><img src="https://static01.nyt.com/images/2017/05/26/business/26wheels-top/26wheels-top-superJumbo.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">preparing to scout: relevant world model loading.</div><div><img src="https://miro.medium.com/v2/resize:fit:960/1*vZrogb-8wqQALKBxmCvdWA.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">preparing to scout: relevant world model loaded. please follow our shell.</div><div><img src="https://voyis.com/wp-content/uploads/2021/10/pipeline-following-gif-laser.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+
+
 // Droideka
-msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">DocBot advancing.</div><div><img src="https://i.imgur.com/zRKVdgE.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">A DocBot without quad-miniguns is not equipped appropriately.</div><div><img src="https://i.imgur.com/zRKVdgE.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
 
 
 msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;"></div><div><img src="https://www.njcu.edu/sites/default/files/styles/ifde_wysiwyg__natural/public/images/2020-01/toaster%20safety.jpg?itok=SMY9dP9-" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
@@ -59,7 +79,11 @@ msg.push(await ChatMessage.create({content:`<div><div style="background-color: b
 
 msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">Scorchers/Exploits at will! WE ARE LEGION</div><div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/SADM%28cropped%29.jpg/220px-SADM%28cropped%29.jpg" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
 
-msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">Please let us know if our support is required:</div><div><img src="https://www.bigfooty.com/forum/media/nuclear-atom-bomg-explosion-animated-gif-4-1883555046-gif.78924/full" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">working on olfactory resolution</div><div><img src="https://s-media-cache-ak0.pinimg.com/originals/92/d3/49/92d34994abba6190910ccf85d912d61d.gif" style="display: block; margin-left: auto; margin-right: auto;"/></div></div>`}))
 
 
 assets/Tokens/Top%20Down/PC/Gial%20Engstrand/Prof1.png
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">OPSEC is to be observed. humanely restoring from stack will come later.</div>`}))
+
+msg.push(await ChatMessage.create({content:`<div><div style="background-color: black; color: #7CFC00; font-family: monospace;">good! we'll censor 2ms before detonation.</div></div>`}))
