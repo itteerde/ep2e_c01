@@ -1,24 +1,13 @@
 {
   "sentinel": "EGR_2.71828",
   "gear": [
-    "Mind Amp (pg. 320, 3 gp)",
-    "Energy Efficiency (pg. 323, 3 gp)",
-    "Defrag Blueprint Multi-Use (pg. null, 3 gp)",
-    "Multi-Focus Blueprint Multi-Use (pg. null, 2 gp)",
-    "Multi-Tasking Blueprint Multi-Use (pg. 320, 3 gp)",
-    "Cauterizer Blueprint Multi-Use (pg. 327, 3 gp)",
-    "Fault Tolerance (pg. 326, 2 gp)",
-    "MP2GP (pg. undefined, -5 gp)",
-    "DocBot (pg. 347, 3 gp)",
-    "Ghostrider Module (pg. 320, 1 gp) : @DocBot",
-    "Mobility System Thrust Vector (Rocket) (pg. 324, 2 gp) : @DocBot",
-    "Medichines (pg. 322, 3 gp) : @DocBot",
-    "Hardened Skeleton (pg. 322, 3 gp) : @DocBot",
-    "Structural Enhancement (pg. 323, 3 gp) : @DocBot",
-    "Self-Healing (pg. 217, 1 gp) : @DocBot",
-    "Impact (pg. 217, 1 gp) : @DocBot",
-    "Reactive (pg. 217, 1 gp) : @DocBot"
+    "Fake Ego ID (pg. 315, 3 gp) : Escher",
+    "Ego Bridge (pg. 342, 2 gp) : Escher@Explorenaut",
+    "Breadcrumb System (pg. 336, 1 gp) : Escher@Explorenaut",
+    "Explorenaut (pg. 346, 3 gp)",
+    "Mobility System Thrust Vector (Rocket) (pg. 324, 2 gp) : @Explorenaut",
+    "Medichines (pg. 322, 3 gp) : @Explorenaut"
   ],
-  "gp_left": -18,
+  "gp_left": 0,
   "mp_left": 0
 }

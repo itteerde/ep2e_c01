@@ -136,6 +136,22 @@ function getGearData() {
 	gear.set("Persistence", {
 		name: "Persistence", complexity: "Mod", restricted: false, gp: 2, pg: 326, description: `This meshware uses rootkit techniques to keep the digital mind active despite attempts to crash it. Increase the infomorph’s Durability by 10 and Wound Threshold by 2.`
 	});
+	gear.set("Portable Sensor (Infrared)", {
+		name: "Portable Sensor (Infrared)", complexity: "Mod", restricted: false, gp: 2, pg: 317,
+		description: 'This is a small portable (possibly even wearable) sensor system. The type of sensor must be chosen (for example: infrared, lidar, radar, x-ray). Combined sensor systems are also available, at a cumulative cost. See Senses and Sensors ▶318, and Radio and Sensor Ranges ▶337.'
+	});
+	gear.set("Portable Sensor (Radar)", {
+		name: "Portable Sensor (Radar)", complexity: "Mod", restricted: false, gp: 2, pg: 317,
+		description: 'This is a small portable (possibly even wearable) sensor system. The type of sensor must be chosen (for example: infrared, lidar, radar, x-ray). Combined sensor systems are also available, at a cumulative cost. See Senses and Sensors ▶318, and Radio and Sensor Ranges ▶337.'
+	});
+	gear.set("Portable Sensor (Terahertz)", {
+		name: "Portable Sensor (Terahertz)", complexity: "Mod", restricted: false, gp: 2, pg: 317,
+		description: 'This is a small portable (possibly even wearable) sensor system. The type of sensor must be chosen (for example: infrared, lidar, radar, x-ray). Combined sensor systems are also available, at a cumulative cost. See Senses and Sensors ▶318, and Radio and Sensor Ranges ▶337.'
+	});
+	gear.set("Portable Sensor (X-Ray)", {
+		name: "Portable Sensor (X-Ray)", complexity: "Mod", restricted: false, gp: 2, pg: 317,
+		description: 'This is a small portable (possibly even wearable) sensor system. The type of sensor must be chosen (for example: infrared, lidar, radar, x-ray). Combined sensor systems are also available, at a cumulative cost. See Senses and Sensors ▶318, and Radio and Sensor Ranges ▶337.'
+	});
 	gear.set("Pressure Tent", {
 		name: "Pressure Tent", complexity: "Mod", restricted: false, gp: 2, pg: 341,
 		description: 'This pack self-unfolds in 3 action turns into a pressurized shelter for up to 4 medium-sized people plus gear. A built-in breather will convert carbon dioxide from the atmosphere (if any) indefinitely. It also packs itself.'
@@ -325,32 +341,43 @@ function egr_explorenaut(options = {}) {
 
 	if (options?.ghostrider) {
 		pack.push(
-			{ ...gear.get("Ghostrider Module"), notes: `@Explorenaut` },
+			{ ...gear.get("Ghostrider Module"), notes: `${options.identity ? options.identity : ''}@Explorenaut` },
 		);
 	}
 
 	if (options?.mobility) {
 		pack.push(
-			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: `@Explorenaut` },
+			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: `${options.identity ? options.identity : ''}@Explorenaut` },
 		);
+	}
+
+	if (options?.sensors) {
+		if (options?.sensors?.x_ray) {
+			pack.push(
+				{ ...gear.get("Portable Sensor (X-Ray)"), notes: `${options.identity ? options.identity : ''}@Explorenaut` }
+			);
+		}
 	}
 
 	if (options?.medichines) {
 		pack.push(
-			{ ...gear.get("Medichines"), notes: `@Explorenaut` },
+			{ ...gear.get("Medichines"), notes: `${options.identity ? options.identity : ''}@Explorenaut` },
 		);
 	}
 
 	if (options?.breadcrumb) {
 		pack.push(
-			{ ...gear.get("Breadcrumb System "), notes: `@DocBot` },
+			{ ...gear.get("Breadcrumb System "), notes: `${options.identity ? options.identity : ''}@Explorenaut` },
 		);
 	}
 
 	if (options?.armored) {
-		pack.push(
-			{ ...gear.get("Heavy Combat Armor"), notes: `@Explorenaut` },
-		);
+
+		if (!(options.armored.heavy_combat_armor === false)) {
+			pack.push(
+				{ ...gear.get("Heavy Combat Armor"), notes: `@Explorenaut` },
+			);
+		}
 
 		if (options.armored.hardened_skelton) {
 			pack.push(
@@ -562,44 +589,36 @@ function egt_parisphere_upgrade(options = {}) {
 
 const downtime = 0;
 
+let identity = 'Escher';
 mission_gear.set("EGR_2.71828", {
 	sentinel: "EGR_2.71828",
-	mp: 10,
-	gp: 14,
+	mp: 4 + 4,
+	gp: 10 + 4,
 	gear: [
-		//{ ...gear.get("Fake Ego ID"), notes: `Leonhard Euler` },
-		{ ...gear.get("Mind Amp") },
-		{ ...gear.get("Energy Efficiency") },
-		toBlueprint("Defrag"),
-		toBlueprint("Multi-Focus"),
-		toBlueprint("Multi-Tasking"),
-		toBlueprint("Cauterizer"),
-		{ ...gear.get("Fault Tolerance") },
-		{ name: "MP2GP", gp: -5 },
+		{ ...gear.get("Fake Ego ID"), notes: identity },
+		//{ ...gear.get("Ego Bridge"), notes: `Escher@Explorenaut` },
+		//{ ...gear.get("Breadcrumb System"), notes: `Escher@Explorenaut` },
+		{ ...gear.get("Spindle"), notes: `${identity}@Explorenaut` },
+		{ ...gear.get("Spindle Climber"), notes: `${identity}@Explorenaut` },
+		//{ ...gear.get("Fake Brainprint"), notes: `burner ID` },
+		//{ name: "MP2GP", gp: 0 },
 	],
 	morph: [
+		//{ name: "GP2MP", mp: -1 },
+		{ name: "Spectre", mp: 6, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/06-infomorphs.html#spectre' },
+		//{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
+		{ name: "Morph upgrade Flex +1", mp: 2 },
+		/**
 		{ name: "Operator", mp: 2, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/06-infomorphs.html#operator' },
 		{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
 		{ name: "Morph upgrade Flex +1", mp: 2 },
-		{ name: "MP2GP", mp: 5 },
+		 */
+		{ name: "Spare", mp: 0 },
 	]
 });
 
-mission_gear.set("Doc#1", {
-	sentinel: "Doc#1",
-	mp: 3,
-	gp: 10,
-	gear: [],
-	morph: [
-		{ name: "Doc#1", mp: 3, description: "DocBot" }
-	]
-});
-mission_gear.get("Doc#1").gear = egr_docbot({
-	ghostrider: 1,
-	armored: true
-});
 
-if (true) {
+if (false) {
 	mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 		.concat(
 			egr_docbot({
@@ -608,6 +627,27 @@ if (true) {
 				medichines: true,
 				armored: { hardened_skelton: true, structural_enhancement: true, self_healing: true, impact: true, reactive: true },
 				armed: { weapon_mount: 2, machine_gun: 0 }
+			})
+		)
+		;
+}
+
+if (true) {
+	mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
+		.concat(
+			egr_explorenaut({
+				identity: identity,
+				ghostrider: 0,
+				mobility: "Thurst Vector (Rocket)",
+				medichines: true,
+				armored: {
+					heavy_combat_armor: false,
+					hardened_skelton: false,
+					structural_enhancement: false,
+					self_healing: false,
+					impact: false,
+					reactive: false
+				},
 			})
 		)
 		;
@@ -641,6 +681,11 @@ function report_mission_gear(options = { mg: mission_gear, json: false }) {
 report_mission_gear();
 report_mission_gear({ mg: mission_gear, json: true });
 // fs.writeFileSync('file.json', JSON.stringify(jsonVariable));
+
+if (!process.argv.find(a => a.startsWith("--cmd"))) {
+	process.exit();
+}
+
 
 const rl = readline.createInterface({ input, output });
 
