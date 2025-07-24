@@ -672,7 +672,7 @@ function colorize(s) {
 
 function report_mission_gear(options = { mg: mission_gear, json: false }) {
 	for (let [key, value] of options.mg) {
-		if (!(options?.json)) {
+		if (!(options.json)) {
 			console.log({
 				sentinel: key,
 				gear: value.gear.map(i => `${i.name} (pg. ${i.pg}, ${i.gp} gp)${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
@@ -681,9 +681,10 @@ function report_mission_gear(options = { mg: mission_gear, json: false }) {
 				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
 			});
 		} else {// is json
-			fs.writeFileSync(`${key}.json`, JSON.stringify({
+			fs.writeFileSync(`./${key}.json`, JSON.stringify({
 				sentinel: key,
 				gear: value.gear.map(i => `${i.name} (pg. ${i.pg}, ${i.gp} gp)${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
+				morph: value.morph.map(m => `${m.name}, mp: ${m.mp}`),
 				gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
 				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
 			}, null, 2));
