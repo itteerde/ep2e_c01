@@ -1,6 +1,7 @@
 import fs from 'fs';
 import * as readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
+import { color, consoleColors } from '../lib/colorize.mjs';
 
 function getGearData() {
 	const gear = new Map();
@@ -237,6 +238,10 @@ function toBlueprint(item) {
 	return { ...gear.get(item), name: `${gear.get(item).name} Blueprint Multi-Use`, gp: gear.get(item).gp + 1 }
 }
 
+function toWarning(s) {
+	return `❗${s}❗`;
+}
+
 const gear = getGearData();
 const mission_gear = new Map();
 
@@ -347,27 +352,27 @@ function egr_explorenaut(options = {}) {
 
 	if (options?.mobility) {
 		pack.push(
-			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: `${options.identity ? options.identity : ''}@Explorenaut` },
+			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: `@Explorenaut` },
 		);
 	}
 
 	if (options?.sensors) {
 		if (options?.sensors?.x_ray) {
 			pack.push(
-				{ ...gear.get("Portable Sensor (X-Ray)"), notes: `${options.identity ? options.identity : ''}@Explorenaut` }
+				{ ...gear.get("Portable Sensor (X-Ray)"), notes: `@Explorenaut` }
 			);
 		}
 	}
 
 	if (options?.medichines) {
 		pack.push(
-			{ ...gear.get("Medichines"), notes: `${options.identity ? options.identity : ''}@Explorenaut` },
+			{ ...gear.get("Medichines"), notes: `@Explorenaut` },
 		);
 	}
 
 	if (options?.breadcrumb) {
 		pack.push(
-			{ ...gear.get("Breadcrumb System "), notes: `${options.identity ? options.identity : ''}@Explorenaut` },
+			{ ...gear.get("Breadcrumb System "), notes: `@Explorenaut` },
 		);
 	}
 
@@ -598,8 +603,8 @@ mission_gear.set("EGR_2.71828", {
 		{ ...gear.get("Fake Ego ID"), notes: identity },
 		//{ ...gear.get("Ego Bridge"), notes: `Escher@Explorenaut` },
 		//{ ...gear.get("Breadcrumb System"), notes: `Escher@Explorenaut` },
-		{ ...gear.get("Spindle"), notes: `${identity}@Explorenaut` },
-		{ ...gear.get("Spindle Climber"), notes: `${identity}@Explorenaut` },
+		{ ...gear.get("Spindle"), notes: toWarning(`non-Ware@Explorenaut`) },
+		{ ...gear.get("Spindle Climber"), notes: toWarning(`non-Ware@Explorenaut`) },
 		//{ ...gear.get("Fake Brainprint"), notes: `burner ID` },
 		//{ name: "MP2GP", gp: 0 },
 	],
@@ -656,6 +661,14 @@ if (true) {
 
 
 console.clear();
+
+function colorize(s) {
+	if (s.match(new RegExp('!!!.*!!!', 'g'))) {
+		return s.replace(new RegExp('!!!.*!!!', 'g'), color(consoleColors.red, '!!!_!!!'));
+	}
+
+	return s;
+}
 
 function report_mission_gear(options = { mg: mission_gear, json: false }) {
 	for (let [key, value] of options.mg) {
