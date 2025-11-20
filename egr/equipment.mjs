@@ -594,11 +594,11 @@ function egt_parisphere_upgrade(options = {}) {
 
 const downtime = 0;
 
-let identity = 'Escher';
+let identity = 'Poincare';
 mission_gear.set("EGR_2.71828", {
 	sentinel: "EGR_2.71828",
-	mp: 4 + 4,
-	gp: 10 + 4,
+	mp: 6 + 4,
+	gp: 20 + 4,
 	gear: [
 		{ ...gear.get("Fake Ego ID"), notes: identity },
 		//{ ...gear.get("Ego Bridge"), notes: `Escher@Explorenaut` },
@@ -607,12 +607,13 @@ mission_gear.set("EGR_2.71828", {
 		{ ...gear.get("Spindle Climber"), notes: toWarning(`non-Ware@Explorenaut`) },
 		//{ ...gear.get("Fake Brainprint"), notes: `burner ID` },
 		//{ name: "MP2GP", gp: 0 },
+		{ ...gear.get("Spindle Climber"), notes: toWarning(`non-Ware@DocBot`) },
 	],
 	morph: [
 		//{ name: "GP2MP", mp: -1 },
 		{ name: "Spectre", mp: 6, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/06-infomorphs.html#spectre' },
 		//{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
-		{ name: "Morph upgrade Flex +1", mp: 2 },
+		{ name: "Morph upgrade Flex +2", mp: 4 },
 		/**
 		{ name: "Operator", mp: 2, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/06-infomorphs.html#operator' },
 		{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
@@ -623,15 +624,49 @@ mission_gear.set("EGR_2.71828", {
 });
 
 
-if (false) {
+// special mission gear bio
+mission_gear.set("EGR_2.71828", {
+	sentinel: "EGR_2.71828",
+	mp: 6 + 4,
+	gp: 20 + 4,
+	gear: [
+		//{ ...gear.get("Fake Ego ID"), notes: identity },
+		//{ ...gear.get("Ego Bridge"), notes: `Escher@Explorenaut` },
+		{ ...gear.get("Breadcrumb System"), notes: toWarning(`non-Ware@Explorenaut`) },
+		{ ...gear.get("Spindle"), notes: toWarning(`non-Ware@Explorenaut`) },
+		{ ...gear.get("Spindle Climber"), notes: toWarning(`non-Ware@Explorenaut`) },
+		{ ...gear.get("Envirosuit"), notes: identity },
+		//{ ...gear.get("Fake Brainprint"), notes: `burner ID` },
+		{ ...gear.get("Spindle Climber"), notes: identity },
+		//{ ...gear.get("Medichines"), notes: identity }
+		//{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: identity }
+		{ ...gear.get("Battle Laser"), notes: identity }
+	],
+	morph: [
+		//{ name: "GP2MP", mp: -1 },
+		{ name: "Menton", mp: 4, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/01-biomorphs.html#menton' },
+		{ name: "Transhuman Essentials", mp: 1 },
+		{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
+		{ name: "Morph upgrade Flex +2", mp: 4 },
+		/**
+		{ name: "Operator", mp: 2, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/06-infomorphs.html#operator' },
+		{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
+		{ name: "Morph upgrade Flex +1", mp: 2 },
+		 */
+		{ name: "Spare", mp: 0 },
+	]
+});
+
+
+if (true) {
 	mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 		.concat(
 			egr_docbot({
-				ghostrider: 1,
+				ghostrider: 0,
 				mobility: "Thurst Vector (Rocket)",
 				medichines: true,
-				armored: { hardened_skelton: true, structural_enhancement: true, self_healing: true, impact: true, reactive: true },
-				armed: { weapon_mount: 2, machine_gun: 0 }
+				armored: { hardened_skelton: false, structural_enhancement: false, self_healing: false, impact: false, reactive: false }
+				//armed: { weapon_mount: 2, machine_gun: 0 }
 			})
 		)
 		;
@@ -644,7 +679,7 @@ if (true) {
 				identity: identity,
 				ghostrider: 0,
 				mobility: "Thurst Vector (Rocket)",
-				medichines: true,
+				medichines: false,
 				armored: {
 					heavy_combat_armor: false,
 					hardened_skelton: false,
@@ -657,6 +692,7 @@ if (true) {
 		)
 		;
 }
+
 
 
 
@@ -695,6 +731,9 @@ function report_mission_gear(options = { mg: mission_gear, json: false }) {
 report_mission_gear();
 report_mission_gear({ mg: mission_gear, json: true });
 // fs.writeFileSync('file.json', JSON.stringify(jsonVariable));
+
+//console.clear();
+//console.log(mission_gear.get("EGR_2.71828").gear.map(e => e.name));
 
 if (!process.argv.find(a => a.startsWith("--cmd"))) {
 	process.exit();
