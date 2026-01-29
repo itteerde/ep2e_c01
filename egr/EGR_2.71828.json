@@ -4,14 +4,14 @@
     "Breadcrumb System (pg. 336, 1 gp) : ❗non-Ware@Explorenaut❗",
     "Spindle (pg. 341, 2 gp) : ❗non-Ware@Explorenaut❗",
     "Spindle Climber (pg. 341, 1 gp) : ❗non-Ware@Explorenaut❗",
-    "Envirosuit (pg. 351, 3 gp) : Poincare",
-    "Spindle Climber (pg. 341, 1 gp) : Poincare",
-    "Battle Laser (pg. 208, 3 gp) : Poincare",
-    "DocBot (pg. 347, 3 gp)",
-    "Mobility System Thrust Vector (Rocket) (pg. 324, 2 gp) : @DocBot",
-    "Medichines (pg. 322, 3 gp) : @DocBot",
     "Explorenaut (pg. 346, 3 gp)",
-    "Mobility System Thrust Vector (Rocket) (pg. 324, 2 gp) : @Explorenaut"
+    "Ghostrider Module (pg. 320, 1 gp) : Poincare@Explorenaut",
+    "Mobility System Thurst Vector (Rocket) (pg. 324, 2 gp) : @Explorenaut",
+    "Mobility System Submarine (pg. 324, 2 gp) : @Explorenaut",
+    "Medichines (pg. 322, 3 gp) : @Explorenaut",
+    "Heavy Combat Armor (pg. 214, 3 gp) : @Explorenaut",
+    "Hardened Skeleton (pg. 322, 3 gp) : @Explorenaut",
+    "Structural Enhancement (pg. 323, 3 gp) : @Explorenaut"
   ],
   "morph": [
     "Menton, mp: 4",

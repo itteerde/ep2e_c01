@@ -128,6 +128,9 @@ function getGearData() {
 	gear.set("Multi-Tasking", {
 		name: "Multi-Tasking", complexity: "Mod", restricted: false, gp: 2, pg: 320, description: `This cybernetic or software module enables your brain to focus on two things at the same time — something our minds cannot usually handle — without any context-switching confusion or increased error rates from inattention. Multi-Tasking increases your Insight Pool by 1.`
 	});
+	gear.set("Neurachem", {
+		name: "Neurachem", complexity: "Maj", restricted: false, gp: 3, ware: ["B", "H"], pg: 323, properties: [], description: `This mod enhances your chemical synapses and juices your neurotransmitters, drastically speeding up your neural connections. Neurachem can be mentally activated or triggered by charged emotions. +2 Vigor Pool while active. Extensive use of neurachem without a break can lead to nervous system fatigue (–20 impairment modifier to all actions; GM discretion).`
+	});
 	gear.set("Nuclear Battery", {
 		name: "Nuclear Battery", complexity: "Min", restricted: false, gp: 1, pg: 317, description: `These micro-sized batteries generate power from radio-isotope decay, storing it for use. They can produce power for years or even decades. They are often used to recharge standard batteries.`
 	});
@@ -187,8 +190,14 @@ function getGearData() {
 	gear.set("Skillware", {
 		name: "Skillware", complexity: "Maj", restricted: false, gp: 3, pg: 321, description: `Your brain is laced with a network of artificial neurons that can be formatted with information. This allows you to download skillsofts ▶below into your brain, gaining the use of those programmed skills until the skillsoft is erased or replaced. Skillware systems are only capable of handling 120 total skill points worth of skillsofts at a time. Switching out a skillsoft is a complex action.`
 	});
+	gear.set("Skinlink", {
+		name: "Skinlink", complexity: "Min", restricted: false, gp: 1, pg: 325, description: `Nanobots live on the morph’s external skin or shell, automatically swarming over and creating a physical connection with any electronics you touch. They also take advantage of the electrical field in a biomorph’s skin for communication. They allow you to communicate and mesh with skinlink-equipped devices, devices with external access ports, devices with exposed electronics, or other skinlinked characters merely by touching them. This is considered a wired link, and so is not subject to sniffing or jamming.`
+	});
 	gear.set("Small Fabber", {
 		name: "Small Fabber", complexity: "Min", restricted: false, gp: 1, pg: 343, description: 'These small and portable fabbers can produce objects up to a very small size with the appropriate blueprint. They have a maximum volume of 2 liters.'
+	});
+	gear.set("Smart Actuators", {
+		name: "Smart Actuators", complexity: "Mod", restricted: false, gp: 2, ware: ["H"], pg: 323, properties: [], description: `Your shell makes use of smart materials and advanced actuator designs for increased speed and strength. +1 Vigor pool.`
 	});
 	gear.set("Smart Anchors", {
 		name: "Smart Anchors", complexity: "Min", restricted: false, gp: 1, pg: 341, description: 'When activated, this worn harness fires out up to 6 anchoring cables with a length of 10 meters. These cables spike into ice, dirt, or rock, or use grip pads to adhere to an appropriate surface. This prevents you from drifting into space, accidentally kicking off with terminal velocity, or falling off a cliff face. The device’s ALI targets and deploys anchors, and can be instructed to do so under certain conditions'
@@ -351,9 +360,11 @@ function egr_explorenaut(options = {}) {
 	}
 
 	if (options?.mobility) {
-		pack.push(
-			{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${options?.mobility?.type ? options.mobility.type : "Thrust Vector (Rocket)"}`, notes: `@Explorenaut` },
-		);
+		options.mobility.forEach(m => {
+			pack.push(
+				{ ...gear.get("Mobility System"), name: `${gear.get("Mobility System").name} ${m}`, notes: `@Explorenaut` },
+			);
+		});
 	}
 
 	if (options?.sensors) {
@@ -423,6 +434,24 @@ function egr_explorenaut(options = {}) {
 				);
 			}
 		}
+	}
+
+	if (options?.skinlink) {
+		pack.push(
+			{ ...gear.get("Skinlink"), notes: `${options.identity ? options.identity : ''}@Explorenaut` },
+		);
+	}
+
+	if (options?.neurachem) {
+		pack.push(
+			{ ...gear.get("Neurachem"), notes: `${options.identity ? options.identity : ''}@Explorenaut` },
+		);
+	}
+
+	if (options?.smart_actuators) {
+		pack.push(
+			{ ...gear.get("Smart Actuators"), notes: `${options.identity ? options.identity : ''}@Explorenaut` },
+		);
 	}
 
 	return pack;
@@ -594,20 +623,16 @@ function egt_parisphere_upgrade(options = {}) {
 
 const downtime = 0;
 
-let identity = 'Poincare';
+let identity = 'Thales';
 mission_gear.set("EGR_2.71828", {
 	sentinel: "EGR_2.71828",
 	mp: 6 + 4,
 	gp: 20 + 4,
 	gear: [
 		{ ...gear.get("Fake Ego ID"), notes: identity },
-		//{ ...gear.get("Ego Bridge"), notes: `Escher@Explorenaut` },
-		//{ ...gear.get("Breadcrumb System"), notes: `Escher@Explorenaut` },
+		{ ...gear.get("Breadcrumb System"), notes: toWarning(`non-Ware@Explorenaut`) },
 		{ ...gear.get("Spindle"), notes: toWarning(`non-Ware@Explorenaut`) },
 		{ ...gear.get("Spindle Climber"), notes: toWarning(`non-Ware@Explorenaut`) },
-		//{ ...gear.get("Fake Brainprint"), notes: `burner ID` },
-		//{ name: "MP2GP", gp: 0 },
-		{ ...gear.get("Spindle Climber"), notes: toWarning(`non-Ware@DocBot`) },
 	],
 	morph: [
 		//{ name: "GP2MP", mp: -1 },
@@ -625,40 +650,41 @@ mission_gear.set("EGR_2.71828", {
 
 
 // special mission gear bio
-mission_gear.set("EGR_2.71828", {
-	sentinel: "EGR_2.71828",
-	mp: 6 + 4,
-	gp: 20 + 4,
-	gear: [
-		//{ ...gear.get("Fake Ego ID"), notes: identity },
-		//{ ...gear.get("Ego Bridge"), notes: `Escher@Explorenaut` },
-		{ ...gear.get("Breadcrumb System"), notes: toWarning(`non-Ware@Explorenaut`) },
-		{ ...gear.get("Spindle"), notes: toWarning(`non-Ware@Explorenaut`) },
-		{ ...gear.get("Spindle Climber"), notes: toWarning(`non-Ware@Explorenaut`) },
-		{ ...gear.get("Envirosuit"), notes: identity },
-		//{ ...gear.get("Fake Brainprint"), notes: `burner ID` },
-		{ ...gear.get("Spindle Climber"), notes: identity },
-		//{ ...gear.get("Medichines"), notes: identity }
-		//{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: identity }
-		{ ...gear.get("Battle Laser"), notes: identity }
-	],
-	morph: [
-		//{ name: "GP2MP", mp: -1 },
-		{ name: "Menton", mp: 4, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/01-biomorphs.html#menton' },
-		{ name: "Transhuman Essentials", mp: 1 },
-		{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
-		{ name: "Morph upgrade Flex +2", mp: 4 },
-		/**
-		{ name: "Operator", mp: 2, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/06-infomorphs.html#operator' },
-		{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
-		{ name: "Morph upgrade Flex +1", mp: 2 },
-		 */
-		{ name: "Spare", mp: 0 },
-	]
-});
+if (false)
+	mission_gear.set("EGR_2.71828", {
+		sentinel: "EGR_2.71828",
+		mp: 6 + 4,
+		gp: 20 + 4,
+		gear: [
+			//{ ...gear.get("Fake Ego ID"), notes: identity },
+			//{ ...gear.get("Ego Bridge"), notes: `Escher@Explorenaut` },
+			{ ...gear.get("Breadcrumb System"), notes: toWarning(`non-Ware@Explorenaut`) },
+			{ ...gear.get("Spindle"), notes: toWarning(`non-Ware@Explorenaut`) },
+			{ ...gear.get("Spindle Climber"), notes: toWarning(`non-Ware@Explorenaut`) },
+			//{ ...gear.get("Envirosuit"), notes: identity },
+			//{ ...gear.get("Fake Brainprint"), notes: `burner ID` },
+			//{ ...gear.get("Spindle Climber"), notes: identity },
+			//{ ...gear.get("Medichines"), notes: identity }
+			//{ ...gear.get("Machine Gun"), name: `${gear.get("Machine Gun").name} Railgun`, notes: identity }
+			//{ ...gear.get("Battle Laser"), notes: identity }
+		],
+		morph: [
+			//{ name: "GP2MP", mp: -1 },
+			{ name: "Menton", mp: 4, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/01-biomorphs.html#menton' },
+			{ name: "Transhuman Essentials", mp: 1 },
+			{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
+			{ name: "Morph upgrade Flex +2", mp: 4 },
+			/**
+			{ name: "Operator", mp: 2, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/06-infomorphs.html#operator' },
+			{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
+			{ name: "Morph upgrade Flex +1", mp: 2 },
+			 */
+			{ name: "Spare", mp: 0 },
+		]
+	});
 
 
-if (true) {
+if (false) {
 	mission_gear.get("EGR_2.71828").gear = mission_gear.get("EGR_2.71828").gear
 		.concat(
 			egr_docbot({
@@ -678,16 +704,19 @@ if (true) {
 			egr_explorenaut({
 				identity: identity,
 				ghostrider: 0,
-				mobility: "Thurst Vector (Rocket)",
-				medichines: false,
+				mobility: ["Thurst Vector (Rocket)", "Submarine"],
+				medichines: true,
 				armored: {
-					heavy_combat_armor: false,
+					heavy_combat_armor: true,
 					hardened_skelton: false,
-					structural_enhancement: false,
+					structural_enhancement: true, // better than hardened_skeleton
 					self_healing: false,
 					impact: false,
 					reactive: false
 				},
+				skinlink: true,
+				neurachem: true,
+				smart_actuators: true
 			})
 		)
 		;
@@ -729,11 +758,11 @@ function report_mission_gear(options = { mg: mission_gear, json: false }) {
 }
 
 report_mission_gear();
-report_mission_gear({ mg: mission_gear, json: true });
+//report_mission_gear({ mg: mission_gear, json: true });
 // fs.writeFileSync('file.json', JSON.stringify(jsonVariable));
 
 //console.clear();
-//console.log(mission_gear.get("EGR_2.71828").gear.map(e => e.name));
+//console.log(mission_gear.get("EGR_2.71828").gear.map(e => `${e.name} (${e.gp ? e.gp : e.mp})`));
 
 if (!process.argv.find(a => a.startsWith("--cmd"))) {
 	process.exit();
