@@ -69,7 +69,14 @@ function getGearData() {
 	});
 	gear.set("Explorenaut", {
 		name: "Explorenaut", complexity: "Maj", restricted: false, gp: 3, pg: 346,
-		description: 'These small-sized bots travel on smart treads or with thrust-vector jets. They are loaded with sensors and favored for gatecrashing and similar exploration ops.  A pair of manipulator arms are used for taking samples.'
+		description: 'These small-sized bots travel on smart treads or with thrust-vector jets. They are loaded with sensors and favored for gatecrashing and similar exploration ops.  A pair of manipulator arms are used for taking samples.',
+		stats: {
+			armor: { energy: 12, kinetic: 10 },
+			health: { wt: 8, dur: 35, dr: 70 },
+			pools: { vigor: 1, flex: 1 },
+			size: 'S',
+			movement: { tracked: [4, 12], thrust_vector_gas_jet: [8, 40] }
+		}
 	});
 	gear.set("Fake Brainprint", {
 		name: "Fake Brainprint", complexity: "Maj", restricted: true, gp: 3, pg: -1, description: ``
@@ -96,10 +103,26 @@ function getGearData() {
 		name: "Hand Laser", complexity: "Mod", restricted: true, gp: 2, pg: 208, ware: ["C", "H"], description: `The morph has a weapon-grade laser implanted in its forearm, with a flexible waveguide leading to a lens located between the first two knuckles on the morph’s dominant hand. The laser’s batteries are implanted and not easily swapped out in biomorphs.`
 	});
 	gear.set("Hardened Skeleton", {
-		name: "Hardened Skeleton", complexity: "Maj", restricted: false, gp: 3, pg: 322, ware: ["C", "H"], description: `The morph’s skeleton is laced with strengthening amorphous metals and fullerenes. Increase your Wound Threshold by 1, Durability by 5, Death Rating by 8 (biomorphs) or 10 (synthmorphs), and your SOM Check by 10.`
+		name: "Hardened Skeleton", complexity: "Maj", restricted: false, gp: 3, pg: 322, ware: ["C", "H"], description: `The morph’s skeleton is laced with strengthening amorphous metals and fullerenes. Increase your Wound Threshold by 1, Durability by 5, Death Rating by 8 (biomorphs) or 10 (synthmorphs), and your SOM Check by 10.`,
+		modifiers: {
+			aptitudes: {
+				som: { mod: 0, check: 10 }
+			},
+			health: { wt: 1, dur: 10 } // dur +8 for bio, guess one would need two items in order to avoid working with functions receiving the morph
+		}
 	});
-	gear.set("Heavy Combat Armor", { name: "Heavy Combat Armor", gp: 3, ware: ["H"], pg: 214 });
-	gear.set("Impact", { name: "Impact", gp: 1, ware: "H", pg: 217 });
+	gear.set("Heavy Combat Armor", {
+		name: "Heavy Combat Armor", gp: 3, ware: ["H"], pg: 214, description: `These bulky and noticeable armor plates protect against heavy weaponry for serious combat operations. The shell’s mobility systems and power output are also modified to handle the extra mass.`,
+		modifiers: {
+			armor: { energy: 16, kinetic: 14 }
+		}
+	});
+	gear.set("Impact", {
+		name: "Impact", gp: 1, ware: "H", pg: 217, description: ``,
+		modifiers: {
+			armor: { energy: 0, kinetic: 3 }
+		}
+	});
 	gear.set("Large Fabber", {
 		name: "Large Fabber", complexity: "Maj", restricted: false, gp: 3, pg: 343, description: 'Large-sized fabbers are non-portable, unless mounted on a bot or vehicle, with a volume of 80 liters. They can manufacture most medium-sized items, or two or more of the same small-sized items at a time, or four or more identical very small objects at once.'
 	});
