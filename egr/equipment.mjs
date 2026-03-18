@@ -654,8 +654,9 @@ mission_gear.set("EGR_2.71828", {
 	gear: [
 		{ ...gear.get("Fake Ego ID"), notes: identity },
 		{ ...gear.get("Breadcrumb System"), notes: toWarning(`non-Ware@Explorenaut`) },
-		{ ...gear.get("Spindle"), notes: toWarning(`non-Ware@Explorenaut`) },
-		{ ...gear.get("Spindle Climber"), notes: toWarning(`non-Ware@Explorenaut`) },
+		//{ ...gear.get("Spindle"), notes: toWarning(`non-Ware@Explorenaut`) },
+		//{ ...gear.get("Spindle Climber"), notes: toWarning(`non-Ware@Explorenaut`) },
+		//{ ...gear.get("TacNet") },
 	],
 	morph: [
 		//{ name: "GP2MP", mp: -1 },
@@ -665,7 +666,7 @@ mission_gear.set("EGR_2.71828", {
 		/**
 		{ name: "Operator", mp: 2, description: 'https://eclipsephase.github.io/en/SUPP/02-CO/03/06-infomorphs.html#operator' },
 		{ name: "Academic Essentials", mp: 1, availability: null, description: '+1 Insight, Multi-Tasking' },
-		{ name: "Morph upgrade Flex +1", mp: 2 },
+		{ name: "Morph upgrade Flex +2", mp: 4 },
 		 */
 		{ name: "Spare", mp: 0 },
 	]
@@ -739,7 +740,7 @@ if (true) {
 				},
 				skinlink: true,
 				neurachem: true,
-				smart_actuators: true
+				smart_actuators: false
 			})
 		)
 		;
