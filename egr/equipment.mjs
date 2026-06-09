@@ -1,3 +1,6 @@
+import util from 'node:util';
+util.inspect.defaultOptions.breakLength = 250;
+
 import fs from 'fs';
 import * as readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
@@ -746,7 +749,7 @@ if (true) {
 		;
 }
 
-
+mission_gear.get("EGR_2.71828").roles = [`science-officer`, `probe`, `pilot`, `mesh-defender`, `hacker`, `quartermaster`];
 
 
 console.clear();
@@ -767,7 +770,8 @@ function report_mission_gear(options = { mg: mission_gear, json: false }) {
 				gear: value.gear.map(i => `${i.name} (pg. ${i.pg}, ${i.gp} gp)${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
 				morph: value.morph.map(m => `${m.name}, mp: ${m.mp}`),
 				gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
-				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
+				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0),
+				roles: value.roles
 			});
 		} else {// is json
 			fs.writeFileSync(`./${key}.json`, JSON.stringify({
@@ -775,7 +779,8 @@ function report_mission_gear(options = { mg: mission_gear, json: false }) {
 				gear: value.gear.map(i => `${i.name} (pg. ${i.pg}, ${i.gp} gp)${i.notes ? " : " : ""}${i.notes ? i.notes : ""}`),
 				morph: value.morph.map(m => `${m.name}, mp: ${m.mp}`),
 				gp_left: value.gp - value.gear.reduce((acc, i) => acc + i.gp, 0),
-				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0)
+				mp_left: value.mp - value.morph.reduce((acc, i) => acc + i.mp, 0),
+				roles: value.roles
 			}, null, 2));
 		}
 	}
