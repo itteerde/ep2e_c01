@@ -749,7 +749,7 @@ if (true) {
 		;
 }
 
-mission_gear.get("EGR_2.71828").roles = [`science-officer`, `probe`, `pilot`, `mesh-defender`, `hacker`, `quartermaster`];
+mission_gear.get("EGR_2.71828").roles = [`science-officer`, `probe`, `pilot`, `combat-engineer`, `mesh-defender`, `hacker`, `quartermaster`];
 
 
 console.clear();
